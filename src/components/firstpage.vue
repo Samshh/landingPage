@@ -9,10 +9,10 @@
                 <img src="\src\assets\box.svg" alt="test">
                 <div class="textwrapper">
                     <div class="katakana">
-                        <p>メ</p>
-                        <p>イ</p>
-                        <p>プ</p>
-                        <p>ル</p>
+                        <p class="m">メ</p>
+                        <p class="i">イ</p>
+                        <p class="p">プ</p>
+                        <p class="r">ル</p>
                     </div>        
                     <div class="kanji">
                         <p>
@@ -48,6 +48,10 @@
 }
 
 .box1{
+    animation-name: fade-in;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
     display: flex;
 }
 
@@ -67,12 +71,50 @@
     font-size: 25px;
 }
 
+.m{
+    animation-name: fade-in;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+
+.i{
+    animation-name: fade-in;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+
+.p{
+    animation-name: fade-in;
+    animation-duration: 2.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+
+.r{
+    animation-name: fade-in;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
 .kanji p{
     font-family: "Noto Serif JP", serif;
     font-weight: 400;
     font-style: normal;
     margin: 0;
     font-size: 25px;
+    animation-name: fade-in;
+    animation-duration: 3.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+
+.name{
+    animation-name: fade-in;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
 }
 
 .maintext {
@@ -96,6 +138,15 @@
     .mainwrapper{
         transform: scale(0.55);
     }
+}
+
+@keyframes fade-in{
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
 }
 
 </style>
