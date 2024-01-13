@@ -21,7 +21,7 @@ And when it's chill time, you'll catch me watching
 Let's explore this tech and creativity journey together!
             </p>
         </div>
-        <img class="myPic" src="\landingPage\src\assets\favicon-32x32.png" alt="">
+        <img class="myPic" src="\src\assets\SamGoogle1.webp" alt="">
     </div>
 </div>
 </template>
