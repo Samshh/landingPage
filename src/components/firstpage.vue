@@ -41,6 +41,10 @@
     gap: 0px;
     padding: 0px;
     margin: 0px;
+    animation-name: bgFade;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
 }
 
 .mainwrapper{
@@ -137,6 +141,15 @@
 @media (max-width: 430px) {
     .mainwrapper{
         transform: scale(0.55);
+    }
+}
+
+@keyframes bgFade{
+    from{
+        background-color: #161616;
+    }
+    to{
+        background-color: #e7e7e7;
     }
 }
 
