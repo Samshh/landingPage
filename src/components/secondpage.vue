@@ -6,9 +6,11 @@
 <div class="outerWrapper">
     <div class="innerWrapper">
         <div class="aboutMe">
+
             <p class="me" style="color: #e7e7e7;">About Me.</p>
+            <p class="hira">こんにちは!</p>
             <p class="desc">
-こんにちは! I'm Sam Dacara, a 20-year-old Software Developer and a 2nd-year Computer Science student based in Davao City, Philippines.
+ I'm Sam Dacara, a 20-year-old Software Developer and a 2nd-year Computer Science student based in Davao City, Philippines.
 As a self-taught programmer, my primary focus is on back-end development. I'm currently delving into the realm of Web Development and exploring my interests in Machine Learning and Artificial Intelligence. 
 Excited about the endless possibilities in the tech world!
             </p>
@@ -41,7 +43,7 @@ Let's explore this tech and creativity journey together!
 
 .aboutMe{
     width: 50%;
-    height: 70vh;
+    height: 75vh;
     display: flex;
     flex-direction: column;
 }
@@ -61,6 +63,16 @@ Let's explore this tech and creativity journey together!
     color: #e7e7e7;
 }
 
+.hira{
+    font-family: "Noto Serif JP", serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+    padding-bottom: 10px;
+    font-size: 25px;
+    color: #e7e7e7;
+    padding-top: 5px;
+}
 .myPic{
     border-radius: 10px;
     width: 40%;
