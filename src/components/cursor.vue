@@ -54,4 +54,11 @@ onUnmounted(() => {
   transition: transform 0.1s ease-out;
   pointer-events: none;
 }
+
+@media (max-width: 430px){
+  .custom-cursor {
+    display: none;
+  }
+}
+
 </style>

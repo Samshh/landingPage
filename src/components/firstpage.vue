@@ -92,4 +92,10 @@
     padding-right: 35px;
 }
 
+@media (max-width: 430px) {
+    .mainwrapper{
+        transform: scale(0.55);
+    }
+}
+
 </style>

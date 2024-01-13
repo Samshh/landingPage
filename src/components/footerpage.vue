@@ -23,7 +23,7 @@
 </template>
 
 <style scoped>
-  .outerWrapper {
+.outerWrapper {
     width: 100vw;
     height: 15vh;
     min-height: 100px;
@@ -44,7 +44,7 @@
     width: 95%;
     height: 100%;
     display: flex;
-    flex-direction: row;
+    /* flex-direction: row; */
     align-items: center;
     justify-content: space-around;
   }
@@ -98,4 +98,14 @@
     background-color: #161616;
     z-index: -1;
   }
+
+@media (max-width: 430px) {
+    .contactMe{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+    }
+}
+
 </style>
