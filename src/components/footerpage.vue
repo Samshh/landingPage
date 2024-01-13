@@ -59,6 +59,11 @@
     margin-top: 30px;
     position: relative;
     justify-content: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none; 
+    user-select: none; 
+    pointer-events: none;
   }
 
   .heartIcon{
@@ -77,7 +82,11 @@
     transition: color 0.3s;
     display: flex;
     align-items: center;
-    z-index: 1; 
+    z-index: 1;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none; 
+    user-select: none; 
   }
 
   .contact i {
