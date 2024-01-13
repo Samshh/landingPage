@@ -19,7 +19,7 @@ And when it's chill time, you'll catch me watching
 Let's explore this tech and creativity journey together!
             </p>
         </div>
-        <img class="myPic" src="C:\landingPage\src\assets\SamGoogle1.webp" alt="">
+        <img class="myPic" src="\landingPage\src\assets\SamGoogle1.webp" alt="">
     </div>
 </div>
 </template>
