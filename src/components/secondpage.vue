@@ -21,7 +21,7 @@ And when it's chill time, you'll catch me watching
 Let's explore this tech and creativity journey together!
             </p>
         </div>
-        <!-- <img class="myPic" src="\landingPage\src\assets\SamGoogle1.webp" alt=""> -->
+        <img class="myPic" src="\landingPage\src\assets\favicon-32x32.png" alt="">
     </div>
 </div>
 </template>
@@ -73,10 +73,10 @@ Let's explore this tech and creativity journey together!
     color: #e7e7e7;
     padding-top: 5px;
 }
-/* .myPic{
+.myPic{
     border-radius: 10px;
     width: 40%;
-} */
+}
 
 ::selection {
   background-color:#e7e7e7;
