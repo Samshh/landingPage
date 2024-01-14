@@ -51,7 +51,7 @@ onMounted(() => {
     color: "#e7e7e7",
   });
 
-  gsap.to(".custom-cursor", {
+  gsap.to([".custom-cursor", ".myPic"], {
     scrollTrigger: {
       trigger: ".outerWrapper",
       start: "top center",
@@ -62,6 +62,7 @@ onMounted(() => {
     },
     ease: "power1.inOut",
     backgroundColor: "#e7e7e7",
+    opacity: 1,
   });
 
   animateText(".myText", ".aboutMe","I'm Sam Dacara, a 20-year-old Software Developer and a 2nd-year Computer Science student based in Davao City, Philippines. As a self-taught programmer, my primary focus is on back-end development. I'm currently delving into the realm of Web Development and exploring my interests in Machine Learning and Artificial Intelligence. Excited about the endless possibilities in the tech world!", 10);
@@ -112,6 +113,7 @@ onMounted(() => {
 .aboutMe{
     display: flex;
     color: #161616;
+    padding-bottom: 20px;
 }
 .me{
     font-size: 45px;
@@ -148,6 +150,7 @@ onMounted(() => {
     -ms-user-select: none; 
     user-select: none; 
     pointer-events: none;
+    opacity: 0;
 }
 
 .aboutMe2{

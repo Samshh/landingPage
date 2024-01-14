@@ -27,8 +27,8 @@
     width: 100vw;
     height: 15vh;
     min-height: 100px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
 
   .innerWrapper {
