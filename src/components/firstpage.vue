@@ -183,15 +183,6 @@ onMounted(() => {
     }
 }
 
-@keyframes bgFade{
-    from{
-        background-color: #161616;
-    }
-    to{
-        background-color: #e7e7e7;
-    }
-}
-
 @keyframes fade-in{
   from{
     opacity: 0;

@@ -25,6 +25,45 @@ onMounted(() => {
     });
   };
 
+  gsap.to(".background", {
+    scrollTrigger: {
+      trigger: ".outerWrapper",
+      start: "top center",
+      end: "bottom center",
+      toggleActions: "play reverse play reverse",
+      scrub: false,
+      markers: false,
+    },
+    ease: "power1.inOut",
+    backgroundColor: "#161616",
+  });
+
+  gsap.to("#p", {
+    scrollTrigger: {
+      trigger: ".outerWrapper",
+      start: "top center",
+      end: "bottom center",
+      toggleActions: "play reverse play reverse",
+      scrub: false,
+      markers: false,
+    },
+    ease: "power1.inOut",
+    color: "#e7e7e7",
+  });
+
+  gsap.to(".custom-cursor", {
+    scrollTrigger: {
+      trigger: ".outerWrapper",
+      start: "top center",
+      end: "bottom center",
+      toggleActions: "play reverse play reverse",
+      scrub: false,
+      markers: false,
+    },
+    ease: "power1.inOut",
+    backgroundColor: "#e7e7e7",
+  });
+
   animateText(".myText", ".aboutMe","I'm Sam Dacara, a 20-year-old Software Developer and a 2nd-year Computer Science student based in Davao City, Philippines. As a self-taught programmer, my primary focus is on back-end development. I'm currently delving into the realm of Web Development and exploring my interests in Machine Learning and Artificial Intelligence. Excited about the endless possibilities in the tech world!", 10);
   animateText(".myText2", ".aboutMe","Outside of tech, I'm also a Musician—I play the guitar and piano. And when it's chill time, you'll catch me watching anime. Let's explore this tech and creativity journey together!", 10);
   animateText(".me", ".aboutMe","About Me.", 2);
@@ -33,6 +72,7 @@ onMounted(() => {
   onUnmounted(() => {
     gsap.killTweensOf(".myText", ".myText2");
 });
+
 </script>
 
 <template>
@@ -40,13 +80,13 @@ onMounted(() => {
     <div class="innerWrapper">
         <div class="aboutMe">
             <div class="aboutMe2">
-                <p class="me" style="color: #e7e7e7;">私について。</p>
-                <p class="desc myText">
+                <p id="p" class="me">私について。</p>
+                <p id="p" class="desc myText">
                     私は Sam Dacara です。フィリピンのダバオ市に拠点を置く 20 歳のソフトウェア開発者で、コンピュータ サイエンスの 2 年生です。
 独学のプログラマーとして、私の主な焦点はバックエンド開発です。私は現在、ウェブ開発の領域を深く掘り下げ、機械学習と人工知能への興味を探求しています。
 テクノロジーの世界の無限の可能性に興奮しています!
                 </p>
-                <p class="desc myText2">
+                <p id="p" class="desc myText2">
                     テクノロジー以外では、私はミュージシャンでもあり、ギターとピアノを弾きます。
 そして、落ち着いた時間になったら、あなたは私を見てくれるでしょう
 アニメ。このテクノロジーと創造性の旅を一緒に探索しましょう!
@@ -62,7 +102,6 @@ onMounted(() => {
 .outerWrapper{
     height: auto;
     width: 100vw;
-    background-color: #161616;
 }
 
 .innerWrapper{
@@ -72,6 +111,7 @@ onMounted(() => {
 
 .aboutMe{
     display: flex;
+    color: #161616;
 }
 .me{
     font-size: 45px;
@@ -86,7 +126,6 @@ onMounted(() => {
     text-align: left;
     padding-right: 45px;
     padding-top: 35px;
-    color: #e7e7e7;
 }
 
 
@@ -102,8 +141,8 @@ onMounted(() => {
 }
 .myPic{
     border-radius: 10px;
-    height: 40%;
-    width: 40%;
+    height: 40.5%;
+    width: 40.5%;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none; 
@@ -150,12 +189,6 @@ onMounted(() => {
     padding: 0;
     padding-bottom: 10%;
   }
-
-.hira {
-    font-size: 15px;
-    padding-bottom: 10%;
-    padding-top: 0px;
-    }
 
 .myPic{
     width: 100%;

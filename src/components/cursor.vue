@@ -1,61 +1,47 @@
 <template>
-  <div>
-    <div
-      class="custom-cursor"
-      :style="{ top: `${cursorY}px`, left: `${cursorX}px`, backgroundColor: cursorColor }"
-    ></div>
-  </div>
+  <div v-if="smallscreen" class="custom-cursor" :style="{ top: cursorY + 'px', left: cursorX + 'px' }"></div>
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue';
+import { onMounted, onBeforeUnmount, ref } from 'vue';
+
+const smallscreen = ref(window.innerWidth > 1024);
+
+const updateScreenSize = () => {
+smallscreen.value = window.innerWidth > 1024;
+};
 
 const cursorX = ref(0);
 const cursorY = ref(0);
-const cursorColor = ref('#161616'); // Default color
 
 const updateCursorPosition = (event) => {
-  cursorX.value = event.clientX;
-  cursorY.value = event.clientY;
-
-  // Change cursor color based on the mouse position
-  cursorColor.value = isMouseOverArea(event.clientX, event.clientY) ? '#e7e7e7' : '#161616';
-};
-
-const isMouseOverArea = (mouseX, mouseY) => {
-  const outerWrapper = document.querySelector('.outerWrapper');
-  const outerWrapperPosition = outerWrapper ? outerWrapper.getBoundingClientRect() : null;
-
-  return (
-    outerWrapperPosition &&
-    mouseX >= outerWrapperPosition.left &&
-    mouseX <= outerWrapperPosition.right &&
-    mouseY >= outerWrapperPosition.top &&
-    mouseY <= outerWrapperPosition.bottom
-  );
+cursorX.value = event.clientX;
+cursorY.value = event.clientY;
 };
 
 onMounted(() => {
-  window.addEventListener('mousemove', updateCursorPosition);
+document.addEventListener('mousemove', updateCursorPosition);
 });
 
-onUnmounted(() => {
-  window.removeEventListener('mousemove', updateCursorPosition);
+onBeforeUnmount(() => {
+document.removeEventListener('mousemove', updateCursorPosition);
 });
 </script>
+
 
 <style scoped>
 .custom-cursor {
   position: fixed;
   width: 13px;
   height: 13px;
+  background-color: #161616;
   border-radius: 50%;
-  transform: translate(-50%, -50%);
-  transition: transform 0.1s ease-out;
   pointer-events: none;
+  z-index: 9999;
+  cursor: none;
 }
 
-@media (max-width: 430px){
+@media (max-width: 430px) {
   .custom-cursor {
     display: none;
   }

@@ -29,7 +29,6 @@
     min-height: 100px;
     margin-top: 20px;
     margin-bottom: 20px;
-    background-color: #e7e7e7;
   }
 
   .innerWrapper {
@@ -44,7 +43,6 @@
     width: 95%;
     height: 100%;
     display: flex;
-    /* flex-direction: row; */
     align-items: center;
     justify-content: space-around;
   }
@@ -55,8 +53,7 @@
     font-size: 20px;
     font-weight: 400;
     align-items: center;
-    margin-bottom: 30px;
-    margin-top: 30px;
+  
     position: relative;
     justify-content: center;
     -webkit-user-select: none;
@@ -64,6 +61,7 @@
     -ms-user-select: none; 
     user-select: none; 
     pointer-events: none;
+    color: #e7e7e7;
   }
 
   .heartIcon{
@@ -75,10 +73,9 @@
     font-size: 25px;
     font-weight: 400;
     text-align: center;
-    padding: 15px 35px;
+    padding: 15px;
     text-decoration: none;
     position: relative;
-    color: #161616;
     transition: color 0.3s;
     display: flex;
     align-items: center;
@@ -86,7 +83,9 @@
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none; 
-    user-select: none; 
+    user-select: none;
+    color: #e7e7e7;
+    border-radius: 10deg;
   }
 
   .contact i {
@@ -94,7 +93,8 @@
   }
 
   .contact:hover {
-    color: #e7e7e7;
+    background-color: #e7e7e7;
+    color: #161616;
   }
 
   .contact:hover::before {
@@ -104,17 +104,18 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #161616;
-    z-index: -1;
   }
 
 @media (max-width: 430px) {
-    .contactMe{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-around;
-    }
+  .contactMe{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .madeBy{
+    padding-bottom: 15px;
+  }
 }
 
 </style>

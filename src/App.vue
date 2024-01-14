@@ -17,6 +17,7 @@ requestAnimationFrame(raf)
 </script>
 
 <template>
+    <div class="background"></div>
     <cursor/>
     <firstpage/>
     <secondpage/>
@@ -25,5 +26,11 @@ requestAnimationFrame(raf)
 </template>
 
 <style scoped>
-
+.background{
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  position: fixed;
+  background-color: #e7e7e7;
+}
 </style>
