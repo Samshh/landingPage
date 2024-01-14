@@ -15,7 +15,7 @@ onMounted(() => {
     });
   };
 
-  animateText(".maintext", "Samshh", 3);
+  animateText(".maintext", "samshh", 3);
 });
 
   onUnmounted(() => {
@@ -35,27 +35,9 @@ onMounted(() => {
       <div class="line"></div>
     </div>
     <div class="mainwrapper">
-        <div class="box1">
-            <img class="logo" src="\src\assets\box.svg" alt="test">
-            <div class="textwrapper">
-                <div class="katakana">
-                    <p class="m">メ</p>
-                    <p class="i">イ</p>
-                    <p class="p">プ</p>
-                    <p class="r">ル</p>
-                </div>        
-                <div class="kanji">
-                    <p>
-                        楓
-                    </p>
-                </div>    
-            </div>
-        </div>
         <div class="name">
             <p class="maintext">73616d736868</p>
-            <p class="subtext">
-                Software Developer
-            </p>            
+            <p class="subtext">メイプル</p>            
         </div>
     </div>
     
@@ -73,108 +55,39 @@ onMounted(() => {
     padding: 0px;
     margin: 0px;
     animation-name: bgFade;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-in-out;
-}
-
-.mainwrapper{
-    transform: scale(1.25);
-}
-
-.logo{
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none; 
-    user-select: none; 
-    pointer-events: none;
-}
-
-.box1{
-    animation-name: fade-in;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-in-out;
-    display: flex;
-}
-
-.textwrapper{
-    display: flex;
-    flex-direction: column;
-    padding-left: 10px;
-    justify-content: space-between;
-}
-
-.katakana p{
-    font-family: "Noto Serif JP", serif;
-    font-weight: 900;
-    font-style: normal;
-    margin: 0;
-    padding-bottom: 10px;
-    font-size: 25px;
-}
-
-.m{
-    animation-name: fade-in;
-    animation-duration: 1.5s;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-in-out;
-}
-
-.i{
-    animation-name: fade-in;
     animation-duration: 2s;
     animation-fill-mode: forwards;
     animation-timing-function: ease-in-out;
 }
 
-.p{
-    animation-name: fade-in;
-    animation-duration: 2.5s;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-in-out;
-}
-
-.r{
-    animation-name: fade-in;
-    animation-duration: 3s;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-in-out;
-}
-.kanji p{
-    font-family: "Noto Serif JP", serif;
-    font-weight: 400;
-    font-style: normal;
-    margin: 0;
-    font-size: 25px;
-    animation-name: fade-in;
-    animation-duration: 3.5s;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-in-out;
+.mainwrapper{
+    display: flex;
 }
 
 .name{
+    margin: 0;
     animation-name: fade-in;
     animation-duration: 4s;
     animation-fill-mode: forwards;
     animation-timing-function: ease-in-out;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
 }
 
 .maintext {
     margin: 0;
-    padding-top: 10px;
-    font-size: 25px;
+    font-size: 55px;
     font-weight: 400;
-    text-align: right;
-    padding-right: 35px;
+    text-align: center;
 }
 
 .subtext{
+    font-family: "Noto Serif JP", sans-serif;
     margin: 0;
-    font-size: 15px;
+    font-size: 25px;
     font-weight: 400;
-    text-align: right;
-    padding-right: 35px;
+    text-align: center;
 }
 
 @media (max-width: 430px) {
