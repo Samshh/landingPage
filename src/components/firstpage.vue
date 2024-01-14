@@ -1,7 +1,28 @@
 <script setup>
+import { gsap } from "gsap"; 
+import { TextPlugin } from "gsap/TextPlugin"; 
+import { onMounted, onUnmounted} from 'vue';
+
+onMounted(() => {
+  gsap.registerPlugin(TextPlugin);
+
+  const animateText = (selector, text, duration) => {
+    gsap.to(selector, {
+      duration: duration, 
+      text: text, 
+      delay: 1,
+      ease: "power1.out",
+    });
+  };
+
+  animateText(".maintext", "Samshh", 3);
+});
+
+  onUnmounted(() => {
+    gsap.killTweensOf(".myText");
+  });
 
 </script>
-
 <template>
 <div class="mybox">
     <div class="lines">
@@ -31,7 +52,7 @@
             </div>
         </div>
         <div class="name">
-            <p class="maintext">Samshh</p>
+            <p class="maintext">73616d736868</p>
             <p class="subtext">
                 Software Developer
             </p>            
