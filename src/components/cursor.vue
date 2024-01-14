@@ -47,8 +47,8 @@ onUnmounted(() => {
 <style scoped>
 .custom-cursor {
   position: fixed;
-  width: 20px;
-  height: 20px;
+  width: 13px;
+  height: 13px;
   border-radius: 50%;
   transform: translate(-50%, -50%);
   transition: transform 0.1s ease-out;
