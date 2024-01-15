@@ -85,7 +85,6 @@
     -ms-user-select: none; 
     user-select: none;
     color: #e7e7e7;
-    border-radius: 10deg;
   }
 
   .contact i {

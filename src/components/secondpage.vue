@@ -51,7 +51,7 @@ onMounted(() => {
     color: "#e7e7e7",
   });
 
-  gsap.to([".custom-cursor", ".myPic"], {
+  gsap.to(".custom-cursor", {
     scrollTrigger: {
       trigger: ".outerWrapper",
       start: "top center",
@@ -62,6 +62,18 @@ onMounted(() => {
     },
     ease: "power1.inOut",
     backgroundColor: "#e7e7e7",
+  });
+
+  gsap.to(".myPic", {
+    scrollTrigger: {
+      trigger: ".outerWrapper",
+      start: "top center",
+      end: "bottom center",
+      toggleActions: "play reverse play reverse",
+      scrub: false,
+      markers: false,
+    },
+    ease: "power1.inOut",
     opacity: 1,
   });
 
@@ -119,6 +131,8 @@ onMounted(() => {
     font-size: 45px;
     font-weight: 400px;
     margin-bottom: 0px;
+    padding-bottom: 20px;
+    margin: 0;
 }
 
 .desc, .myText3, .anime{
@@ -154,7 +168,7 @@ onMounted(() => {
 }
 
 .aboutMe2{
-    padding-top: 8%;
+    padding-top: 10%;
     padding-left: 3%;
     padding-right: 5%;
 }
@@ -190,12 +204,13 @@ onMounted(() => {
 .desc {
     font-size: 15px;
     padding: 0;
-    padding-bottom: 10%;
+    padding-bottom: 20px;
   }
 
 .myPic{
     width: 100%;
     padding-bottom: 10px;
+    padding-top: 10px;
     }
 }
 

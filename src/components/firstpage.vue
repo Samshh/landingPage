@@ -52,7 +52,7 @@ onMounted(() => {
             </div>
         </div>
         <div class="name">
-            <p class="maintext">73616d736868</p>
+            <p class="maintext">73616d</p>
             <p class="subtext">
                 Software Developer
             </p>            
