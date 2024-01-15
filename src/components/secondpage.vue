@@ -19,7 +19,7 @@ onMounted(() => {
         start: "top center",
         end: "40% center",
         toggleActions: "play none none reverse",
-        scrub: false,
+        scrub: 10,
         markers: false,
       },
     });
