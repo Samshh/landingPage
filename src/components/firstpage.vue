@@ -88,6 +88,41 @@ onMounted(() => {
     -ms-user-select: none; 
     user-select: none; 
     pointer-events: none;
+    position: relative;
+    animation: glitch 1s infinite;
+}
+
+.logo::before,
+.logo::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+}
+
+.logo::before {
+  left: 2px;
+  animation: glitch 1.5s infinite;
+}
+
+.logo::after {
+  left: -2px;
+  animation: glitch 2s infinite;
+}
+
+@keyframes glitch {
+  2%,64% {
+    transform: translate(2px, 0) skew(0deg);
+  }
+  4%,60% {
+    transform: translate(-2px, 0) skew(0deg);
+  }
+  62% {
+    transform: translate(0, 0) skew(5deg);
+  }
 }
 
 .box1{

@@ -18,8 +18,8 @@ onMounted(() => {
         trigger: trigger,
         start: "top center",
         end: "40% center",
-        toggleActions: "play none none none",
-        scrub: 10,
+        toggleActions: "play none none reverse",
+        scrub: false,
         markers: false,
       },
     });
