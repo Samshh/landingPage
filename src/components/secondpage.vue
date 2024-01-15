@@ -77,7 +77,7 @@ onMounted(() => {
     opacity: 1,
   });
 
-  animateText(".myText", ".aboutMe","I'm Sam Dacara, a 20-year-old Software Developer and a 2nd-year Computer Science student based in Davao City, Philippines. As a self-taught programmer, my primary focus is on back-end development. I'm currently delving into the realm of Web Development and exploring my interests in Machine Learning and Artificial Intelligence. Excited about the endless possibilities in the tech world!", 10);
+  animateText(".myText", ".aboutMe","I'm Sam Dacara, a Software Developer based in Davao City, Philippines. My primary focus is on back-end development. I'm currently delving into the realm of Web Development and exploring my interests in Machine Learning and Artificial Intelligence. Excited about the endless possibilities in the tech world!", 10);
   animateText(".myText2", ".aboutMe","Outside of tech, I'm also a Musician—I play the guitar and piano. And when it's chill time, you'll catch me watching anime. Let's explore this tech and creativity journey together!", 10);
   animateText(".me", ".aboutMe","About Me.", 2);
 });
@@ -95,14 +95,13 @@ onMounted(() => {
             <div class="aboutMe2">
                 <p id="p" class="me">私について。</p>
                 <p id="p" class="desc myText">
-                    私は Sam Dacara です。フィリピンのダバオ市に拠点を置く 20 歳のソフトウェア開発者で、コンピュータ サイエンスの 2 年生です。
-独学のプログラマーとして、私の主な焦点はバックエンド開発です。私は現在、ウェブ開発の領域を深く掘り下げ、機械学習と人工知能への興味を探求しています。
-テクノロジーの世界の無限の可能性に興奮しています!
+                  私はサム・ダカラ、フィリピン・ダバオシティ拠点のソフトウェア開発者です。
+                  主な焦点はバックエンド開発です。現在はウェブ開発の領域に深く入り、
+                  機械学習と人工知能に興味を深めています。テックの世界での無限の可能性にワクワクしています！
                 </p>
                 <p id="p" class="desc myText2">
-                    テクノロジー以外では、私はミュージシャンでもあり、ギターとピアノを弾きます。
-そして、落ち着いた時間になったら、あなたは私を見てくれるでしょう
-アニメ。このテクノロジーと創造性の旅を一緒に探索しましょう!
+                  テックの外では、私はミュージシャンでもあります — ギターとピアノを演奏します。
+                  そして、くつろぐ時間にはアニメを観ていることがあります。一緒にこのテックと創造性の旅を探機しましょう！
                 </p>   
             </div>
         <img class="myPic" src="\src\assets\SamGoogle1.webp" alt="">
@@ -135,9 +134,9 @@ onMounted(() => {
     margin: 0;
 }
 
-.desc, .myText3, .anime{
+.desc{
     margin: 0;
-    font-size: 25px;
+    font-size: 30px;
     font-weight: 400;
     text-align: left;
     padding-right: 45px;
