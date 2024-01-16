@@ -24,6 +24,7 @@
 
 <style scoped>
 .outerWrapper {
+  display: none;
     width: 100vw;
     height: 15vh;
     min-height: 100px;
@@ -106,6 +107,9 @@
   }
 
 @media (max-width: 430px) {
+  .outerWrapper{
+    display: contents;
+  }
   .contactMe{
     display: flex;
     flex-direction: column;
