@@ -3,7 +3,7 @@ import { onMounted, onUnmounted } from 'vue';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { TextPlugin } from 'gsap/TextPlugin';
-import {animateText, changeColor} from './animations.js';
+import {animateText} from './animations.js';
 
 
 onMounted(() => {
@@ -45,7 +45,6 @@ onMounted(() => {
     animateText('.projects', '.projects', 'featured project.', 2);
     animateText('.projectdesc', '.projects', 'This Discord bot serves as a ticket system with additional features. Users can create tickets using the "/ticket" command, and staff can manage them. The bot includes commands for basic moderation tasks such as banning, kicking, and member information. Additionally, it offers utility commands like announcing messages and sending direct messages.', 10);
     animateText('.projectdesc1', '.projects', 'The mod mail setup allows administrators to configure a designated category and channel for mod mail.', 10);
-    changeColor("#p", "#161616", ".projectwrap", "top center", "450%");
 });
     
 onUnmounted(() => {
@@ -80,7 +79,6 @@ onUnmounted(() => {
 .outerWrapper{
     height: 430vh;
     width: 100vw;
-    padding-top: 1%;
 }
 
 .innerWrapper{
@@ -105,7 +103,6 @@ onUnmounted(() => {
     padding-bottom: 20px;
     margin: 0;
     text-align: left;
-    color: #e7e7e7;
 }
 
 .project{
@@ -115,7 +112,6 @@ onUnmounted(() => {
     text-align: left;
     padding-right: 45px;
     padding-top: 35px;
-    color: #e7e7e7;
 }
 
 .projectdesc, .projectdesc1{
@@ -125,7 +121,6 @@ onUnmounted(() => {
     text-align: left;
     padding-right: 45px;
     padding-top: 35px;
-    color: #e7e7e7;
 }
 
 .projectpics{

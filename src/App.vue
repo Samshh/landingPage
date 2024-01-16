@@ -1,6 +1,5 @@
 <script setup>
 import firstpage from './components/firstpage.vue'
-// import navigation from './components/navigation.vue'
 import secondpage from './components/secondpage.vue'
 import cursor from './components/cursor.vue'
 import footerpage from './components/footerpage.vue'
