@@ -42,18 +42,14 @@ onMounted(() => {
     scrollerpic(".projectpic3", ".projectpic3", "1", "-5%");
     scrollerpic(".projectpic4", ".projectpic4", "1", "-5%");
     scrollerpic(".projectpic5", ".projectpic5", "1", "-5%");
-    animateText('.projects', '.projects', 'Featured Project.', 1);
+    animateText('.projects', '.projects', 'featured project.', 2);
     animateText('.projectdesc', '.projects', 'This Discord bot serves as a ticket system with additional features. Users can create tickets using the "/ticket" command, and staff can manage them. The bot includes commands for basic moderation tasks such as banning, kicking, and member information. Additionally, it offers utility commands like announcing messages and sending direct messages.', 10);
     animateText('.projectdesc1', '.projects', 'The mod mail setup allows administrators to configure a designated category and channel for mod mail.', 10);
-    changeColor(".projects", "#161616", ".projectwrap", "top center", "400%");
-    changeColor(".project", "#161616", ".projectwrap", "top center", "400%");
-    changeColor(".projectdesc", "#161616", ".projectwrap", "top center", "400%");
-    changeColor(".projectdesc1", "#161616", ".projectwrap", "top center", "400%");
-
+    changeColor("#p", "#161616", ".projectwrap", "top center", "450%");
 });
     
 onUnmounted(() => {
-    gsap.killTweensOf(".projectwrap", "projectpic1", "projectpic2", "projectpic3", "projectpic4", "projectpic5");
+    gsap.killTweensOf(".projects",".projectwrap", "projectpic1", "projectpic2", "projectpic3", "projectpic4", "projectpic5");
 });
 </script>
 
@@ -61,20 +57,20 @@ onUnmounted(() => {
     <div class="outerWrapper">
         <div class="innerWrapper">
             <div class="projectwrap">
-                <p class="projects">注目のプロジェクト。</p>
-                <p class="project">Discord API.</p>
-                <p class="projectdesc">このDiscordボットは、追加の機能を備えたチケットシステムとして機能します。
+                <p id="p" class="projects">注目のプロジェクト。</p>
+                <p id="p" class="project">Discord API.</p>
+                <p id="p" class="projectdesc">このDiscordボットは、追加の機能を備えたチケットシステムとして機能します。
                 ユーザーは「/ticket」コマンドを使用してチケットを作成でき、スタッフはそれらを管理できます。
                 ボットには禁止、キック、およびメンバー情報などの基本的なモデレーションタスクのためのコマンドが含まれています。
                 さらに、アナウンスメッセージやダイレクトメッセージの送信などのユーティリティコマンドも提供されています。 
-                <p class="projectdesc1">モッドメールのセットアップでは、管理者が指定したカテゴリとチャンネルをモッドメール用に設定できます。</p></p>
+                <p id="p" class="projectdesc1">モッドメールのセットアップでは、管理者が指定したカテゴリとチャンネルをモッドメール用に設定できます。</p></p>
             </div>
             <div class="projectpics">
-                <img class="projectpic1" src="/src/assets/project1.png" alt="">
-                <img class="projectpic2" src="/src/assets/project2.png" alt="">
-                <img class="projectpic3" src="/src/assets/project3.png" alt="">
-                <img class="projectpic4" src="/src/assets/project4.png" alt="">
-                <img class="projectpic5" src="/src/assets/project5.png" alt="">
+                <img id="pic" class="projectpic1" src="/src/assets/project1.png" alt="">
+                <img id="pic" class="projectpic2" src="/src/assets/project2.png" alt="">
+                <img id="pic" class="projectpic3" src="/src/assets/project3.png" alt="">
+                <img id="pic" class="projectpic4" src="/src/assets/project4.png" alt="">
+                <img id="pic" class="projectpic5" src="/src/assets/project5.png" alt="">
             </div>
         </div>
     </div>
@@ -82,7 +78,7 @@ onUnmounted(() => {
 
 <style scoped>
 .outerWrapper{
-    height: 400vh;
+    height: 430vh;
     width: 100vw;
     padding-top: 1%;
 }
@@ -155,6 +151,7 @@ onUnmounted(() => {
     user-select: none;
     position: relative;
     left: 5%;
+    box-shadow: 0px 0px 10px 0px #161616;
 }
 
 @media (max-width: 430px){

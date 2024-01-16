@@ -35,3 +35,33 @@ export const changeColor = (selector, color, trigger, start, end) => {
         color: color,
       });
 };
+
+export const BGchangeColor = (trigger, color) => {
+  gsap.to(".background", {
+    scrollTrigger: {
+      trigger: trigger,
+      start: "top center",
+      end: "bottom center",
+      toggleActions: "play reverse play reverse",
+      scrub: false,
+      markers: false,
+    },
+    ease: "power1.inOut",
+    backgroundColor: color,
+  });
+};
+
+export const cursorChange = (trigger, color) => {
+  gsap.to(".custom-cursor", {
+    scrollTrigger: {
+      trigger: trigger,
+      start: "top center",
+      end: "bottom center",
+      toggleActions: "play reverse play reverse",
+      scrub: false,
+      markers: false,
+    },
+    ease: "power1.inOut",
+    backgroundColor: color,
+  });
+};

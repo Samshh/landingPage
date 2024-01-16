@@ -6,6 +6,7 @@ import cursor from './components/cursor.vue'
 import footerpage from './components/footerpage.vue'
 import Lenis from '@studio-freight/lenis'
 import thirdpage from './components/thirdpage.vue'
+import footermain from './components/footermain.vue'
 
 const lenis = new Lenis();
 
@@ -23,6 +24,7 @@ requestAnimationFrame(raf)
     <firstpage/>
     <secondpage/>
     <thirdpage/>
+    <footermain/>
     <footerpage/>
 </template>
 
