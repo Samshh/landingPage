@@ -1,8 +1,20 @@
 <script setup>
 import { gsap } from "gsap"; 
-import { onMounted, onUnmounted} from 'vue';
+import { onMounted, onUnmounted, ref, watchEffect} from 'vue';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import {BGchangeColor, animateText, changeColor, cursorChange} from './animations.js';
+
+const currentTime = ref(new Date().toLocaleTimeString());
+
+watchEffect(() => {
+  const intervalId = setInterval(() => {
+    currentTime.value = new Date().toLocaleTimeString();
+  }, 1000);
+
+  onUnmounted(() => {
+    clearInterval(intervalId);
+  });
+});
 
 gsap.registerPlugin(ScrollTrigger);
 onMounted(() => {
@@ -11,6 +23,7 @@ onMounted(() => {
     cursorChange(".outterWrapper", "#e7e7e7");
     changeColor(".contacts", "#e7e7e7", ".outterWrapper", "top center", "bottom center");
     changeColor(".contact", "#e7e7e7", ".outterWrapper", "top center", "bottom center");
+    changeColor(".time p", "#e7e7e7", ".outterWrapper", "top center", "bottom center");
 });
  
   onUnmounted(() => {
@@ -37,8 +50,9 @@ onMounted(() => {
           <i class="fas fa-utensils"></i> Bento
         </a>
       </div>
-        
-        <div class="detes"></div>
+    </div>
+    <div class="time" style="width: 250px;" >
+      <p>{{ currentTime }}</p>
     </div>
 </div>
 </template>
@@ -48,6 +62,9 @@ onMounted(() => {
 .outterWrapper{
     width: 100vh;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .innerWrapper{
@@ -59,6 +76,7 @@ onMounted(() => {
   padding-bottom: 20px;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   padding-left: 10%;
   padding-top: 10%;
 }
@@ -70,7 +88,11 @@ onMounted(() => {
     text-align: left;
     color: #161616;
 }
-
+.heartIcon{
+  color: #e7e7e7;
+  margin-left: 5px;
+  margin-right: 5px;
+}
 .contact{
     margin: 0;
     font-size: 25px;
@@ -90,6 +112,24 @@ onMounted(() => {
     color: #161616;
 }
 
+.time p{
+    font-size: 25px;
+    font-weight: 400;
+    text-align: center;
+    padding-left: 108px;
+    text-decoration: none;
+    position: relative;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none; 
+    user-select: none;
+    color: #161616;
+    margin: 0;
+    padding-bottom: 60px;
+}
 .contact i {
     margin-right: 10px;
   }
