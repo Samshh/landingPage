@@ -89,7 +89,7 @@ onMounted(() => {
     user-select: none; 
     pointer-events: none;
     position: relative;
-    animation: glitch 1s infinite;
+    /* animation: glitch 1s infinite; */
 }
 
 .logo::before,
