@@ -4,7 +4,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { TextPlugin } from 'gsap/TextPlugin';
 import {animateText} from './animations.js';
-
+import Lenis from '@studio-freight/lenis';
 
 onMounted(() => {
     gsap.registerPlugin(TextPlugin);
@@ -36,6 +36,20 @@ onMounted(() => {
             opacity: opacity,
         });
     };
+
+    const lenis = new Lenis()
+    lenis.on('scroll', (e) => {
+        console.log(e)
+    })
+
+    lenis.on('scroll', ScrollTrigger.update)
+
+    gsap.ticker.add((time)=>{
+        lenis.raf(time * 1000)
+    })
+
+    gsap.ticker.lagSmoothing(0)
+
     scrollerpic(".projectpics", ".projectpics", "1", "0");
     scrollerpic(".projectpic1", ".projectpic1 ", "1", "-5%");
     scrollerpic(".projectpic2", ".projectpic2", "1", "-5%");
