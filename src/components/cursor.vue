@@ -1,9 +1,13 @@
 <template>
-  <div v-if="smallscreen" class="custom-cursor" :style="{ top: cursorY + 'px', left: cursorX + 'px' }"></div>
+  <div
+    v-if="smallscreen"
+    class="custom-cursor"
+    :style="{ top: cursorY + 'px', left: cursorX + 'px' }"
+  ></div>
 </template>
 
 <script setup>
-import { onMounted, onBeforeUnmount, ref } from 'vue';
+import { onMounted, onBeforeUnmount, ref } from "vue";
 
 const smallscreen = ref(window.innerWidth > 1024);
 
@@ -20,11 +24,11 @@ const updateCursorPosition = (event) => {
 };
 
 onMounted(() => {
-  document.addEventListener('mousemove', updateCursorPosition);
+  document.addEventListener("mousemove", updateCursorPosition);
 });
 
 onBeforeUnmount(() => {
-  document.removeEventListener('mousemove', updateCursorPosition);
+  document.removeEventListener("mousemove", updateCursorPosition);
 });
 </script>
 
@@ -45,5 +49,4 @@ onBeforeUnmount(() => {
     display: none;
   }
 }
-
 </style>
