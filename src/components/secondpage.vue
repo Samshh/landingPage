@@ -29,7 +29,7 @@ onMounted(() => {
 });
 
   onUnmounted(() => {
-    gsap.killTweensOf(".myText", ".myText2");
+    gsap.killTweensOf(".myText", ".myText2", ".me", "#p", ".myPic", ".outerWrapper");
 });
 
 </script>

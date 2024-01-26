@@ -31,10 +31,12 @@ cursorY.value = event.clientY;
 
 onMounted(() => {
 document.addEventListener('mousemove', updateCursorPosition);
+lenis.start();
 });
 
 onBeforeUnmount(() => {
 document.removeEventListener('mousemove', updateCursorPosition);
+lenis.stop();
 });
 </script>
 
