@@ -50,7 +50,7 @@ onMounted(() => {
                   そして、くつろぐ時間にはアニメを観ていることがあります。一緒にこのテックと創造性の旅を探機しましょう！
                 </p>   
             </div>
-        <img class="myPic" src="\src\assets\SamGoogle1.webp" alt="">
+        <img class="myPic" src="\src\assets\SamGoogle.png" alt="">
         </div>
     </div>
 </div>
@@ -100,16 +100,23 @@ onMounted(() => {
         opacity: 0;
   }
 }
-.myPic{
-    border-radius: 10px;
-    height: 40.5%;
-    width: 40.5%;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none; 
-    user-select: none; 
-    pointer-events: none;
-    opacity: 0;
+.myPic {
+  border-radius: 10px;
+  height: 40.5%;
+  width: 40.5%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none; 
+  user-select: none; 
+  opacity: 0;
+  transition: transform 0.5s, box-shadow 0.5s, filter 0.5s;
+  transform-style: preserve-3d;
+  filter: grayscale(100%);
+}
+
+.myPic:hover {
+  transform: scale(1.1) perspective(1000px);
+  filter: grayscale(0%);
 }
 
 .aboutMe2{
