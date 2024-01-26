@@ -1,24 +1,24 @@
 <script setup>
 import { gsap } from "gsap"; 
 import { onMounted, onUnmounted} from 'vue';
-// import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import {BGchangeColor, animateText, changeColor, cursorChange} from './animations.js';
 
 onMounted(() => {
-//   gsap.registerPlugin(ScrollTrigger);
+  gsap.registerPlugin(ScrollTrigger);
 
-//   gsap.to(".myPic", {
-//     scrollTrigger: {
-//       trigger: ".outerWrapper",
-//       start: "top center",
-//       end: "bottom center",
-//       toggleActions: "play reverse play reverse",
-//       scrub: false,
-//       markers: false,
-//     },
-//     ease: "power1.inOut",
-//     opacity: 1,
-//   });
+  gsap.to(".myPic", {
+    scrollTrigger: {
+      trigger: ".outerWrapper",
+      start: "top center",
+      end: "bottom center",
+      toggleActions: "play reverse play reverse",
+      scrub: false,
+      markers: false,
+    },
+    ease: "power1.inOut",
+    opacity: 1,
+  });
   
   cursorChange(".outerWrapper", "#e7e7e7")
   BGchangeColor(".outerWrapper", "#161616")
@@ -108,7 +108,8 @@ onMounted(() => {
   -moz-user-select: none;
   -ms-user-select: none; 
   user-select: none; 
-  opacity: 1;
+  /* opacity: 1; */
+  opacity: 0;
   transition: transform 0.5s, box-shadow 0.5s, filter 0.5s;
   transform-style: preserve-3d;
   filter: grayscale(100%);

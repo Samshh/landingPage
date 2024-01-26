@@ -88,11 +88,7 @@ onMounted(() => {
     text-align: left;
     color: #161616;
 }
-.heartIcon{
-  color: #e7e7e7;
-  margin-left: 5px;
-  margin-right: 5px;
-}
+
 .contact{
     margin: 0;
     font-size: 25px;
@@ -129,6 +125,7 @@ onMounted(() => {
     color: #161616;
     margin: 0;
     padding-bottom: 60px;
+    white-space: nowrap;
 }
 .contact i {
     margin-right: 10px;
