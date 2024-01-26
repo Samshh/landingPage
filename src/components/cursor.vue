@@ -6,40 +6,50 @@
 import { onMounted, onBeforeUnmount, ref } from 'vue';
 import Lenis from '@studio-freight/lenis';
 
-const lenis = new Lenis();
+let lenis;
+
+try {
+  lenis = new Lenis();
+} catch (error) {
+  console.error("Failed to initialize Lenis:", error);
+}
 
 function raf(time) {
-  lenis.raf(time)
-  requestAnimationFrame(raf)
+  if (lenis) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
 }
-requestAnimationFrame(raf)
-
+requestAnimationFrame(raf);
 
 const smallscreen = ref(window.innerWidth > 1024);
 
 const updateScreenSize = () => {
-smallscreen.value = window.innerWidth > 1024;
+  smallscreen.value = window.innerWidth > 1024;
 };
 
 const cursorX = ref(0);
 const cursorY = ref(0);
 
 const updateCursorPosition = (event) => {
-cursorX.value = event.clientX;
-cursorY.value = event.clientY;
+  cursorX.value = event.clientX;
+  cursorY.value = event.clientY;
 };
 
 onMounted(() => {
-document.addEventListener('mousemove', updateCursorPosition);
-lenis.start();
+  document.addEventListener('mousemove', updateCursorPosition);
+  if (lenis) {
+    lenis.start();
+  }
 });
 
 onBeforeUnmount(() => {
-document.removeEventListener('mousemove', updateCursorPosition);
-lenis.stop();
+  document.removeEventListener('mousemove', updateCursorPosition);
+  if (lenis) {
+    lenis.stop();
+  }
 });
 </script>
-
 
 <style scoped>
 .custom-cursor {
