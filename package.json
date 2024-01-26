@@ -9,7 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@studio-freight/lenis": "^1.0.33",
+    "@studio-freight/lenis": "^1.0.34",
     "gsap": "^3.12.4",
     "vue": "^3.3.11"
   },

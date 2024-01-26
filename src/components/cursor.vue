@@ -4,23 +4,9 @@
 
 <script setup>
 import { onMounted, onBeforeUnmount, ref } from 'vue';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Lenis from '@studio-freight/lenis';
-
-let lenis;
-
-try {
-  lenis = new Lenis();
-} catch (error) {
-  console.error("Failed to initialize Lenis:", error);
-}
-
-function raf(time) {
-  if (lenis) {
-    lenis.raf(time);
-    requestAnimationFrame(raf);
-  }
-}
-requestAnimationFrame(raf);
 
 const smallscreen = ref(window.innerWidth > 1024);
 
@@ -37,17 +23,25 @@ const updateCursorPosition = (event) => {
 };
 
 onMounted(() => {
+  gsap.registerPlugin(ScrollTrigger);
   document.addEventListener('mousemove', updateCursorPosition);
-  if (lenis) {
-    lenis.start();
-  }
+  const lenis = new Lenis()
+
+  lenis.on('scroll', (e) => {
+    console.log(e)
+  })
+
+  lenis.on('scroll', ScrollTrigger.update)
+
+  gsap.ticker.add((time)=>{
+    lenis.raf(time * 1000)
+  })
+
+  gsap.ticker.lagSmoothing(0)
 });
 
 onBeforeUnmount(() => {
   document.removeEventListener('mousemove', updateCursorPosition);
-  if (lenis) {
-    lenis.stop();
-  }
 });
 </script>
 

@@ -112,6 +112,7 @@ onMounted(() => {
   transition: transform 0.5s, box-shadow 0.5s, filter 0.5s;
   transform-style: preserve-3d;
   filter: grayscale(100%);
+  box-shadow: 0px 0px 10px 0px #161616
 }
 
 .myPic:hover {
