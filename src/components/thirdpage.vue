@@ -56,7 +56,7 @@ onUnmounted(() => {
         <div class="innerWrapper">
             <div class="projectwrap">
                 <p id="p" class="projects">注目のプロジェクト。</p>
-                <p id="p" class="project">Discord API.</p>
+                <a id="p" class="project" href="https://github.com/Samshh/DiscordBot" target="_blank" style="color: #161616;" >Discord API.</a>
                 <p id="p" class="projectdesc">このDiscordボットは、追加の機能を備えたチケットシステムとして機能します。
                 ユーザーは「/ticket」コマンドを使用してチケットを作成でき、スタッフはそれらを管理できます。
                 ボットには禁止、キック、およびメンバー情報などの基本的なモデレーションタスクのためのコマンドが含まれています。
@@ -111,6 +111,7 @@ onUnmounted(() => {
     text-align: left;
     padding-right: 45px;
     padding-top: 35px;
+    cursor: none;
 }
 
 .projectdesc, .projectdesc1{
