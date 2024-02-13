@@ -6,32 +6,16 @@ import { onMounted, onUnmounted } from "vue";
 onMounted(() => {
   gsap.registerPlugin(TextPlugin);
 
-  const animateText = (selector, text, text1, duration, repeat) => {
+  const animateText = (selector, text, duration) => {
     gsap.to(selector, {
       duration: duration,
       text: text, 
       delay: 1,
-      ease: "power1.out",
-      onComplete: () => {
-        const timeline = gsap.timeline({ repeat: repeat, yoyo: true });
-        timeline
-          .to(selector, {
-            duration: duration,
-            text: text, 
-            // delay: 1,
-            ease: "power1.inOut",
-          })
-          .to(selector, {
-            duration: duration,
-            text: text1, 
-            // delay: 1,
-            ease: "power1.inOut",
-          });
-      }
+      ease: "power1.out"
     });
   };
 
-  animateText(".maintext", "Samshh", "meiple", 3, -1);
+  animateText(".maintext", "Samshh", 3);
 });
 
 onUnmounted(() => {
