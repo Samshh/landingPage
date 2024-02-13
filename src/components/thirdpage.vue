@@ -3,7 +3,7 @@ import { onMounted, onUnmounted } from 'vue';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { TextPlugin } from 'gsap/TextPlugin';
-import {animateText} from './animations.js';
+import { animateText } from './animations.js';
 
 onMounted(() => {
     gsap.registerPlugin(TextPlugin);
@@ -12,11 +12,12 @@ onMounted(() => {
         scrollTrigger: {
             trigger: ".projectwrap",
             start: "-3.5%",
-            end: "350%", 
+            endTrigger: ".projectpic5",
+            end: "center center",
             pin: true,
-            pinSpacing: false, 
+            pinSpacing: false,
             scrub: true,
-            markers: false, 
+            markers: false,
         },
     });
 
@@ -35,6 +36,7 @@ onMounted(() => {
             opacity: opacity,
         });
     };
+    // scrollerpic("#p", ".projectpics", "1");
     scrollerpic(".projectpics", ".projectpics", "1", "0");
     scrollerpic(".projectpic1", ".projectpic1 ", "1", "-5%");
     scrollerpic(".projectpic2", ".projectpic2", "1", "-5%");
@@ -45,9 +47,9 @@ onMounted(() => {
     animateText('.projectdesc', '.projects', 'This Discord bot serves as a ticket system with additional features. Users can create tickets using the "/ticket" command, and staff can manage them. The bot includes commands for basic moderation tasks such as banning, kicking, and member information. Additionally, it offers utility commands like announcing messages and sending direct messages.', 10);
     animateText('.projectdesc1', '.projects', 'The mod mail setup allows administrators to configure a designated category and channel for mod mail.', 10);
 });
-    
+
 onUnmounted(() => {
-    gsap.killTweensOf(".projects",".projectwrap", "projectpic1", "projectpic2", "projectpic3", "projectpic4", "projectpic5");
+    gsap.killTweensOf(".projects", ".projectwrap", "projectpic1", "projectpic2", "projectpic3", "projectpic4", "projectpic5");
 });
 </script>
 
@@ -56,12 +58,14 @@ onUnmounted(() => {
         <div class="innerWrapper">
             <div class="projectwrap">
                 <p id="p" class="projects">注目のプロジェクト。</p>
-                <a id="p" class="project" href="https://github.com/Samshh/DiscordBot" target="_blank" style="color: #161616;" >Discord API.</a>
+                <a id="p" class="project" href="https://github.com/Samshh/DiscordBot" target="_blank"
+                    style="color: #161616;">Discord API.</a>
                 <p id="p" class="projectdesc">このDiscordボットは、追加の機能を備えたチケットシステムとして機能します。
-                ユーザーは「/ticket」コマンドを使用してチケットを作成でき、スタッフはそれらを管理できます。
-                ボットには禁止、キック、およびメンバー情報などの基本的なモデレーションタスクのためのコマンドが含まれています。
-                さらに、アナウンスメッセージやダイレクトメッセージの送信などのユーティリティコマンドも提供されています。 
-                <p id="p" class="projectdesc1">モッドメールのセットアップでは、管理者が指定したカテゴリとチャンネルをモッドメール用に設定できます。</p></p>
+                    ユーザーは「/ticket」コマンドを使用してチケットを作成でき、スタッフはそれらを管理できます。
+                    ボットには禁止、キック、およびメンバー情報などの基本的なモデレーションタスクのためのコマンドが含まれています。
+                    さらに、アナウンスメッセージやダイレクトメッセージの送信などのユーティリティコマンドも提供されています。
+                <p id="p" class="projectdesc1">モッドメールのセットアップでは、管理者が指定したカテゴリとチャンネルをモッドメール用に設定できます。</p>
+                </p>
             </div>
             <div class="projectpics">
                 <img id="pic" class="projectpic1" src="/src/assets/project1.png" alt="">
@@ -75,55 +79,55 @@ onUnmounted(() => {
 </template>
 
 <style scoped>
-.outerWrapper{
-    height: 430vh;
-    width: 100vw;
+.outerWrapper {
+    padding-bottom: clamp(25px, 1.7vw, 50px);
 }
 
-.innerWrapper{
+.innerWrapper {
     display: flex;
     align-items: flex-start;
     justify-content: center;
 }
 
-.projectwrap{
+.projectwrap {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    padding-left: 5%;
-    gap: 20px;
+    padding-left: clamp(22.5px, 2.7vw, 45px);
+    gap: clamp(12.5px, 1.7vw, 25px);
 }
 
-.projects{
-    font-size: 45px;
+.projects {
+    font-size: clamp(22.5px, 3.4vw, 45px);
     font-weight: 400px;
     margin-bottom: 0px;
-    padding-bottom: 20px;
+    padding-bottom: clamp(10px, 1.7vw, 20px);
     margin: 0;
     text-align: left;
 }
 
-.project{
+.project {
     margin: 0;
-    font-size: 30px;
+    font-size: clamp(15px, 1.7vw, 30px);
     font-weight: 400;
     text-align: left;
-    padding-right: 45px;
-    padding-top: 35px;
+    padding-right: clamp(22.5px, 1.7vw, 45px);
+    padding-top: clamp(17.5px, 1.7vw, 35px);
     cursor: none;
 }
 
-.projectdesc, .projectdesc1{
+.projectdesc,
+.projectdesc1 {
     margin: 0;
-    font-size: 30px;
+    font-size: clamp(15px, 1.7vw, 30px);
     font-weight: 400;
     text-align: left;
-    padding-right: 45px;
-    padding-top: 35px;
+    padding-right: clamp(22.5px, 1.7vw, 45px);
+    padding-top: clamp(15px, 1.7vw, 30px);
 }
 
-.projectpics{
+.projectpics {
     padding-top: 5%;
     display: flex;
     flex-direction: column;
@@ -135,24 +139,26 @@ onUnmounted(() => {
     opacity: 0;
 }
 
-.projectpic1, .projectpic2, .projectpic3, .projectpic4, .projectpic5{
-    width: 1000px;
-    height: 600px;
+.projectpic1,
+.projectpic2,
+.projectpic3,
+.projectpic4,
+.projectpic5 {
+    width: clamp(200px, 50vw, 1000px);
+    object-fit: fill;
     border-radius: 10px;
     margin-top: 90px;
     -webkit-user-select: none;
     -moz-user-select: none;
-    -ms-user-select: none; 
+    -ms-user-select: none;
     user-select: none;
     position: relative;
     left: 5%;
     box-shadow: 0px 0px 10px 0px #161616;
 }
 
-@media (max-width: 430px){
-    .outerWrapper{
+@media (max-width: 430px) {
+    .outerWrapper {
         display: none;
     }
-}
-
-</style>
+}</style>

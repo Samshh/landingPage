@@ -59,36 +59,17 @@ onUnmounted(() => {
     <div class="innerWrapper">
       <div class="contwrap">
         <div class="contacts">お問い合わせはこちら。</div>
-        <a
-          class="contact linkedin"
-          target="_blank"
-          href="https://www.linkedin.com/in/samshh/"
-          style="cursor: none"
-        >
+        <a class="contact linkedin" target="_blank" href="https://www.linkedin.com/in/samshh/" style="cursor: none">
           <i class="fab fa-linkedin"></i> LinkedIn
         </a>
-        <a
-          class="contact github"
-          target="_blank"
-          href="https://github.com/Samshh"
-          style="cursor: none"
-        >
+        <a class="contact github" target="_blank" href="https://github.com/Samshh" style="cursor: none">
           <i class="fab fa-github"></i> GitHub
         </a>
-        <a
-          class="contact google"
-          target="_blank"
-          href="https://developers.google.com/profile/u/samshh"
-          style="cursor: none"
-        >
+        <a class="contact google" target="_blank" href="https://developers.google.com/profile/u/samshh"
+          style="cursor: none">
           <i class="fab fa-google"></i> Google
         </a>
-        <a
-          class="contact bento"
-          target="_blank"
-          href="https://bento.me/samshh"
-          style="cursor: none"
-        >
+        <a class="contact bento" target="_blank" href="https://bento.me/samshh" style="cursor: none">
           <i class="fas fa-utensils"></i> Bento
         </a>
       </div>
@@ -114,16 +95,16 @@ onUnmounted(() => {
 
 .contwrap {
   margin-bottom: 0px;
-  padding-bottom: 20px;
+  padding-bottom: clamp(10px, 1.7vw, 20px);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding-left: 10%;
-  padding-top: 10%;
+  padding-left: clamp(22px, 5.7vw, 45px);
+  padding-top: clamp(10px, 1.7vw, 20px);
 }
 
 .contacts {
-  font-size: 45px;
+  font-size: clamp(22.5px, 2.7vw, 45px);
   font-weight: 400px;
   margin: 0;
   text-align: left;
@@ -132,10 +113,10 @@ onUnmounted(() => {
 
 .contact {
   margin: 0;
-  font-size: 25px;
+  font-size: clamp(15px, 1.7vw, 30px);
   font-weight: 400;
   text-align: center;
-  padding: 15px;
+  padding: clamp(7.5px, 1.7vw, 15px);
   text-decoration: none;
   position: relative;
   transition: color 0.3s;
@@ -150,10 +131,10 @@ onUnmounted(() => {
 }
 
 .time p {
-  font-size: 25px;
+  font-size: clamp(15px, 1.7vw, 30px);
   font-weight: 400;
   text-align: center;
-  padding-left: 108px;
+  padding-left: clamp(40px, 1.7vw, 108px);
   text-decoration: none;
   position: relative;
   display: flex;
@@ -165,11 +146,12 @@ onUnmounted(() => {
   user-select: none;
   color: #161616;
   margin: 0;
-  padding-bottom: 60px;
+  padding-bottom: clamp(30px, 1.7vw, 60px);
   white-space: nowrap;
 }
+
 .contact i {
-  margin-right: 10px;
+  margin-right: clamp(5px, 1.7vw, 10px);
 }
 
 .contact:hover {

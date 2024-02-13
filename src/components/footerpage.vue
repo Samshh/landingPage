@@ -2,36 +2,17 @@
   <div class="outerWrapper">
     <div class="innerWrapper">
       <div class="contactMe">
-        <a
-          class="contact linkedin"
-          target="_blank"
-          href="https://www.linkedin.com/in/samshh/"
-          style="cursor: none"
-        >
+        <a class="contact linkedin" target="_blank" href="https://www.linkedin.com/in/samshh/" style="cursor: none">
           <i class="fab fa-linkedin"></i> LinkedIn
         </a>
-        <a
-          class="contact github"
-          target="_blank"
-          href="https://github.com/Samshh"
-          style="cursor: none"
-        >
+        <a class="contact github" target="_blank" href="https://github.com/Samshh" style="cursor: none">
           <i class="fab fa-github"></i> GitHub
         </a>
-        <a
-          class="contact google"
-          target="_blank"
-          href="https://developers.google.com/profile/u/samshh"
-          style="cursor: none"
-        >
+        <a class="contact google" target="_blank" href="https://developers.google.com/profile/u/samshh"
+          style="cursor: none">
           <i class="fab fa-google"></i> Google
         </a>
-        <a
-          class="contact bento"
-          target="_blank"
-          href="https://bento.me/samshh"
-          style="cursor: none"
-        >
+        <a class="contact bento" target="_blank" href="https://bento.me/samshh" style="cursor: none">
           <i class="fas fa-utensils"></i> Bento
         </a>
       </div>
@@ -87,6 +68,7 @@
   margin-left: 5px;
   margin-right: 5px;
 }
+
 .contact {
   margin: 0;
   font-size: 25px;
@@ -128,12 +110,14 @@
   .outerWrapper {
     display: contents;
   }
+
   .contactMe {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
   }
+
   .madeBy {
     padding-bottom: 15px;
   }

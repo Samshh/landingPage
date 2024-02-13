@@ -12,18 +12,18 @@ import {
 onMounted(() => {
   gsap.registerPlugin(ScrollTrigger);
 
-  // gsap.to(".myPic", {
-  //   scrollTrigger: {
-  //     trigger: ".outerWrapper",
-  //     start: "top center",
-  //     end: "bottom center",
-  //     toggleActions: "play reverse play reverse",
-  //     scrub: false,
-  //     markers: false,
-  //   },
-  //   ease: "power1.inOut",
-  //   opacity: 1,
-  // });
+  gsap.to(".myPic", {
+    scrollTrigger: {
+      trigger: ".outerWrapper",
+      start: "top center",
+      end: "bottom center",
+      toggleActions: "play reverse play reverse",
+      scrub: false,
+      markers: false,
+    },
+    ease: "power1.inOut",
+    opacity: 1,
+  });
 
   cursorChange(".outerWrapper", "#e7e7e7");
   BGchangeColor(".outerWrapper", "#161616");
@@ -59,6 +59,7 @@ onUnmounted(() => {
   <div class="outerWrapper">
     <div class="innerWrapper">
       <div class="aboutMe">
+        <img class="myPic" src="\src\assets\SamGoogle.png" alt="" />
         <div class="aboutMe2">
           <p id="p" class="me">私について。</p>
           <p id="p" class="desc myText">
@@ -72,43 +73,38 @@ onUnmounted(() => {
             そして、くつろぐ時間にはアニメを観ていることがあります。一緒にこのテックと創造性の旅を探機しましょう！
           </p>
         </div>
-        <img class="myPic" src="\src\assets\SamGoogle.png" alt="" />
+        
       </div>
     </div>
   </div>
 </template>
 
 <style scoped>
-.outerWrapper {
-  height: auto;
-  width: 100vw;
-}
-
-.innerWrapper {
-  padding-left: 20px;
-  padding-right: 70px;
-}
 
 .aboutMe {
+  padding-right: clamp(22.5px, 2.7vw, 45px);
+  padding-left: clamp(22.5px, 2.7vw, 45px);
   display: flex;
   color: #161616;
-  padding-bottom: 20px;
+  padding-bottom: clamp(35px, 5.7vw, 70px);
+  
 }
 .me {
-  font-size: 45px;
+  font-size: clamp(22.5px, 3.4vw, 45px);
   font-weight: 400px;
   margin-bottom: 0px;
-  padding-bottom: 20px;
+  padding-left: clamp(42.5px, 5.7vw, 85px);
+  padding-bottom: clamp(10px, 1.7vw, 20px);
   margin: 0;
 }
 
 .desc {
   margin: 0;
-  font-size: 30px;
+  font-size: clamp(15px, 1.7vw, 30px);
   font-weight: 400;
   text-align: left;
-  padding-right: 45px;
-  padding-top: 35px;
+  padding-left: clamp(42.5px, 5.7vw, 85px);
+  padding-top: clamp(15px, 1.7vw, 30px);
 }
 
 @keyframes slide {
@@ -125,18 +121,16 @@ onUnmounted(() => {
 }
 .myPic {
   border-radius: 10px;
-  height: 40.5%;
-  width: 40.5%;
+  object-fit: cover;
+  height: clamp(450px, 50vw, 900px);
+  width: clamp(250px, 50vw, 800px);
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  opacity: 1;
-  /* opacity: 0; */
   transition: transform 0.5s, box-shadow 0.5s, filter 0.5s;
   transform-style: preserve-3d;
   filter: grayscale(100%);
-  box-shadow: 0px 0px 10px 0px #161616;
 }
 
 .myPic:hover {
@@ -145,9 +139,7 @@ onUnmounted(() => {
 }
 
 .aboutMe2 {
-  padding-top: 10%;
-  padding-left: 3%;
-  padding-right: 5%;
+  padding-top: clamp(45px, 5vw, 180px);
 }
 
 ::selection {
@@ -170,12 +162,18 @@ onUnmounted(() => {
     justify-content: space-around;
     padding: 0;
   }
+  .me {
+    padding-left: 0;
+  }
   .aboutMe {
-    flex-direction: column;
+    flex-direction: column-reverse;
     width: auto;
+    padding: 0;
   }
 
   .aboutMe2 {
+    padding-right: clamp(22.5px, 2.7vw, 45px);
+    padding-left: clamp(22.5px, 2.7vw, 45px);
     padding-top: 0px;
   }
   .desc {

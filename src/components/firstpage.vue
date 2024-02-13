@@ -9,7 +9,7 @@ onMounted(() => {
   const animateText = (selector, text, duration) => {
     gsap.to(selector, {
       duration: duration,
-      text: text, 
+      text: text,
       delay: 1,
       ease: "power1.out"
     });
@@ -108,14 +108,17 @@ onUnmounted(() => {
 }
 
 @keyframes glitch {
+
   2%,
   64% {
     transform: translate(2px, 0) skew(0deg);
   }
+
   4%,
   60% {
     transform: translate(-2px, 0) skew(0deg);
   }
+
   62% {
     transform: translate(0, 0) skew(5deg);
   }
@@ -172,6 +175,7 @@ onUnmounted(() => {
   animation-fill-mode: forwards;
   animation-timing-function: ease-in-out;
 }
+
 .kanji p {
   font-family: "Noto Serif JP", serif;
   font-weight: 400;
@@ -218,6 +222,7 @@ onUnmounted(() => {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -251,12 +256,10 @@ onUnmounted(() => {
   width: 100%;
   top: -50%;
   left: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 0) 0%,
-    #161616 75%,
-    #161616 100%
-  );
+  background: linear-gradient(to bottom,
+      rgba(255, 255, 255, 0) 0%,
+      #161616 75%,
+      #161616 100%);
   animation: drop 7s 0s infinite;
   animation-fill-mode: forwards;
   animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
@@ -314,8 +317,8 @@ onUnmounted(() => {
   0% {
     top: -50%;
   }
+
   100% {
     top: 110%;
   }
-}
-</style>
+}</style>

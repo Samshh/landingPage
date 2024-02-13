@@ -1,9 +1,5 @@
 <template>
-  <div
-    v-if="smallscreen"
-    class="custom-cursor"
-    :style="{ top: cursorY + 'px', left: cursorX + 'px' }"
-  ></div>
+  <div v-if="smallscreen" class="custom-cursor" :style="{ top: cursorY + 'px', left: cursorX + 'px' }"></div>
 </template>
 
 <script setup>
