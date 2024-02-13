@@ -131,6 +131,7 @@ onUnmounted(() => {
   transition: transform 0.5s, box-shadow 0.5s, filter 0.5s;
   transform-style: preserve-3d;
   filter: grayscale(100%);
+  opacity: 0;
 }
 
 .myPic:hover {
