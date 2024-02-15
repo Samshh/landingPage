@@ -68,11 +68,11 @@ onUnmounted(() => {
                 </p>
             </div>
             <div class="projectpics">
-                <img id="pic" class="projectpic1" src="/src/assets/project1.png" alt="">
-                <img id="pic" class="projectpic2" src="/src/assets/project2.png" alt="">
-                <img id="pic" class="projectpic3" src="/src/assets/project3.png" alt="">
-                <img id="pic" class="projectpic4" src="/src/assets/project4.png" alt="">
-                <img id="pic" class="projectpic5" src="/src/assets/project5.png" alt="">
+                <img id="pic" class="projectpic1" src="/src/assets/image-0.png" alt="">
+                <img id="pic" class="projectpic2" src="/src/assets/image-1.png" alt="">
+                <img id="pic" class="projectpic3" src="/src/assets/image-3.png" alt="">
+                <img id="pic" class="projectpic4" src="/src/assets/image-6.png" alt="">
+                <img id="pic" class="projectpic5" src="/src/assets/image-9.png" alt="">
             </div>
         </div>
     </div>
