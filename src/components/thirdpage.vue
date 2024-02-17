@@ -57,7 +57,7 @@ onUnmounted(() => {
     <div class="outerWrapper">
         <div class="innerWrapper">
             <div class="projectwrap">
-                <p id="p" class="projects">注目のプロジェクト。</p>
+                <h1 id="p" class="projects">注目のプロジェクト。</h1>
                 <a id="p" class="project" href="https://github.com/Samshh/DiscordBot" target="_blank"
                     style="color: #161616;">Discord API.</a>
                 <p id="p" class="projectdesc">このDiscordボットは、追加の機能を備えたチケットシステムとして機能します。

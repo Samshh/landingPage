@@ -95,7 +95,7 @@ onUnmounted(() => {
     <div class="timewrap">
       <div class="innerWrapper">
         <div class="contwrap">
-          <div class="contacts">ソーシャル。</div>
+          <h1 class="contacts">ソーシャル。</h1>
           <a class="contact linkedin" target="_blank" href="https://www.linkedin.com/in/samshh/" style="cursor: none">
             <i class="fab fa-linkedin"></i> LinkedIn
           </a>
@@ -116,7 +116,7 @@ onUnmounted(() => {
         </div>
       </div>
       <div class="detailwrap">
-        <div class="detail">デタイルズ。</div>
+        <h1 class="detail">デタイルズ。</h1>
         <p class="details">samdacs2@gmail.com</p>
         <p class="details">+63 969 696 9696</p>
       </div>
@@ -144,11 +144,13 @@ onUnmounted(() => {
   user-select: none;
   cursor: none;
 }
+
 .madeby {
   text-align: center;
   display: flex;
   align-items: flex-end;
 }
+
 .madewrap {
   width: 50vw;
   display: flex;
@@ -157,6 +159,7 @@ onUnmounted(() => {
   padding-left: clamp(22px, 5.7vw, 45px);
   padding-right: clamp(22px, 5.7vw, 45px);
 }
+
 .timewrap {
   display: flex;
   flex-direction: column;
@@ -314,5 +317,4 @@ onUnmounted(() => {
   .outterWrapper {
     display: none;
   }
-}
-</style>
+}</style>

@@ -60,8 +60,8 @@ onUnmounted(() => {
     <div class="innerWrapper">
       <div class="aboutMe">
         <img class="myPic" src="/src/assets/SamGoogle.png" alt="" />
-        <div class="aboutMe2">
-          <p id="p" class="me">私について。</p>
+        <div class="aboutwrap">
+          <h1 id="p" class="me">私について。</h1>
           <p id="p" class="desc myText">
             私はサム・ダカラ、フィリピン・ダバオシティ拠点のソフトウェア開発者です。
             主な焦点はバックエンド開発です。現在はウェブ開発の領域に深く入り、
@@ -73,13 +73,15 @@ onUnmounted(() => {
             そして、くつろぐ時間にはアニメを観ていることがあります。一緒にこのテックと創造性の旅を探機しましょう！
           </p>
         </div>
-        
       </div>
     </div>
   </div>
 </template>
 
 <style scoped>
+.aboutwrap {
+  padding-top: clamp(45px, 5vw, 180px);
+}
 
 .aboutMe {
   padding-right: clamp(22.5px, 2.7vw, 45px);
@@ -87,8 +89,8 @@ onUnmounted(() => {
   display: flex;
   color: #161616;
   padding-bottom: clamp(35px, 5.7vw, 70px);
-  
 }
+
 .me {
   font-size: clamp(22.5px, 3.4vw, 45px);
   font-weight: 400px;
@@ -108,17 +110,20 @@ onUnmounted(() => {
 }
 
 @keyframes slide {
+
   0%,
   50% {
     transform: translateY(0);
     opacity: 1;
   }
+
   50.01%,
   100% {
     transform: translateY(-100%);
     opacity: 0;
   }
 }
+
 .myPic {
   border-radius: 10px;
   object-fit: cover;
@@ -139,10 +144,6 @@ onUnmounted(() => {
   filter: grayscale(0%);
 }
 
-.aboutMe2 {
-  padding-top: clamp(45px, 5vw, 180px);
-}
-
 ::selection {
   background-color: #e7e7e7;
   color: #161616;
@@ -158,14 +159,17 @@ onUnmounted(() => {
     height: auto;
     overflow: auto;
   }
+
   .innerWrapper {
     flex-direction: column;
     justify-content: space-around;
     padding: 0;
   }
+
   .me {
     padding-left: 0;
   }
+
   .aboutMe {
     flex-direction: column-reverse;
     width: auto;
@@ -177,6 +181,7 @@ onUnmounted(() => {
     padding-left: clamp(22.5px, 2.7vw, 45px);
     padding-top: 0px;
   }
+
   .desc {
     font-size: 15px;
     padding: 0;
@@ -188,5 +193,4 @@ onUnmounted(() => {
     padding-bottom: 10px;
     padding-top: 10px;
   }
-}
-</style>
+}</style>
