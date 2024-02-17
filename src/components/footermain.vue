@@ -117,8 +117,8 @@ onUnmounted(() => {
       </div>
       <div class="detailwrap">
         <div class="detail">デタイルズ。</div>
-        <p class="details">loremipsum@gmail.com</p>
-        <p class="details">+8172-568-4069</p>
+        <p class="details">samdacs2@gmail.com</p>
+        <p class="details">+63 969 696 9696</p>
       </div>
     </div>
     <div class="madewrap">
