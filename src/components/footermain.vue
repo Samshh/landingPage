@@ -134,6 +134,7 @@ onUnmounted(() => {
 
 <style scoped>
 .source {
+  font-size: clamp(8px, 1.7vw, 16px);
   margin: 0;
   text-decoration: none;
   color: #161616;
@@ -173,7 +174,7 @@ onUnmounted(() => {
 }
 
 .detail {
-  font-size: clamp(22.5px, 2.7vw, 45px);
+  font-size: clamp(22.5px, 3.4vw, 45px);
   font-weight: 400px;
   margin: 0;
   text-align: left;
@@ -218,6 +219,7 @@ onUnmounted(() => {
   display: flex;
   flex-direction: column;
   padding-bottom: clamp(7.5px, 1.7vw, 15px);
+  padding-top: clamp(22px, 5.7vw, 45px);
 }
 
 .innerWrapper {
@@ -225,7 +227,6 @@ onUnmounted(() => {
   display: flex;
   justify-content: space-between;
   padding-left: clamp(22px, 5.7vw, 45px);
-  padding-top: clamp(10px, 1.7vw, 20px);
   padding-right: clamp(22px, 5.7vw, 45px);
 }
 
@@ -237,7 +238,7 @@ onUnmounted(() => {
 }
 
 .contacts {
-  font-size: clamp(22.5px, 2.7vw, 45px);
+  font-size: clamp(22.5px, 3.4vw, 45px);
   font-weight: 400px;
   margin: 0;
   text-align: left;
