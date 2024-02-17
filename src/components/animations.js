@@ -65,3 +65,30 @@ export const cursorChange = (trigger, color) => {
     backgroundColor: color,
   });
 };
+
+export const scrollerpic = (selector, trigger, opacity, x) => {
+  gsap.to(selector, {
+      scrollTrigger: {
+          trigger: trigger,
+          start: "top center",
+          end: "bottom center",
+          toggleActions: "play reverse play reverse",
+          scrub: false,
+          markers: false,
+      },
+      ease: "power1.inOut",
+      x: x,
+      opacity: opacity,
+  });
+};
+
+export const pulse = (selector, duration, delay) => {
+  gsap.to(selector, {
+    duration: duration,
+    delay: delay,
+    scaleX: 1,
+    repeat: -1,
+    yoyo: true,
+    ease: "power1.inOut"
+  });
+};

@@ -12,19 +12,6 @@ import {
 onMounted(() => {
   gsap.registerPlugin(ScrollTrigger);
 
-  gsap.to(".myPic", {
-    scrollTrigger: {
-      trigger: ".outerWrapper",
-      start: "top center",
-      end: "bottom center",
-      toggleActions: "play reverse play reverse",
-      scrub: false,
-      markers: false,
-    },
-    ease: "power1.inOut",
-    opacity: 1,
-  });
-
   cursorChange(".outerWrapper", "#e7e7e7");
   BGchangeColor(".outerWrapper", "#161616");
   animateText(
@@ -40,7 +27,7 @@ onMounted(() => {
     10
   );
   animateText(".me", ".aboutMe", "about me.", 2);
-  changeColor("#p", "#e7e7e7", ".outerWrapper", "top center", "bottom center");
+  changeColor("#q", "#e7e7e7", ".outerWrapper", "top center", "bottom center");
 });
 
 onUnmounted(() => {
@@ -61,13 +48,13 @@ onUnmounted(() => {
       <div class="aboutMe">
         <img class="myPic" src="/src/assets/SamGoogle.png" alt="" />
         <div class="aboutwrap">
-          <h1 id="p" class="me">私について。</h1>
-          <p id="p" class="desc myText">
+          <h1 id="q" class="me">私について。</h1>
+          <p id="q" class="desc myText">
             私はサム・ダカラ、フィリピン・ダバオシティ拠点のソフトウェア開発者です。
             主な焦点はバックエンド開発です。現在はウェブ開発の領域に深く入り、
             機械学習と人工知能に興味を深めています。テックの世界での無限の可能性にワクワクしています！
           </p>
-          <p id="p" class="desc myText2">
+          <p id="q" class="desc myText2">
             テックの外では、私はミュージシャンでもあります —
             ギターとピアノを演奏します。
             そして、くつろぐ時間にはアニメを観ていることがあります。一緒にこのテックと創造性の旅を探機しましょう！
@@ -136,7 +123,6 @@ onUnmounted(() => {
   transition: transform 0.5s, box-shadow 0.5s, filter 0.5s;
   transform-style: preserve-3d;
   filter: grayscale(100%);
-  opacity: 0;
 }
 
 .myPic:hover {
@@ -176,7 +162,7 @@ onUnmounted(() => {
     padding: 0;
   }
 
-  .aboutMe2 {
+  .aboutwrap {
     padding-right: clamp(22.5px, 2.7vw, 45px);
     padding-left: clamp(22.5px, 2.7vw, 45px);
     padding-top: 0px;
@@ -193,4 +179,5 @@ onUnmounted(() => {
     padding-bottom: 10px;
     padding-top: 10px;
   }
-}</style>
+}
+</style>

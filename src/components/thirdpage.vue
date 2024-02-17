@@ -3,7 +3,7 @@ import { onMounted, onUnmounted } from 'vue';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { TextPlugin } from 'gsap/TextPlugin';
-import { animateText } from './animations.js';
+import { animateText, scrollerpic, pulse, changeColor } from './animations.js';
 
 onMounted(() => {
     gsap.registerPlugin(TextPlugin);
@@ -21,22 +21,8 @@ onMounted(() => {
         },
     });
 
-    const scrollerpic = (selector, trigger, opacity, x) => {
-        gsap.to(selector, {
-            scrollTrigger: {
-                trigger: trigger,
-                start: "top center",
-                end: "bottom center",
-                toggleActions: "play reverse play reverse",
-                scrub: false,
-                markers: false,
-            },
-            ease: "power1.inOut",
-            x: x,
-            opacity: opacity,
-        });
-    };
-    // scrollerpic("#p", ".projectpics", "1");
+    changeColor("#p", "#161616", ".projectpics", "top center", "bottom center");
+    pulse(".underline", "1", "0")
     scrollerpic(".projectpics", ".projectpics", "1", "0");
     scrollerpic(".projectpic1", ".projectpic1 ", "1", "-5%");
     scrollerpic(".projectpic2", ".projectpic2", "1", "-5%");
@@ -58,8 +44,10 @@ onUnmounted(() => {
         <div class="innerWrapper">
             <div class="projectwrap">
                 <h1 id="p" class="projects">注目のプロジェクト。</h1>
-                <a id="p" class="project" href="https://github.com/Samshh/DiscordBot" target="_blank"
-                    style="color: #161616;">Discord API.</a>
+                <a id="p" class="project" href="https://github.com/Samshh/DiscordBot" target="_blank">
+                    Discord API.
+                    <div class="underline"></div>
+                </a>
                 <p id="p" class="projectdesc">このDiscordボットは、追加の機能を備えたチケットシステムとして機能します。
                     ユーザーは「/ticket」コマンドを使用してチケットを作成でき、スタッフはそれらを管理できます。
                     ボットには禁止、キック、およびメンバー情報などの基本的なモデレーションタスクのためのコマンドが含まれています。
@@ -79,6 +67,10 @@ onUnmounted(() => {
 </template>
 
 <style scoped>
+#p {
+    color: #e7e7e7;
+}
+
 .outerWrapper {
     padding-bottom: clamp(25px, 1.7vw, 50px);
 }
@@ -112,9 +104,21 @@ onUnmounted(() => {
     font-size: clamp(15px, 1.7vw, 30px);
     font-weight: 400;
     text-align: left;
-    padding-right: clamp(22.5px, 1.7vw, 45px);
-    padding-top: clamp(17.5px, 1.7vw, 35px);
     cursor: none;
+    text-decoration: none;
+    color: #161616;
+    position: relative;
+}
+
+.underline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    transform-origin: left center;
+    transform: scaleX(0);
+    background-color: #161616;
 }
 
 .projectdesc,
@@ -161,4 +165,5 @@ onUnmounted(() => {
     .outerWrapper {
         display: none;
     }
-}</style>
+}
+</style>

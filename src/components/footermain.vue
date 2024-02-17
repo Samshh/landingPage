@@ -7,6 +7,7 @@ import {
   animateText,
   changeColor,
   cursorChange,
+  pulse,
 } from "./animations.js";
 
 const currentTime = ref(new Date().toLocaleTimeString());
@@ -83,6 +84,11 @@ onMounted(() => {
     "top center",
     "bottom center"
   );
+  pulse(".underline", "2", "0");
+  pulse(".underline1", "2", "0.5");
+  pulse(".underline2", "2", "1");
+  pulse(".underline3", "2", "1.5");
+  pulse(".underline4", "2", "2");
 });
 
 onUnmounted(() => {
@@ -96,18 +102,30 @@ onUnmounted(() => {
       <div class="innerWrapper">
         <div class="contwrap">
           <h1 class="contacts">ソーシャル。</h1>
-          <a class="contact linkedin" target="_blank" href="https://www.linkedin.com/in/samshh/" style="cursor: none">
-            <i class="fab fa-linkedin"></i> LinkedIn
+          <a class="contact linkedin" target="_blank" href="https://www.linkedin.com/in/samshh/" style="cursor: none;">
+            <i class="fab fa-linkedin"></i> 
+            LinkedIn
+            <div class="underline"></div>
           </a>
-          <a class="contact github" target="_blank" href="https://github.com/Samshh" style="cursor: none">
-            <i class="fab fa-github"></i> GitHub
+          <a class="contact github" target="_blank" href="https://github.com/Samshh" style="cursor: none;">
+            <i class="fab fa-github"></i> 
+            GitHub
+            <div class="underline1"></div>
           </a>
-          <a class="contact google" target="_blank" href="https://developers.google.com/profile/u/samshh"
-            style="cursor: none">
-            <i class="fab fa-google"></i> Google
+          <a class="contact google" target="_blank" href="https://developers.google.com/profile/u/samshh" style="cursor: none;">
+            <i class="fab fa-google"></i> 
+            Google
+            <div class="underline2"></div>
           </a>
-          <a class="contact bento" target="_blank" href="https://bento.me/samshh" style="cursor: none">
-            <i class="fas fa-utensils"></i> Bento
+          <a class="contact bento" target="_blank" href="https://bento.me/samshh" style="cursor: none;">
+            <i class="fas fa-utensils"></i> 
+            Bento
+            <div class="underline3"></div>
+          </a>
+          <a class="contact instagram" target="_blank" href="https://www.instagram.com/smldcra/" style="cursor: none;">
+            <i class="fab fa-instagram"></i> 
+            Instagram
+            <div class="underline4"></div>
           </a>
         </div>
         <div class="fadein">
@@ -133,6 +151,18 @@ onUnmounted(() => {
 </template>
 
 <style scoped>
+
+.underline, .underline1, .underline2, .underline3, .underline4 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #e7e7e7;
+    transform-origin: left center;
+    transform: scaleX(0);
+}
+
 .source {
   font-size: clamp(8px, 1.7vw, 16px);
   margin: 0;
@@ -174,6 +204,7 @@ onUnmounted(() => {
   align-items: flex-start;
   padding-left: clamp(22px, 5.7vw, 45px);
   padding-right: clamp(22px, 5.7vw, 45px);
+  padding-top: clamp(7.5px, 1.7vw, 15px);
 }
 
 .detail {
@@ -238,6 +269,7 @@ onUnmounted(() => {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  justify-content: space-around;
 }
 
 .contacts {
@@ -253,13 +285,10 @@ onUnmounted(() => {
   font-size: clamp(15px, 1.7vw, 30px);
   font-weight: 400;
   text-align: center;
-  padding: clamp(7.5px, 1.7vw, 15px);
   text-decoration: none;
   position: relative;
-  transition: color 0.3s;
   display: flex;
   align-items: center;
-  z-index: 1;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -275,7 +304,6 @@ onUnmounted(() => {
   position: relative;
   display: flex;
   align-items: center;
-  z-index: 1;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -287,20 +315,6 @@ onUnmounted(() => {
 
 .contact i {
   margin-right: clamp(5px, 1.7vw, 10px);
-}
-
-.contact:hover {
-  background-color: #e7e7e7;
-  color: #161616 !important;
-}
-
-.contact:hover::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
 }
 
 ::selection {
@@ -317,4 +331,5 @@ onUnmounted(() => {
   .outterWrapper {
     display: none;
   }
-}</style>
+}
+</style>
