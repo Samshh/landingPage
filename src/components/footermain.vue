@@ -69,6 +69,20 @@ onMounted(() => {
     "top center",
     "bottom center"
   );
+  changeColor(
+    ".madeby",
+    "#e7e7e7",
+    ".outterWrapper",
+    "top center",
+    "bottom center"
+  );
+  changeColor(
+    ".source",
+    "#e7e7e7",
+    ".outterWrapper",
+    "top center",
+    "bottom center"
+  );
 });
 
 onUnmounted(() => {
@@ -107,13 +121,41 @@ onUnmounted(() => {
         <p class="details">+8172-568-4069</p>
       </div>
     </div>
-    <div class="time" style="width: 250px">
-      <p>{{ currentTime }}</p>
+    <div class="madewrap">
+      <div class="madeby">
+        <a class="source" target="_blank" href="https://github.com/Samshh/landingPage">© 2024 Samshh</a>
+      </div>
+      <div class="time">
+        <p>{{ currentTime }}</p>
+      </div>
     </div>
   </div>
 </template>
 
 <style scoped>
+.source {
+  margin: 0;
+  text-decoration: none;
+  color: #161616;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: none;
+}
+.madeby {
+  text-align: center;
+  display: flex;
+  align-items: flex-end;
+}
+.madewrap {
+  width: 50vw;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  padding-left: clamp(22px, 5.7vw, 45px);
+  padding-right: clamp(22px, 5.7vw, 45px);
+}
 .timewrap {
   display: flex;
   flex-direction: column;
@@ -150,10 +192,6 @@ onUnmounted(() => {
   display: flex;
   align-items: center;
   z-index: 1;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
   color: #161616;
 }
 
@@ -179,6 +217,7 @@ onUnmounted(() => {
   height: 100vh;
   display: flex;
   flex-direction: column;
+  padding-bottom: clamp(7.5px, 1.7vw, 15px);
 }
 
 .innerWrapper {
@@ -228,7 +267,6 @@ onUnmounted(() => {
   font-size: clamp(15px, 1.7vw, 30px);
   font-weight: 400;
   text-align: center;
-  padding-left: clamp(40px, 1.7vw, 108px);
   text-decoration: none;
   position: relative;
   display: flex;
@@ -240,7 +278,6 @@ onUnmounted(() => {
   user-select: none;
   color: #161616;
   margin: 0;
-  padding-bottom: clamp(30px, 1.7vw, 60px);
   white-space: nowrap;
 }
 
@@ -260,6 +297,16 @@ onUnmounted(() => {
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+::selection {
+  background-color: #e7e7e7;
+  color: #161616;
+}
+
+::-moz-selection {
+  background-color: #e7e7e7;
+  color: #161616;
 }
 
 @media (max-width: 430px) {
