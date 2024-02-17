@@ -13,7 +13,7 @@ onMounted(() => {
             trigger: ".projectwrap",
             start: "-3.5%",
             endTrigger: ".projectpic5",
-            end: "center center",
+            end: "70% center",
             pin: true,
             pinSpacing: false,
             scrub: true,

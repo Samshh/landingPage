@@ -59,7 +59,7 @@ onUnmounted(() => {
   <div class="outerWrapper">
     <div class="innerWrapper">
       <div class="aboutMe">
-        <img class="myPic" src="\src\assets\SamGoogle.png" alt="" />
+        <img class="myPic" src="/src/assets/SamGoogle.png" alt="" />
         <div class="aboutMe2">
           <p id="p" class="me">私について。</p>
           <p id="p" class="desc myText">

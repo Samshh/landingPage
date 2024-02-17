@@ -23,7 +23,8 @@ watchEffect(() => {
 
 gsap.registerPlugin(ScrollTrigger);
 onMounted(() => {
-  animateText(".contacts", ".outterWrapper", "contact me.", 2);
+  animateText(".detail", ".outterWrapper", "details.", 2);
+  animateText(".contacts", ".outterWrapper", "socials.", 2);
   BGchangeColor(".outterWrapper", "#161616");
   cursorChange(".outterWrapper", "#e7e7e7");
   changeColor(
@@ -47,6 +48,27 @@ onMounted(() => {
     "top center",
     "bottom center"
   );
+  changeColor(
+    ".quote",
+    "#e7e7e7",
+    ".outterWrapper",
+    "top center",
+    "bottom center"
+  );
+  changeColor(
+    ".detail",
+    "#e7e7e7",
+    ".outterWrapper",
+    "top center",
+    "bottom center"
+  );
+  changeColor(
+    ".details",
+    "#e7e7e7",
+    ".outterWrapper",
+    "top center",
+    "bottom center"
+  );
 });
 
 onUnmounted(() => {
@@ -56,22 +78,33 @@ onUnmounted(() => {
 
 <template>
   <div class="outterWrapper">
-    <div class="innerWrapper">
-      <div class="contwrap">
-        <div class="contacts">お問い合わせはこちら。</div>
-        <a class="contact linkedin" target="_blank" href="https://www.linkedin.com/in/samshh/" style="cursor: none">
-          <i class="fab fa-linkedin"></i> LinkedIn
-        </a>
-        <a class="contact github" target="_blank" href="https://github.com/Samshh" style="cursor: none">
-          <i class="fab fa-github"></i> GitHub
-        </a>
-        <a class="contact google" target="_blank" href="https://developers.google.com/profile/u/samshh"
-          style="cursor: none">
-          <i class="fab fa-google"></i> Google
-        </a>
-        <a class="contact bento" target="_blank" href="https://bento.me/samshh" style="cursor: none">
-          <i class="fas fa-utensils"></i> Bento
-        </a>
+    <div class="timewrap">
+      <div class="innerWrapper">
+        <div class="contwrap">
+          <div class="contacts">ソーシャル。</div>
+          <a class="contact linkedin" target="_blank" href="https://www.linkedin.com/in/samshh/" style="cursor: none">
+            <i class="fab fa-linkedin"></i> LinkedIn
+          </a>
+          <a class="contact github" target="_blank" href="https://github.com/Samshh" style="cursor: none">
+            <i class="fab fa-github"></i> GitHub
+          </a>
+          <a class="contact google" target="_blank" href="https://developers.google.com/profile/u/samshh"
+            style="cursor: none">
+            <i class="fab fa-google"></i> Google
+          </a>
+          <a class="contact bento" target="_blank" href="https://bento.me/samshh" style="cursor: none">
+            <i class="fas fa-utensils"></i> Bento
+          </a>
+        </div>
+        <div class="fadein">
+          <img class="samshh" src="/src/assets/footerimage.jpg" alt="samshh">
+          <p class="quote">"It is what is it."</p>
+        </div>
+      </div>
+      <div class="detailwrap">
+        <div class="detail">デタイルズ。</div>
+        <p class="details">loremipsum@gmail.com</p>
+        <p class="details">+8172-568-4069</p>
       </div>
     </div>
     <div class="time" style="width: 250px">
@@ -81,26 +114,87 @@ onUnmounted(() => {
 </template>
 
 <style scoped>
-.outterWrapper {
-  width: 100vh;
-  height: 100vh;
+.timewrap {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  width: 100vw;
+  height: 100vh;
 }
 
-.innerWrapper {
-  display: flex;
-}
-
-.contwrap {
+.detailwrap {
   margin-bottom: 0px;
-  padding-bottom: clamp(10px, 1.7vw, 20px);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   padding-left: clamp(22px, 5.7vw, 45px);
+  padding-right: clamp(22px, 5.7vw, 45px);
+}
+
+.detail {
+  font-size: clamp(22.5px, 2.7vw, 45px);
+  font-weight: 400px;
+  margin: 0;
+  text-align: left;
+  color: #161616;
+}
+
+.details {
+  margin: 0;
+  font-size: clamp(15px, 1.7vw, 30px);
+  font-weight: 400;
+  text-align: center;
+  padding-top: clamp(7.5px, 1.7vw, 15px);
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #161616;
+}
+
+.samshh {
+  border-radius: 50%;
+  width: clamp(150px, 17.7vw, 320px);
+  height: clamp(150px, 17.7vw, 320px);
+  filter: grayscale(100%);
+}
+
+.quote {
+  font-size: clamp(15px, 1.7vw, 30px);
+  font-style: italic;
+  font-weight: 400;
+  text-align: center;
+  padding-top: clamp(15px, 1.7vw, 30px);
+  position: relative;
+  margin: 0;
+}
+
+.outterWrapper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.innerWrapper {
+  padding-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  padding-left: clamp(22px, 5.7vw, 45px);
   padding-top: clamp(10px, 1.7vw, 20px);
+  padding-right: clamp(22px, 5.7vw, 45px);
+}
+
+.contwrap {
+  margin-bottom: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .contacts {
