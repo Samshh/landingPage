@@ -68,6 +68,8 @@ onUnmounted(() => {
 <style scoped>
 .aboutwrap {
   padding-top: clamp(45px, 5vw, 180px);
+  padding-left: clamp(42.5px, 5.7vw, 85px);
+  padding-right: clamp(42.5px, 5.7vw, 85px);
 }
 
 .aboutMe {
@@ -82,7 +84,6 @@ onUnmounted(() => {
   font-size: clamp(22.5px, 3.4vw, 45px);
   font-weight: 400px;
   margin-bottom: 0px;
-  padding-left: clamp(42.5px, 5.7vw, 85px);
   padding-bottom: clamp(10px, 1.7vw, 20px);
   margin: 0;
 }
@@ -91,8 +92,7 @@ onUnmounted(() => {
   margin: 0;
   font-size: clamp(15px, 1.7vw, 30px);
   font-weight: 400;
-  text-align: left;
-  padding-left: clamp(42.5px, 5.7vw, 85px);
+  text-align: justify;
   padding-top: clamp(15px, 1.7vw, 30px);
 }
 

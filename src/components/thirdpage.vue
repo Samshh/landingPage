@@ -87,6 +87,7 @@ onUnmounted(() => {
     align-items: flex-start;
     justify-content: center;
     padding-left: clamp(22.5px, 2.7vw, 45px);
+    padding-right: clamp(22.5px, 2.7vw, 45px);
     gap: clamp(12.5px, 1.7vw, 25px);
 }
 
@@ -121,12 +122,11 @@ onUnmounted(() => {
     background-color: #161616;
 }
 
-.projectdesc,
-.projectdesc1 {
+.projectdesc, .projectdesc1 {
     margin: 0;
     font-size: clamp(15px, 1.7vw, 30px);
     font-weight: 400;
-    text-align: left;
+    text-align: justify;
     padding-right: clamp(22.5px, 1.7vw, 45px);
     padding-top: clamp(15px, 1.7vw, 30px);
 }
