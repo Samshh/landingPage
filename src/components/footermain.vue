@@ -128,10 +128,6 @@ onUnmounted(() => {
             <div class="underline4"></div>
           </a>
         </div>
-        <div class="fadein">
-          <img class="samshh" src="/src/assets/footerimage.jpg" alt="samshh">
-          <p class="quote">"It is what is it."</p>
-        </div>
       </div>
       <div class="detailwrap">
         <h1 class="detail">デタイルズ。</h1>
@@ -230,23 +226,6 @@ onUnmounted(() => {
   color: #161616;
 }
 
-.samshh {
-  border-radius: 50%;
-  width: clamp(150px, 17.7vw, 320px);
-  height: clamp(150px, 17.7vw, 320px);
-  filter: grayscale(100%);
-}
-
-.quote {
-  font-size: clamp(15px, 1.7vw, 30px);
-  font-style: italic;
-  font-weight: 400;
-  text-align: center;
-  padding-top: clamp(15px, 1.7vw, 30px);
-  position: relative;
-  margin: 0;
-}
-
 .outterWrapper {
   width: 100vw;
   height: 100vh;
@@ -269,7 +248,6 @@ onUnmounted(() => {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: space-around;
 }
 
 .contacts {
@@ -283,6 +261,7 @@ onUnmounted(() => {
 .contact {
   margin: 0;
   font-size: clamp(15px, 1.7vw, 30px);
+  padding-top: clamp(7.5px, 1.7vw, 15px);
   font-weight: 400;
   text-align: center;
   text-decoration: none;

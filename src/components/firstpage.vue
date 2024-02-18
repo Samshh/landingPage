@@ -35,21 +35,19 @@ onUnmounted(() => {
     </div>
     <div class="mainwrapper">
       <div class="box1">
-        <img class="logo" src="\src\assets\box.svg" alt="test" />
+        <img class="logo" src="\src\assets\samlogo1.png" alt="test" />
         <div class="textwrapper">
           <div class="katakana">
             <p class="m">メ</p>
             <p class="i">イ</p>
             <p class="p">プ</p>
             <p class="r">ル</p>
-          </div>
-          <div class="kanji">
-            <p>楓</p>
+            <p class="kanji">楓</p>
           </div>
         </div>
       </div>
       <div class="name">
-        <p class="maintext">73616d</p>
+        <h1 class="maintext">73616d</h1>
         <p class="subtext">Software Developer</p>
       </div>
     </div>
@@ -57,6 +55,10 @@ onUnmounted(() => {
 </template>
 
 <style scoped>
+
+.mainwrapper {
+  position: relative;
+}
 .mybox {
   width: auto;
   height: 100vh;
@@ -72,9 +74,6 @@ onUnmounted(() => {
   animation-timing-function: ease-in-out;
 }
 
-.mainwrapper {
-  transform: scale(1.25);
-}
 
 .logo {
   -webkit-user-select: none;
@@ -83,28 +82,8 @@ onUnmounted(() => {
   user-select: none;
   pointer-events: none;
   position: relative;
-  /* animation: glitch 1s infinite; */
-}
-
-.logo::before,
-.logo::after {
-  content: attr(data-text);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #fff;
-}
-
-.logo::before {
-  left: 2px;
-  animation: glitch 1.5s infinite;
-}
-
-.logo::after {
-  left: -2px;
-  animation: glitch 2s infinite;
+  width: auto;
+  height: clamp(350px, 50vw, 550px);
 }
 
 @keyframes glitch {
@@ -130,6 +109,10 @@ onUnmounted(() => {
   animation-fill-mode: forwards;
   animation-timing-function: ease-in-out;
   display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .textwrapper {
@@ -145,7 +128,8 @@ onUnmounted(() => {
   font-style: normal;
   margin: 0;
   padding-bottom: 10px;
-  font-size: 25px;
+  font-size: clamp(15px, 1.7vw, 30px);
+  color: #161616;
 }
 
 .m {
@@ -176,7 +160,7 @@ onUnmounted(() => {
   animation-timing-function: ease-in-out;
 }
 
-.kanji p {
+.kanji {
   font-family: "Noto Serif JP", serif;
   font-weight: 400;
   font-style: normal;
@@ -189,6 +173,10 @@ onUnmounted(() => {
 }
 
 .name {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(5%, 320%);
   animation-name: fade-in;
   animation-duration: 4s;
   animation-fill-mode: forwards;
@@ -197,25 +185,21 @@ onUnmounted(() => {
 
 .maintext {
   margin: 0;
-  padding-top: 10px;
-  font-size: 25px;
+  font-size: clamp(15px, 2.7vw, 30px);
   font-weight: 400;
   text-align: right;
   padding-right: 35px;
+  color: #161616;
 }
 
 .subtext {
+  white-space: nowrap;
   margin: 0;
-  font-size: 15px;
+  font-size: clamp(10px, 1.7vw, 20px);
   font-weight: 400;
   text-align: right;
   padding-right: 35px;
-}
-
-@media (max-width: 430px) {
-  .mainwrapper {
-    transform: scale(0.55);
-  }
+  color: #161616;
 }
 
 @keyframes fade-in {

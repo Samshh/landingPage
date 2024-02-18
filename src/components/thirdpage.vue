@@ -85,7 +85,7 @@ onUnmounted(() => {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: space-evenly;
     padding-left: clamp(22.5px, 2.7vw, 45px);
     padding-right: clamp(22.5px, 2.7vw, 45px);
     gap: clamp(12.5px, 1.7vw, 25px);
@@ -95,7 +95,6 @@ onUnmounted(() => {
     font-size: clamp(22.5px, 3.4vw, 45px);
     font-weight: 400px;
     margin-bottom: 0px;
-    padding-bottom: clamp(10px, 1.7vw, 20px);
     margin: 0;
     text-align: left;
 }
@@ -128,7 +127,7 @@ onUnmounted(() => {
     font-weight: 400;
     text-align: justify;
     padding-right: clamp(22.5px, 1.7vw, 45px);
-    padding-top: clamp(15px, 1.7vw, 30px);
+    
 }
 
 .projectpics {
