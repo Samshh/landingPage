@@ -15,7 +15,7 @@ export const animateText = (selector, trigger, text, duration) => {
       start: "top center",
       end: "center center",
       toggleActions: "play none none reverse",
-      markers: true,
+      markers: false,
     },
   });
 };
