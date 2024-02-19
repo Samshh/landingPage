@@ -5,28 +5,64 @@ import cursor from "./components/cursor.vue";
 import footerpage from "./components/footerpage.vue";
 import thirdpage from "./components/thirdpage.vue";
 import footermain from "./components/footermain.vue";
-// import Lenis from "@studio-freight/lenis";
+import { ref, onMounted, onUnmounted } from "vue";
+import { gsap } from "gsap";
+import { TextPlugin } from 'gsap/TextPlugin';
 
-// const lenis = new Lenis();
+let isLoading = ref(true);
 
-// lenis.on("scroll", (e) => {
-//   console.log(e);
-// });
-// function raf(time) {
-//   lenis.raf(time);
-//   requestAnimationFrame(raf);
-// }
-// requestAnimationFrame(raf);
+onMounted(() => {
+  const loadPromises = [];
+  const images = [
+    "/src/assets/SamGoogle.png",
+    "/src/assets/samlogo1.png",
+    "/src/assets/image-0.png",
+    "/src/assets/image-1.png",
+    "/src/assets/image-3.png",
+    "/src/assets/image-6.png",
+    "/src/assets/image-9.png"
+  ];
+
+  images.forEach((src) => {
+    const image = new Image();
+    const promise = new Promise((resolve) => {
+      image.onload = resolve;
+    });
+    image.src = src;
+    loadPromises.push(promise);
+  });
+
+  Promise.all(loadPromises).then(() => {
+    gsap.registerPlugin(TextPlugin);
+    gsap.to('.welcome', {
+      duration: 3,
+      text: 'hello!',
+      ease: "power1.inOut",
+      onComplete: () => {
+        isLoading.value = false;
+      }
+    });
+  });
+});
+
+onUnmounted(() => {
+  isLoading.value = false;
+});
 </script>
 
 <template>
-  <div class="background"></div>
-  <cursor />
-  <firstpage />
-  <secondpage />
-  <thirdpage />
-  <footermain />
-  <footerpage />
+  <div v-if="isLoading" class="preloader">
+    <div class="welcome">こんにちは!</div>
+  </div>
+  <div v-else>
+    <div class="background"></div>
+    <cursor />
+    <firstpage />
+    <secondpage />
+    <thirdpage />
+    <footermain />
+    <footerpage />
+  </div>
 </template>
 
 <style scoped>
@@ -36,5 +72,22 @@ import footermain from "./components/footermain.vue";
   z-index: -1;
   position: fixed;
   background-color: #e7e7e7;
+}
+
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #161616;
+}
+
+.welcome {
+  color: #e7e7e7;
+  font-size: clamp(50px, 14vw, 250px);
 }
 </style>

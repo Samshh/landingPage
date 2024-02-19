@@ -49,13 +49,7 @@ onMounted(() => {
     "top center",
     "bottom center"
   );
-  changeColor(
-    ".quote",
-    "#e7e7e7",
-    ".outterWrapper",
-    "top center",
-    "bottom center"
-  );
+
   changeColor(
     ".detail",
     "#e7e7e7",
