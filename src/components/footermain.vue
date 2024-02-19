@@ -3,10 +3,8 @@ import { gsap } from "gsap";
 import { onMounted, onUnmounted, ref, watchEffect } from "vue";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import {
-  BGchangeColor,
   animateText,
   changeColor,
-  cursorChange,
   pulse,
 } from "./animations.js";
 

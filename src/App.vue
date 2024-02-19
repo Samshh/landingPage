@@ -4,37 +4,37 @@ import secondpage from "./components/secondpage.vue";
 import cursor from "./components/cursor.vue";
 import footerpage from "./components/footerpage.vue";
 import footermain from "./components/footermain.vue";
-import { ref, onMounted, onUnmounted } from "vue";
+import { onMounted } from "vue";
 import { gsap } from "gsap";
 import { TextPlugin } from 'gsap/TextPlugin';
-
-let isLoading = ref(true);
 
 onMounted(() => {
   setTimeout(() => {
     gsap.registerPlugin(TextPlugin);
     gsap.to('.welcome', {
-      delay: 2,
-      duration: 3,
+      delay: 1,
+      duration: 2,
       text: 'hello!',
       ease: "power1.inOut",
       onComplete: () => {
-        isLoading.value = false;
+        gsap.to('.preloader', {
+          top: '100%',
+          duration: 2
+        });
+        gsap.to('.welcome', {
+          opacity: 0
+        });
       }
     });
   });
 });
-
-onUnmounted(() => {
-  isLoading.value = false;
-});
 </script>
 
 <template>
-  <div v-if="isLoading" class="preloader">
+  <div class="preloader" ref="preloader">
     <div class="welcome">こんにちは!</div>
   </div>
-  <div v-else>
+  <div>
     <div class="background"></div>
     <cursor />
     <firstpage />
@@ -54,7 +54,7 @@ onUnmounted(() => {
 }
 
 .preloader {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -63,6 +63,7 @@ onUnmounted(() => {
   justify-content: center;
   align-items: center;
   background-color: #161616;
+  z-index: 100;
 }
 
 .welcome {

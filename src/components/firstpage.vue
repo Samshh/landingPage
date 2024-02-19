@@ -10,7 +10,7 @@ onMounted(() => {
     gsap.to(selector, {
       duration: duration,
       text: text,
-      delay: 1,
+      delay: 4,
       ease: "power1.out"
     });
   };
@@ -68,10 +68,6 @@ onUnmounted(() => {
   gap: 0px;
   padding: 0px;
   margin: 0px;
-  animation-name: bgFade;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease-in-out;
 }
 
 
@@ -86,28 +82,7 @@ onUnmounted(() => {
   height: clamp(350px, 50vw, 550px);
 }
 
-@keyframes glitch {
-
-  2%,
-  64% {
-    transform: translate(2px, 0) skew(0deg);
-  }
-
-  4%,
-  60% {
-    transform: translate(-2px, 0) skew(0deg);
-  }
-
-  62% {
-    transform: translate(0, 0) skew(5deg);
-  }
-}
-
 .box1 {
-  animation-name: fade-in;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease-in-out;
   display: flex;
   position: absolute;
   top: 50%;
@@ -130,46 +105,6 @@ onUnmounted(() => {
   padding-bottom: 10px;
   font-size: clamp(15px, 1.7vw, 30px);
   color: #161616;
-}
-
-.m {
-  animation-name: fade-in;
-  animation-duration: 1.5s;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease-in-out;
-}
-
-.i {
-  animation-name: fade-in;
-  animation-duration: 2s;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease-in-out;
-}
-
-.p {
-  animation-name: fade-in;
-  animation-duration: 2.5s;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease-in-out;
-}
-
-.r {
-  animation-name: fade-in;
-  animation-duration: 3s;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease-in-out;
-}
-
-.kanji {
-  font-family: "Noto Serif JP", serif;
-  font-weight: 400;
-  font-style: normal;
-  margin: 0;
-  font-size: 25px;
-  animation-name: fade-in;
-  animation-duration: 3.5s;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease-in-out;
 }
 
 .name {
@@ -200,16 +135,6 @@ onUnmounted(() => {
   text-align: right;
   padding-right: 35px;
   color: #161616;
-}
-
-@keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
 }
 
 .lines {
