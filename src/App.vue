@@ -2,7 +2,6 @@
 import firstpage from "./components/firstpage.vue";
 import secondpage from "./components/secondpage.vue";
 import cursor from "./components/cursor.vue";
-import footerpage from "./components/footerpage.vue";
 import footermain from "./components/footermain.vue";
 import { onMounted } from "vue";
 import { gsap } from "gsap";
@@ -54,7 +53,6 @@ onMounted(() => {
     <firstpage />
     <secondpage />
     <footermain />
-    <footerpage />
   </div>
 </template>
 

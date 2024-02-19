@@ -255,7 +255,7 @@ onUnmounted(() => {
 }
 
 .innerWrapper {
-  padding-top: 40px;
+  padding-top: clamp(22px, 5.7vw, 45px);
   display: flex;
   justify-content: space-between;
   padding-left: clamp(22px, 5.7vw, 45px);
@@ -327,7 +327,8 @@ onUnmounted(() => {
 
 @media (max-width: 430px) {
   .outterWrapper {
-    display: none;
+    padding-top: 0;
+    height: 50vh;
   }
 }
 </style>
