@@ -3,7 +3,6 @@ import firstpage from "./components/firstpage.vue";
 import secondpage from "./components/secondpage.vue";
 import cursor from "./components/cursor.vue";
 import footerpage from "./components/footerpage.vue";
-import thirdpage from "./components/thirdpage.vue";
 import footermain from "./components/footermain.vue";
 import { ref, onMounted, onUnmounted } from "vue";
 import { gsap } from "gsap";
@@ -40,7 +39,6 @@ onUnmounted(() => {
     <cursor />
     <firstpage />
     <secondpage />
-    <thirdpage />
     <footermain />
     <footerpage />
   </div>

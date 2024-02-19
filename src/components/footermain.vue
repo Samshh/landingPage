@@ -26,25 +26,23 @@ gsap.registerPlugin(ScrollTrigger);
 onMounted(() => {
   animateText(".detail", ".outterWrapper", "details.", 2);
   animateText(".contacts", ".outterWrapper", "socials.", 2);
-  BGchangeColor(".outterWrapper", "#161616");
-  cursorChange(".outterWrapper", "#e7e7e7");
   changeColor(
     ".contacts",
-    "#e7e7e7",
+    "#161616",
     ".outterWrapper",
     "top center",
     "bottom center"
   );
   changeColor(
     ".contact",
-    "#e7e7e7",
+    "#161616",
     ".outterWrapper",
     "top center",
     "bottom center"
   );
   changeColor(
     ".time p",
-    "#e7e7e7",
+    "#161616",
     ".outterWrapper",
     "top center",
     "bottom center"
@@ -52,28 +50,28 @@ onMounted(() => {
 
   changeColor(
     ".detail",
-    "#e7e7e7",
+    "#161616",
     ".outterWrapper",
     "top center",
     "bottom center"
   );
   changeColor(
     ".details",
-    "#e7e7e7",
+    "#161616",
     ".outterWrapper",
     "top center",
     "bottom center"
   );
   changeColor(
     ".madeby",
-    "#e7e7e7",
+    "#161616",
     ".outterWrapper",
     "top center",
     "bottom center"
   );
   changeColor(
     ".source",
-    "#e7e7e7",
+    "#161616",
     ".outterWrapper",
     "top center",
     "bottom center"
@@ -148,7 +146,7 @@ onUnmounted(() => {
     left: 0;
     right: 0;
     height: 2px;
-    background: #e7e7e7;
+    background: #161616;
     transform-origin: left center;
     transform: scaleX(0);
 }
@@ -157,7 +155,7 @@ onUnmounted(() => {
   font-size: clamp(8px, 1.7vw, 16px);
   margin: 0;
   text-decoration: none;
-  color: #161616;
+  color: #e7e7e7;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -202,7 +200,7 @@ onUnmounted(() => {
   font-weight: 400px;
   margin: 0;
   text-align: left;
-  color: #161616;
+  color: #e7e7e7;
 }
 
 .details {
@@ -217,7 +215,7 @@ onUnmounted(() => {
   display: flex;
   align-items: center;
   z-index: 1;
-  color: #161616;
+  color: #e7e7e7;
 }
 
 .outterWrapper {
@@ -249,7 +247,7 @@ onUnmounted(() => {
   font-weight: 400px;
   margin: 0;
   text-align: left;
-  color: #161616;
+  color: #e7e7e7;
 }
 
 .contact {
@@ -266,7 +264,7 @@ onUnmounted(() => {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  color: #161616;
+  color: #e7e7e7;
 }
 
 .time p {
@@ -281,7 +279,7 @@ onUnmounted(() => {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  color: #161616;
+  color: #e7e7e7;
   margin: 0;
   white-space: nowrap;
 }
@@ -291,13 +289,13 @@ onUnmounted(() => {
 }
 
 ::selection {
-  background-color: #e7e7e7;
-  color: #161616;
+  background-color: #161616;
+  color: #e7e7e7;
 }
 
 ::-moz-selection {
-  background-color: #e7e7e7;
-  color: #161616;
+  background-color: #161616;
+  color: #e7e7e7;
 }
 
 @media (max-width: 430px) {
