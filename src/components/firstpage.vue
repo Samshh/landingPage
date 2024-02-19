@@ -11,7 +11,7 @@ onMounted(() => {
       duration: duration,
       text: text,
       delay: 4,
-      ease: "power1.out"
+      ease: "power1.out",
     });
   };
 
@@ -55,7 +55,6 @@ onUnmounted(() => {
 </template>
 
 <style scoped>
-
 .mainwrapper {
   position: relative;
 }
@@ -69,7 +68,6 @@ onUnmounted(() => {
   padding: 0px;
   margin: 0px;
 }
-
 
 .logo {
   -webkit-user-select: none;
@@ -165,10 +163,12 @@ onUnmounted(() => {
   width: 100%;
   top: -50%;
   left: 0;
-  background: linear-gradient(to bottom,
-      rgba(255, 255, 255, 0) 0%,
-      #161616 75%,
-      #161616 100%);
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 0%,
+    #161616 75%,
+    #161616 100%
+  );
   animation: drop 7s 0s infinite;
   animation-fill-mode: forwards;
   animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);

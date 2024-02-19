@@ -8,15 +8,14 @@ export const animateText = (selector, trigger, text, duration) => {
   gsap.to(selector, {
     duration: duration,
     text: text,
-    delay: 1,
+    delay: 0,
     ease: "power1.inOut",
     scrollTrigger: {
       trigger: trigger,
       start: "top center",
-      end: "40% center",
+      end: "center center",
       toggleActions: "play none none reverse",
-      scrub: 10,
-      markers: false,
+      markers: true,
     },
   });
 };

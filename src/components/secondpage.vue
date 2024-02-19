@@ -18,13 +18,13 @@ onMounted(() => {
     ".myText",
     ".aboutMe",
     "I'm Sam Dacara, a Software Developer based in Davao City, Philippines. My primary focus is on back-end development. I'm currently delving into the realm of Web Development and exploring my interests in Machine Learning and Artificial Intelligence. Excited about the endless possibilities in the tech world!",
-    10
+    5
   );
   animateText(
     ".myText2",
     ".aboutMe",
     "Outside of tech, I'm also a Musician—I play the guitar and piano. And when it's chill time, you'll catch me watching anime. Let's explore this tech and creativity journey together!",
-    10
+    5
   );
   animateText(".me", ".aboutMe", "about me.", 2);
   changeColor("#q", "#e7e7e7", ".outerWrapper", "top center", "bottom center");
@@ -94,21 +94,6 @@ onUnmounted(() => {
   font-weight: 400;
   text-align: justify;
   padding-top: clamp(15px, 1.7vw, 30px);
-}
-
-@keyframes slide {
-
-  0%,
-  50% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-
-  50.01%,
-  100% {
-    transform: translateY(-100%);
-    opacity: 0;
-  }
 }
 
 .myPic {

@@ -2,11 +2,7 @@
 import { gsap } from "gsap";
 import { onMounted, onUnmounted, ref, watchEffect } from "vue";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import {
-  animateText,
-  changeColor,
-  pulse,
-} from "./animations.js";
+import { animateText, changeColor, pulse } from "./animations.js";
 
 const currentTime = ref(new Date().toLocaleTimeString());
 
@@ -92,28 +88,53 @@ onUnmounted(() => {
       <div class="innerWrapper">
         <div class="contwrap">
           <h1 class="contacts">ソーシャル。</h1>
-          <a class="contact linkedin" target="_blank" href="https://www.linkedin.com/in/samshh/" style="cursor: none;">
-            <i class="fab fa-linkedin"></i> 
+          <a
+            class="contact linkedin"
+            target="_blank"
+            href="https://www.linkedin.com/in/samshh/"
+            style="cursor: none"
+          >
+            <i class="fab fa-linkedin"></i>
             LinkedIn
             <div class="underline"></div>
           </a>
-          <a class="contact github" target="_blank" href="https://github.com/Samshh" style="cursor: none;">
-            <i class="fab fa-github"></i> 
+          <a
+            class="contact github"
+            target="_blank"
+            href="https://github.com/Samshh"
+            style="cursor: none"
+          >
+            <i class="fab fa-github"></i>
             GitHub
             <div class="underline1"></div>
           </a>
-          <a class="contact google" target="_blank" href="https://developers.google.com/profile/u/samshh" style="cursor: none;">
-            <i class="fab fa-google"></i> 
+          <a
+            class="contact google"
+            target="_blank"
+            href="https://developers.google.com/profile/u/samshh"
+            style="cursor: none"
+          >
+            <i class="fab fa-google"></i>
             Google
             <div class="underline2"></div>
           </a>
-          <a class="contact bento" target="_blank" href="https://bento.me/samshh" style="cursor: none;">
-            <i class="fas fa-utensils"></i> 
+          <a
+            class="contact bento"
+            target="_blank"
+            href="https://bento.me/samshh"
+            style="cursor: none"
+          >
+            <i class="fas fa-utensils"></i>
             Bento
             <div class="underline3"></div>
           </a>
-          <a class="contact instagram" target="_blank" href="https://www.instagram.com/smldcra/" style="cursor: none;">
-            <i class="fab fa-instagram"></i> 
+          <a
+            class="contact instagram"
+            target="_blank"
+            href="https://www.instagram.com/smldcra/"
+            style="cursor: none"
+          >
+            <i class="fab fa-instagram"></i>
             Instagram
             <div class="underline4"></div>
           </a>
@@ -127,7 +148,12 @@ onUnmounted(() => {
     </div>
     <div class="madewrap">
       <div class="madeby">
-        <a class="source" target="_blank" href="https://github.com/Samshh/landingPage">© 2024 Samshh</a>
+        <a
+          class="source"
+          target="_blank"
+          href="https://github.com/Samshh/landingPage"
+          >© 2024 Samshh</a
+        >
       </div>
       <div class="time">
         <p>{{ currentTime }}</p>
@@ -137,16 +163,19 @@ onUnmounted(() => {
 </template>
 
 <style scoped>
-
-.underline, .underline1, .underline2, .underline3, .underline4 {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background: #161616;
-    transform-origin: left center;
-    transform: scaleX(0);
+.underline,
+.underline1,
+.underline2,
+.underline3,
+.underline4 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #161616;
+  transform-origin: left center;
+  transform: scaleX(0);
 }
 
 .source {

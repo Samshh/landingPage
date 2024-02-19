@@ -6,25 +6,39 @@ import footerpage from "./components/footerpage.vue";
 import footermain from "./components/footermain.vue";
 import { onMounted } from "vue";
 import { gsap } from "gsap";
-import { TextPlugin } from 'gsap/TextPlugin';
+import { TextPlugin } from "gsap/TextPlugin";
+import Lenis from "@studio-freight/lenis";
+
+const lenis = new Lenis();
+
+lenis.on("scroll", (e) => {
+  console.log(e);
+});
+
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+
+requestAnimationFrame(raf);
 
 onMounted(() => {
   setTimeout(() => {
     gsap.registerPlugin(TextPlugin);
-    gsap.to('.welcome', {
+    gsap.to(".welcome", {
       delay: 1,
       duration: 2,
-      text: 'hello!',
+      text: "hello!",
       ease: "power1.inOut",
       onComplete: () => {
-        gsap.to('.preloader', {
-          top: '100%',
-          duration: 2
+        gsap.to(".preloader", {
+          top: "100%",
+          duration: 2,
         });
-        gsap.to('.welcome', {
-          opacity: 0
+        gsap.to(".welcome", {
+          opacity: 0,
         });
-      }
+      },
     });
   });
 });

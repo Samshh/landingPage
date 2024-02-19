@@ -4,7 +4,11 @@
   <div class="outerWrapper">
     <div class="innerWrapper">
       <img class="navLogo" src="C:\landingPage\src\assets\navBox.svg" alt="" />
-      <img class="navBurger" src="C:\landingPage\src\assets\navBurger.svg" alt="" />
+      <img
+        class="navBurger"
+        src="C:\landingPage\src\assets\navBurger.svg"
+        alt=""
+      />
     </div>
   </div>
 </template>
