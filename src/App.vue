@@ -12,29 +12,10 @@ import { TextPlugin } from 'gsap/TextPlugin';
 let isLoading = ref(true);
 
 onMounted(() => {
-  const loadPromises = [];
-  const images = [
-    "/assets/samgoogle-kjylnrwv.png",
-    "/assets/samlogo1-bf-r_lp7.png",
-    "/assets/image-0-pytiwywa.png",
-    "/assets/image-1-jll9akas.png",
-    "/assets/image-3-oylmhqpn.png",
-    "/assets/image-6-vnxt-e4p.png",
-    "/assets/image-9-lakjl7c-.png"
-  ];
-
-  images.forEach((src) => {
-    const image = new Image();
-    const promise = new Promise((resolve) => {
-      image.onload = resolve;
-    });
-    image.src = src;
-    loadPromises.push(promise);
-  });
-
-  Promise.all(loadPromises).then(() => {
+  setTimeout(() => {
     gsap.registerPlugin(TextPlugin);
     gsap.to('.welcome', {
+      delay: 2,
       duration: 3,
       text: 'hello!',
       ease: "power1.inOut",
