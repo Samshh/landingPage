@@ -14,13 +14,13 @@ let isLoading = ref(true);
 onMounted(() => {
   const loadPromises = [];
   const images = [
-    "./assets/SamGoogle.png",
-    "./assets/samlogo1.png",
-    "./assets/image-0.png",
-    "./assets/image-1.png",
-    "./assets/image-3.png",
-    "./assets/image-6.png",
-    "./assets/image-9.png"
+    "/assets/samgoogle-kjylnrwv.png",
+    "/assets/samlogo1-bf-r_lp7.png",
+    "/assets/image-0-pytiwywa.png",
+    "/assets/image-1-jll9akas.png",
+    "/assets/image-3-oylmhqpn.png",
+    "/assets/image-6-vnxt-e4p.png",
+    "/assets/image-9-lakjl7c-.png"
   ];
 
   images.forEach((src) => {
