@@ -14,13 +14,13 @@ let isLoading = ref(true);
 onMounted(() => {
   const loadPromises = [];
   const images = [
-    "@/assets/SamGoogle.png",
-    "@/assets/samlogo1.png",
-    "@/assets/image-0.png",
-    "@/assets/image-1.png",
-    "@/assets/image-3.png",
-    "@/assets/image-6.png",
-    "@/assets/image-9.png"
+    "./assets/SamGoogle.png",
+    "./assets/samlogo1.png",
+    "./assets/image-0.png",
+    "./assets/image-1.png",
+    "./assets/image-3.png",
+    "./assets/image-6.png",
+    "./assets/image-9.png"
   ];
 
   images.forEach((src) => {
