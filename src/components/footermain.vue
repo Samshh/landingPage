@@ -2,7 +2,13 @@
 import { gsap } from "gsap";
 import { onMounted, onUnmounted, ref, watchEffect } from "vue";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { animateText, changeColor, pulse } from "./animations.js";
+import {
+  animateText,
+  changeColor,
+  pulse,
+  BGchangeColor,
+  cursorChange,
+} from "./animations.js";
 
 const currentTime = ref(new Date().toLocaleTimeString());
 
@@ -18,25 +24,27 @@ watchEffect(() => {
 
 gsap.registerPlugin(ScrollTrigger);
 onMounted(() => {
+  cursorChange(".outterWrapper", "#e7e7e7");
+  BGchangeColor(".outterWrapper", "#161616");
   animateText(".detail", ".outterWrapper", "details.", 2);
   animateText(".contacts", ".outterWrapper", "socials.", 2);
   changeColor(
     ".contacts",
-    "#161616",
+    "#e7e7e7",
     ".outterWrapper",
     "top center",
     "bottom center"
   );
   changeColor(
     ".contact",
-    "#161616",
+    "#e7e7e7",
     ".outterWrapper",
     "top center",
     "bottom center"
   );
   changeColor(
     ".time p",
-    "#161616",
+    "#e7e7e7",
     ".outterWrapper",
     "top center",
     "bottom center"
@@ -44,28 +52,28 @@ onMounted(() => {
 
   changeColor(
     ".detail",
-    "#161616",
+    "#e7e7e7",
     ".outterWrapper",
     "top center",
     "bottom center"
   );
   changeColor(
     ".details",
-    "#161616",
+    "#e7e7e7",
     ".outterWrapper",
     "top center",
     "bottom center"
   );
   changeColor(
     ".madeby",
-    "#161616",
+    "#e7e7e7",
     ".outterWrapper",
     "top center",
     "bottom center"
   );
   changeColor(
     ".source",
-    "#161616",
+    "#e7e7e7",
     ".outterWrapper",
     "top center",
     "bottom center"
@@ -173,7 +181,7 @@ onUnmounted(() => {
   left: 0;
   right: 0;
   height: 2px;
-  background: #161616;
+  background: #e7e7e7;
   transform-origin: left center;
   transform: scaleX(0);
 }
@@ -182,7 +190,7 @@ onUnmounted(() => {
   font-size: clamp(8px, 1.7vw, 16px);
   margin: 0;
   text-decoration: none;
-  color: #e7e7e7;
+  color: #161616;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -227,7 +235,7 @@ onUnmounted(() => {
   font-weight: 400px;
   margin: 0;
   text-align: left;
-  color: #e7e7e7;
+  color: #161616;
 }
 
 .details {
@@ -242,7 +250,7 @@ onUnmounted(() => {
   display: flex;
   align-items: center;
   z-index: 1;
-  color: #e7e7e7;
+  color: #161616;
 }
 
 .outterWrapper {
@@ -274,7 +282,7 @@ onUnmounted(() => {
   font-weight: 400px;
   margin: 0;
   text-align: left;
-  color: #e7e7e7;
+  color: #161616;
 }
 
 .contact {
@@ -291,7 +299,7 @@ onUnmounted(() => {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  color: #e7e7e7;
+  color: #161616;
 }
 
 .time p {
@@ -306,7 +314,7 @@ onUnmounted(() => {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  color: #e7e7e7;
+  color: #161616;
   margin: 0;
   white-space: nowrap;
 }
@@ -316,19 +324,18 @@ onUnmounted(() => {
 }
 
 ::selection {
-  background-color: #161616;
-  color: #e7e7e7;
+  background-color: #e7e7e7;
+  color: #161616;
 }
 
 ::-moz-selection {
-  background-color: #161616;
-  color: #e7e7e7;
+  background-color: #e7e7e7;
+  color: #161616;
 }
 
 @media (max-width: 430px) {
   .outterWrapper {
     padding-top: 0;
-    height: 50vh;
   }
 }
 </style>
