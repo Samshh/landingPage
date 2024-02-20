@@ -20,6 +20,21 @@ export const animateText = (selector, trigger, text, duration) => {
   });
 };
 
+export const ObjectChangeColor = (selector, color, trigger, start, end) => {
+  gsap.to(selector, {
+    scrollTrigger: {
+      trigger: trigger,
+      start: start,
+      end: end,
+      toggleActions: "play reverse play reverse",
+      scrub: false,
+      markers: false,
+    },
+    ease: "power1.inOut",
+    backgroundColor: color,
+  });
+};
+
 export const changeColor = (selector, color, trigger, start, end) => {
   gsap.to(selector, {
     scrollTrigger: {

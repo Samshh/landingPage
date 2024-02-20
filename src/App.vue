@@ -23,23 +23,22 @@ function raf(time) {
 requestAnimationFrame(raf);
 
 onMounted(() => {
-  setTimeout(() => {
-    gsap.registerPlugin(TextPlugin);
-    gsap.to(".welcome", {
-      delay: 1,
-      duration: 2,
-      text: "hello!",
-      ease: "power1.inOut",
-      onComplete: () => {
-        gsap.to(".preloader", {
-          top: "100%",
-          duration: 2,
-        });
-        gsap.to(".welcome", {
-          opacity: 0,
-        });
-      },
-    });
+  gsap.registerPlugin(TextPlugin);
+  gsap.to(".welcome", {
+    delay: 1,
+    duration: 2,
+    text: "hello!",
+    ease: "power1.inOut",
+    onComplete: () => {
+      gsap.to(".preloader", {
+        y: "-100%",
+        duration: 2,
+      });
+      gsap.to(".welcome", {
+        opacity: 0,
+        duration: 0.75,
+      });
+    },
   });
 });
 </script>

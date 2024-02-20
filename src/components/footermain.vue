@@ -8,7 +8,13 @@ import {
   pulse,
   BGchangeColor,
   cursorChange,
+  ObjectChangeColor,
 } from "./animations.js";
+import { Icon } from "@iconify/vue";
+// Add gaming sht
+// <Icon icon="simple-icons:myanimelist"  style="color: #161616" />
+// <Icon icon="arcticons:genshin-impact"  style="color: #161616" />
+// <Icon icon="mdi:steam"  style="color: #161616" />
 
 const currentTime = ref(new Date().toLocaleTimeString());
 
@@ -26,6 +32,11 @@ gsap.registerPlugin(ScrollTrigger);
 onMounted(() => {
   cursorChange(".outterWrapper", "#e7e7e7");
   BGchangeColor(".outterWrapper", "#161616");
+  ObjectChangeColor(".underline", "#e7e7e7", ".outterWrapper", "top center", "bottom center");
+  ObjectChangeColor(".underline1", "#e7e7e7", ".outterWrapper", "top center", "bottom center");
+  ObjectChangeColor(".underline2", "#e7e7e7", ".outterWrapper", "top center", "bottom center");
+  ObjectChangeColor(".underline3", "#e7e7e7", ".outterWrapper", "top center", "bottom center");
+  ObjectChangeColor(".underline4", "#e7e7e7", ".outterWrapper", "top center", "bottom center");
   animateText(".detail", ".outterWrapper", "details.", 2);
   animateText(".contacts", ".outterWrapper", "socials.", 2);
   changeColor(
@@ -49,7 +60,6 @@ onMounted(() => {
     "top center",
     "bottom center"
   );
-
   changeColor(
     ".detail",
     "#e7e7e7",
@@ -73,6 +83,13 @@ onMounted(() => {
   );
   changeColor(
     ".source",
+    "#e7e7e7",
+    ".outterWrapper",
+    "top center",
+    "bottom center"
+  );
+  changeColor(
+    ".ficon",
     "#e7e7e7",
     ".outterWrapper",
     "top center",
@@ -102,7 +119,7 @@ onUnmounted(() => {
             href="https://www.linkedin.com/in/samshh/"
             style="cursor: none"
           >
-            <i class="fab fa-linkedin"></i>
+            <Icon icon="mdi:linkedin" class="ficon" style="color: #161616" />
             LinkedIn
             <div class="underline"></div>
           </a>
@@ -112,7 +129,7 @@ onUnmounted(() => {
             href="https://github.com/Samshh"
             style="cursor: none"
           >
-            <i class="fab fa-github"></i>
+            <Icon icon="mdi:github" class="ficon" style="color: #161616" />
             GitHub
             <div class="underline1"></div>
           </a>
@@ -122,7 +139,7 @@ onUnmounted(() => {
             href="https://developers.google.com/profile/u/samshh"
             style="cursor: none"
           >
-            <i class="fab fa-google"></i>
+            <Icon icon="bxl:google" class="ficon" style="color: #161616" />
             Google
             <div class="underline2"></div>
           </a>
@@ -132,7 +149,11 @@ onUnmounted(() => {
             href="https://bento.me/samshh"
             style="cursor: none"
           >
-            <i class="fas fa-utensils"></i>
+            <Icon
+              icon="simple-icons:bento"
+              class="ficon"
+              style="color: #161616"
+            />
             Bento
             <div class="underline3"></div>
           </a>
@@ -142,7 +163,7 @@ onUnmounted(() => {
             href="https://www.instagram.com/smldcra/"
             style="cursor: none"
           >
-            <i class="fab fa-instagram"></i>
+            <Icon icon="mdi:instagram" class="ficon" style="color: #161616" />
             Instagram
             <div class="underline4"></div>
           </a>
@@ -171,6 +192,9 @@ onUnmounted(() => {
 </template>
 
 <style scoped>
+.ficon {
+  font-size: clamp(15px, 1.7vw, 30px);
+}
 .underline,
 .underline1,
 .underline2,
@@ -181,7 +205,7 @@ onUnmounted(() => {
   left: 0;
   right: 0;
   height: 2px;
-  background: #e7e7e7;
+  background: #161616;
   transform-origin: left center;
   transform: scaleX(0);
 }
