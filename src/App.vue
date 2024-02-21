@@ -41,17 +41,17 @@ onMounted(() => {
 </script>
 
 <template>
-  <!-- <div class="preloader" ref="preloader">
+  <div class="preloader" ref="preloader">
     <div class="welcome">こんにちは!</div>
   </div>
-  <div> -->
+  <div>
     <div class="background"></div>
-    <!-- <cursor />
+    <cursor />
     <firstpage />
     <secondpage />
-    <technologies /> -->
+    <technologies />
     <footermain />
-  <!-- </div> -->
+  </div>
 </template>
 
 <style scoped>
@@ -60,7 +60,7 @@ onMounted(() => {
   height: 100vh;
   z-index: -1;
   position: fixed;
-  background-color: #161616;
+  background-color: #e7e7e7;
 }
 
 .preloader {
