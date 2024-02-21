@@ -12,6 +12,22 @@ onMounted(() => {
     "top center",
     "bottom center"
   );
+  changeColor(".num", "#161616", ".technoOuter", "top center", "bottom center");
+  changeColor(
+    ".disc",
+    "#161616",
+    ".technoOuter",
+    "top center",
+    "bottom center"
+  );
+  changeColor(".ai", "#161616", ".technoOuter", "top center", "bottom center");
+  changeColor(
+    ".netli",
+    "#161616",
+    ".technoOuter",
+    "top center",
+    "bottom center"
+  );
   changeColor(".vue", "#161616", ".technoOuter", "top center", "bottom center");
   changeColor(".js", "#161616", ".technoOuter", "top center", "bottom center");
   changeColor(
@@ -77,9 +93,19 @@ onUnmounted(() => {});
             class="icon tf"
           />
           <Icon
+            icon="simple-icons:openai"
+            style="color: #e7e7e7"
+            class="icon ai"
+          />
+          <Icon
             icon="simple-icons:pandas"
             style="color: #e7e7e7"
             class="icon pd"
+          />
+          <Icon
+            icon="simple-icons:numpy"
+            style="color: #e7e7e7"
+            class="icon num"
           />
           <Icon
             icon="devicon-plain:matplotlib"
@@ -113,6 +139,11 @@ onUnmounted(() => {});
             class="icon java"
           />
           <Icon
+            icon="ic:baseline-discord"
+            style="color: #e7e7e7"
+            class="icon disc"
+          />
+          <Icon
             icon="simple-icons:cisco"
             style="color: #e7e7e7"
             class="icon cisco"
@@ -130,6 +161,11 @@ onUnmounted(() => {});
             class="icon css"
           />
           <Icon icon="cib:greensock" style="color: #e7e7e7" class="icon gsap" />
+          <Icon
+            icon="simple-icons:netlify"
+            style="color: #e7e7e7"
+            class="icon netli"
+          />
           <Icon icon="la:markdown" style="color: #e7e7e7" class="icon md" />
         </div>
       </div>
