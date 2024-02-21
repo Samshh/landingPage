@@ -33,10 +33,7 @@ onMounted(() => {
       gsap.to(".preloader", {
         y: "-100%",
         duration: 2,
-      });
-      gsap.to(".welcome", {
-        opacity: 0,
-        duration: 0.75,
+        ease: "expo.inOut",
       });
     },
   });
@@ -44,17 +41,17 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="preloader" ref="preloader">
+  <!-- <div class="preloader" ref="preloader">
     <div class="welcome">こんにちは!</div>
   </div>
-  <div>
+  <div> -->
     <div class="background"></div>
-    <cursor />
+    <!-- <cursor />
     <firstpage />
     <secondpage />
-    <technologies />
+    <technologies /> -->
     <footermain />
-  </div>
+  <!-- </div> -->
 </template>
 
 <style scoped>
@@ -63,7 +60,7 @@ onMounted(() => {
   height: 100vh;
   z-index: -1;
   position: fixed;
-  background-color: #e7e7e7;
+  background-color: #161616;
 }
 
 .preloader {

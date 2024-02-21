@@ -1,5 +1,6 @@
 <script setup>
 import { gsap } from "gsap";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import { onMounted, onUnmounted } from "vue";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import {
@@ -8,10 +9,47 @@ import {
   changeColor,
   cursorChange,
 } from "./animations.js";
+import { Icon } from "@iconify/vue";
+
+gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
+
+const scrollToTop = () => {
+  gsap.to(window, {
+    duration: 2.5,
+    scrollTo: { y: 0, autoKill: false },
+    ease: "expo.inOut",
+  });
+};
 
 onMounted(() => {
   gsap.registerPlugin(ScrollTrigger);
 
+  gsap.fromTo(
+    ".fixed-button",
+    {
+      y: -100,
+      autoAlpha: 0,
+    },
+    {
+      scrollTrigger: {
+        trigger: ".outerWrapper",
+        start: "top center",
+        end: "bottom center",
+        toggleActions: "play none none reverse",
+      },
+      y: 0,
+      autoAlpha: 1,
+      duration: 1,
+      ease: "power1.out",
+    }
+  );
+  changeColor(
+    "#arrowup",
+    "#e7e7e7",
+    ".outerWrapper",
+    "top center",
+    "bottom center"
+  );
   cursorChange(".outerWrapper", "#e7e7e7");
   BGchangeColor(".outerWrapper", "#161616");
   animateText(
@@ -44,6 +82,13 @@ onUnmounted(() => {
 
 <template>
   <div class="outerWrapper">
+    <button class="fixed-button" style="cursor: none" @click="scrollToTop">
+      <Icon
+        icon="solar:map-arrow-up-broken"
+        style="color: #161616"
+        id="arrowup"
+      />
+    </button>
     <div class="innerWrapper">
       <div class="aboutMe">
         <img class="myPic" src="/src/assets/SamGoogle.png" alt="" />
@@ -66,6 +111,18 @@ onUnmounted(() => {
 </template>
 
 <style scoped>
+.fixed-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  font-size: clamp(22.5px, 3.4vw, 45px);
+  background: none;
+  padding: 0;
+  display: inline-block;
+}
 .aboutwrap {
   padding-top: clamp(45px, 5vw, 180px);
   padding-left: clamp(42.5px, 5.7vw, 85px);

@@ -2,8 +2,33 @@
 import { onMounted, onUnmounted } from "vue";
 import { Icon } from "@iconify/vue";
 import { changeColor, animateText } from "./animations.js";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 onMounted(() => {
+
+  gsap.fromTo(
+    ".icon",
+    {
+      autoAlpha: 0,
+      y: 100,
+    },
+    {
+      scrollTrigger: {
+        trigger: ".technoOuter",
+        start: "top center",
+        end: "bottom center",
+        toggleActions: "play none none reverse",
+      },
+      y: 0,
+      autoAlpha: 1,
+      duration: 1,
+      ease: "power1.out",
+      stagger: 0.15,
+    }
+  );
   changeColor(".mt", "#161616", ".technoOuter", "top center", "bottom center");
   changeColor(
     ".cisco",
@@ -185,17 +210,6 @@ onUnmounted(() => {});
   padding-top: clamp(22px, 5.7vw, 45px);
   padding-left: clamp(22px, 5.7vw, 45px);
   padding-right: clamp(22px, 5.7vw, 45px);
-  transition: transform 0.3s ease-in-out;
-}
-
-.icon:hover {
-  transform: scale(1.2);
-}
-
-.technoOuter {
-  margin: 0;
-  height: 100vh;
-  width: 100vw;
 }
 
 .technoInner {
