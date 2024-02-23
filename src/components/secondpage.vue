@@ -182,7 +182,7 @@ onUnmounted(() => {
   color: #161616;
 }
 
-@media (max-width: 430px) {
+@media (max-width: 714px) {
   .outerWrapper {
     height: auto;
     overflow: auto;

@@ -11,7 +11,7 @@
   "dependencies": {
     "@iconify/vue": "^3.2.1",
     "@studio-freight/lenis": "^1.0.34",
-    "gsap": "^3.12.4",
+    "gsap": "^3.12.5",
     "vue": "^3.3.11"
   },
   "devDependencies": {
