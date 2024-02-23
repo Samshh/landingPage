@@ -403,6 +403,12 @@ onUnmounted(() => {
   color: #161616;
 }
 
+@media (min-width: 1680px) {
+  .mySign {
+    transform: scale(1.5);
+  }
+}
+
 @media (max-width: 950px) {
   .outterWrapper {
     padding-top: 0;
@@ -413,6 +419,7 @@ onUnmounted(() => {
   }
 
   .mySign {
+    transform: scale(1);
     padding-top: 40%;
     padding-left: 0;
     display: flex;
