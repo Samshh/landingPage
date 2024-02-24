@@ -420,7 +420,7 @@ onUnmounted(() => {
 
   .mySign {
     transform: scale(1);
-    padding-top: 40%;
+    padding-top: 85px;
     padding-left: 0;
     display: flex;
     justify-content: center;
