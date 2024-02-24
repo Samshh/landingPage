@@ -122,7 +122,7 @@ onUnmounted(() => {
   background: none;
   padding: 0;
   display: inline-block;
-  z-index: 999;
+  z-index: 99;
 }
 .aboutwrap {
   padding-top: clamp(45px, 5vw, 180px);
