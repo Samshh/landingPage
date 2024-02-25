@@ -27,7 +27,7 @@ onMounted(() => {
   gsap.fromTo(
     ".fixed-button",
     {
-      y: -100,
+      y: 100,
       autoAlpha: 0,
     },
     {
@@ -113,7 +113,7 @@ onUnmounted(() => {
 <style scoped>
 .fixed-button {
   position: fixed;
-  top: 20px;
+  bottom: 20px;
   right: 20px;
   border: none;
   text-align: center;
