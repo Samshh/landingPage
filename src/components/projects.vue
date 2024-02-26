@@ -4,16 +4,19 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { TextPlugin } from "gsap/TextPlugin";
 import { onMounted } from "vue";
+import { Icon } from "@iconify/vue";
 import {
   BGchangeColor,
   cursorChange,
   changeColor,
   animateText,
+  scrollerpic,
 } from "./animations";
 
 onMounted(() => {
   gsap.registerPlugin(ScrollTrigger);
   gsap.registerPlugin(TextPlugin);
+  scrollerpic(".ticket", ".projectsMain", 1);
   animateText(".FProject", ".projectsMain", "featured project.", 2);
   animateText(
     ".proj1",
@@ -50,6 +53,13 @@ onMounted(() => {
     "top center",
     "bottom center"
   );
+  changeColor(
+    ".ticket",
+    "#e7e7e7",
+    ".projectsMain",
+    "top center",
+    "bottom center"
+  );
 });
 </script>
 
@@ -68,11 +78,23 @@ onMounted(() => {
       </p>
     </div>
     <div class="ticketLogo">
+      <img src="/src/assets/ticketCommands.png" alt=""  class="ticket">
     </div>
   </div>
 </template>
 
 <style scoped>
+.ticket {
+  border-radius: 10px;
+  object-fit: cover;
+  height: clamp(350px, 50vw, 900px);
+  width: auto;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  opacity: 0;
+}
 .ticketLogo {
   display: flex;
   flex-direction: column;
@@ -88,7 +110,6 @@ onMounted(() => {
 .projectDesc {
   padding-bottom: clamp(22px, 5.7vw, 45px);
   font-size: clamp(15px, 1.7vw, 30px);
-  padding-right: clamp(22px, 5.7vw, 45px);
   font-weight: 400;
   text-align: justify;
   margin: 0;
@@ -97,16 +118,14 @@ onMounted(() => {
   padding-left: clamp(22px, 5.7vw, 45px);
   padding-right: clamp(22px, 5.7vw, 45px);
   padding-bottom: clamp(7.5px, 1.7vw, 15px);
-  padding-top: clamp(22px, 5.7vw, 45px);
-  height: 80vh;
-  width: 100vw;
+  padding-top: clamp(42px, 5.7vw, 85px);
+  height: auto;
+  width: auto;
 }
 
 .projectsWrapper {
   display: flex;
   flex-direction: column;
-  padding-top: clamp(22px, 5.7vw, 45px);
-  padding-right: clamp(22px, 5.7vw, 45px);
 }
 
 .FProject {
@@ -116,19 +135,22 @@ onMounted(() => {
   padding-bottom: clamp(22px, 5.7vw, 45px);
 }
 
+::selection {
+  background-color: #e7e7e7;
+  color: #161616;
+}
+
+::-moz-selection {
+  background-color: #e7e7e7;
+  color: #161616;
+}
+
 @media (max-width: 950px) {
   .projectsMain {
     display: flex;
     flex-direction: column;
   }
 
-  .ticketing {
-    transform: scale(0.5);
-    padding-left: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
 }
 
 </style>
