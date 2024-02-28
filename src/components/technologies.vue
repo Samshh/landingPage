@@ -8,7 +8,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 onMounted(() => {
-
   gsap.fromTo(
     ".icon",
     {
@@ -47,7 +46,7 @@ onMounted(() => {
   );
   changeColor(".ai", "#161616", ".technoOuter", "top center", "bottom center");
   changeColor(
-    ".netli",
+    ".tailwind",
     "#161616",
     ".technoOuter",
     "top center",
@@ -186,11 +185,7 @@ onUnmounted(() => {});
             class="icon css"
           />
           <Icon icon="cib:greensock" style="color: #e7e7e7" class="icon gsap" />
-          <Icon
-            icon="simple-icons:netlify"
-            style="color: #e7e7e7"
-            class="icon netli"
-          />
+          <Icon icon="mdi:tailwind" style="color: #e7e7e7" class="icon tailwind" />
           <Icon icon="la:markdown" style="color: #e7e7e7" class="icon md" />
         </div>
       </div>
