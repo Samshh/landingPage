@@ -40,7 +40,7 @@ onMounted(() => {
       { strokeDashoffset: pathLength },
       {
         strokeDashoffset: 0,
-        duration: 3,
+        duration: 5,
         delay: index * 0.5,
         ease: "power1.inOut",
         scrollTrigger: {

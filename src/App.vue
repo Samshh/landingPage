@@ -4,6 +4,7 @@ import secondpage from "./components/secondpage.vue";
 import cursor from "./components/cursor.vue";
 import footermain from "./components/footermain.vue";
 import technologies from "./components/technologies.vue";
+// import projects from "./components/projects.vue";
 import { onMounted } from "vue";
 import { gsap } from "gsap";
 import { TextPlugin } from "gsap/TextPlugin";
@@ -46,6 +47,7 @@ onMounted(() => {
     <firstpage />
     <secondpage />
     <technologies />
+    <!-- <projects /> -->
     <footermain />
   </div>
 </template>

@@ -1,30 +1,26 @@
 <template>
-  <div v-if="smallscreen" class="custom-cursor" :style="{ top: cursorY + 'px', left: cursorX + 'px' }"></div>
+  <div ref="cursor" class="custom-cursor"></div>
 </template>
 
 <script setup>
-import { onMounted, onBeforeUnmount, ref } from "vue";
+import { onMounted, ref } from "vue";
+import { gsap } from "gsap";
 
-const smallscreen = ref(window.innerWidth > 1024);
-
-const updateScreenSize = () => {
-  smallscreen.value = window.innerWidth > 1024;
-};
-
-const cursorX = ref(0);
-const cursorY = ref(0);
-
-const updateCursorPosition = (event) => {
-  cursorX.value = event.clientX;
-  cursorY.value = event.clientY;
-};
+const cursor = ref(null);
 
 onMounted(() => {
-  document.addEventListener("mousemove", updateCursorPosition);
-});
+  const updateCursorPosition = (event) => {
+    if (window.innerWidth > 768) {
+      gsap.to(cursor.value, {
+        x: event.clientX,
+        y: event.clientY,
+        duration: 0.3,
+        ease: "power2.out",
+      });
+    }
+  };
 
-onBeforeUnmount(() => {
-  document.removeEventListener("mousemove", updateCursorPosition);
+  document.addEventListener("mousemove", updateCursorPosition);
 });
 </script>
 
@@ -38,11 +34,13 @@ onBeforeUnmount(() => {
   pointer-events: none;
   z-index: 9999;
   cursor: none;
+  transform: translate(-50%, -50%);
 }
 
-@media (max-width: 430px) {
+@media (max-width: 768px) {
   .custom-cursor {
     display: none;
   }
 }
+
 </style>

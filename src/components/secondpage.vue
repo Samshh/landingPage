@@ -218,7 +218,8 @@ onUnmounted(() => {
   }
 
   .myPic {
-    width: 100%;
+    width: 100vw;
+    max-height: 50vh;
     padding-bottom: 10px;
     padding-top: 10px;
   }
