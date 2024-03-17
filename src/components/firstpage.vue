@@ -146,7 +146,7 @@ onUnmounted(() => {
 
 .line {
   position: absolute;
-  width: clamp(1px, 100vw, 1.75px);
+  width: 1.5px;
   height: 100%;
   top: 0;
   left: 50%;
@@ -228,6 +228,12 @@ onUnmounted(() => {
 
   100% {
     top: 110%;
+  }
+}
+
+@media (max-width: 430px) {
+  .lines {
+    display: none;
   }
 }
 </style>

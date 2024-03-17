@@ -238,6 +238,7 @@ onUnmounted(() => {
 
 <style scoped>
 .samshh {
+  font-size: clamp(15px, 1.7vw, 26.5px);
   font-weight: 900px;
   margin-bottom: 0px;
   padding-bottom: clamp(10px, 1.7vw, 20px);
@@ -257,7 +258,7 @@ onUnmounted(() => {
   position: fixed;
   top: 0;
   width: 100%;
-  height: 6%;
+  height: clamp(4%, 5.7vw, 6%);
   background-color: #e7e7e7;
   z-index: 99;
 }
@@ -333,13 +334,12 @@ onUnmounted(() => {
   background-color: #e7e7e7;
   color: #161616;
 }
-@media (max-width: 430px) {
+
+@media (max-width: 714px) {
   #navbar {
     display: none;
   }
-}
 
-@media (max-width: 714px) {
   .outerWrapper {
     height: auto;
     overflow: auto;
