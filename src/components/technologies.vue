@@ -99,94 +99,108 @@ onUnmounted(() => {});
 </script>
 
 <template>
-  <div class="technoOuter">
-    <div class="technoInner">
-      <div>
-        <h1 class="techTitle">テクノロジーズ。</h1>
-      </div>
-      <div class="techStack">
-        <div class="tech" style="display: flex">
-          <Icon
-            icon="akar-icons:python-fill"
-            style="color: #e7e7e7"
-            class="icon py"
-          />
-          <Icon
-            icon="simple-icons:tensorflow"
-            style="color: #e7e7e7"
-            class="icon tf"
-          />
-          <Icon
-            icon="simple-icons:openai"
-            style="color: #e7e7e7"
-            class="icon ai"
-          />
-          <Icon
-            icon="simple-icons:pandas"
-            style="color: #e7e7e7"
-            class="icon pd"
-          />
-          <Icon
-            icon="simple-icons:numpy"
-            style="color: #e7e7e7"
-            class="icon num"
-          />
-          <Icon
-            icon="devicon-plain:matplotlib"
-            style="color: #e7e7e7"
-            class="icon mt"
-          />
-          <Icon
-            icon="simple-icons:scikitlearn"
-            style="color: #e7e7e7"
-            class="icon skl"
-          />
-          <Icon icon="mdi:git" style="color: #e7e7e7" class="icon git" />
-          <Icon
-            icon="simple-icons:mysql"
-            style="color: #e7e7e7"
-            class="icon sql"
-          />
-          <Icon
-            icon="akar-icons:php-fill"
-            style="color: #e7e7e7"
-            class="icon php"
-          />
-          <Icon
-            icon="devicon-plain:cplusplus"
-            style="color: #e7e7e7"
-            class="icon cpp"
-          />
-          <Icon
-            icon="ant-design:java-outlined"
-            style="color: #e7e7e7"
-            class="icon java"
-          />
-          <Icon
-            icon="ic:baseline-discord"
-            style="color: #e7e7e7"
-            class="icon disc"
-          />
-          <Icon
-            icon="simple-icons:cisco"
-            style="color: #e7e7e7"
-            class="icon cisco"
-          />
-          <Icon icon="ri:vuejs-fill" style="color: #e7e7e7" class="icon vue" />
-          <Icon icon="cib:js" style="color: #e7e7e7" class="icon js" />
-          <Icon
-            icon="akar-icons:html-fill"
-            style="color: #e7e7e7"
-            class="icon html"
-          />
-          <Icon
-            icon="akar-icons:css-fill"
-            style="color: #e7e7e7"
-            class="icon css"
-          />
-          <Icon icon="cib:greensock" style="color: #e7e7e7" class="icon gsap" />
-          <Icon icon="mdi:tailwind" style="color: #e7e7e7" class="icon tailwind" />
-          <Icon icon="la:markdown" style="color: #e7e7e7" class="icon md" />
+  <div id="techID">
+    <div class="technoOuter">
+      <div class="technoInner">
+        <div>
+          <h1 class="techTitle">テクノロジーズ。</h1>
+        </div>
+        <div class="techStack">
+          <div class="tech" style="display: flex">
+            <Icon
+              icon="akar-icons:python-fill"
+              style="color: #e7e7e7"
+              class="icon py"
+            />
+            <Icon
+              icon="simple-icons:tensorflow"
+              style="color: #e7e7e7"
+              class="icon tf"
+            />
+            <Icon
+              icon="simple-icons:openai"
+              style="color: #e7e7e7"
+              class="icon ai"
+            />
+            <Icon
+              icon="simple-icons:pandas"
+              style="color: #e7e7e7"
+              class="icon pd"
+            />
+            <Icon
+              icon="simple-icons:numpy"
+              style="color: #e7e7e7"
+              class="icon num"
+            />
+            <Icon
+              icon="devicon-plain:matplotlib"
+              style="color: #e7e7e7"
+              class="icon mt"
+            />
+            <Icon
+              icon="simple-icons:scikitlearn"
+              style="color: #e7e7e7"
+              class="icon skl"
+            />
+            <Icon icon="mdi:git" style="color: #e7e7e7" class="icon git" />
+            <Icon
+              icon="simple-icons:mysql"
+              style="color: #e7e7e7"
+              class="icon sql"
+            />
+            <Icon
+              icon="akar-icons:php-fill"
+              style="color: #e7e7e7"
+              class="icon php"
+            />
+            <Icon
+              icon="devicon-plain:cplusplus"
+              style="color: #e7e7e7"
+              class="icon cpp"
+            />
+            <Icon
+              icon="ant-design:java-outlined"
+              style="color: #e7e7e7"
+              class="icon java"
+            />
+            <Icon
+              icon="ic:baseline-discord"
+              style="color: #e7e7e7"
+              class="icon disc"
+            />
+            <Icon
+              icon="simple-icons:cisco"
+              style="color: #e7e7e7"
+              class="icon cisco"
+            />
+            <Icon
+              icon="ri:vuejs-fill"
+              style="color: #e7e7e7"
+              class="icon vue"
+            />
+            <Icon icon="cib:js" style="color: #e7e7e7" class="icon js" />
+            <Icon
+              icon="akar-icons:html-fill"
+              style="color: #e7e7e7"
+              class="icon html"
+            />
+            <Icon
+              icon="akar-icons:css-fill"
+              style="color: #e7e7e7"
+              class="icon css"
+            />
+            <Icon
+              icon="cib:greensock"
+              style="color: #e7e7e7"
+              class="icon gsap"
+            />
+            <Icon
+              icon="mdi:tailwind"
+              style="color: #e7e7e7"
+              class="icon tailwind"
+            />
+            <Icon icon="la:markdown" style="color: #e7e7e7" class="icon md" />
+          </div>
         </div>
       </div>
     </div>

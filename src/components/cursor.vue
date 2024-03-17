@@ -27,8 +27,8 @@ onMounted(() => {
 <style scoped>
 .custom-cursor {
   position: fixed;
-  width: 13px;
-  height: 13px;
+  width: 15px;
+  height: 15px;
   background-color: #161616;
   border-radius: 50%;
   pointer-events: none;
