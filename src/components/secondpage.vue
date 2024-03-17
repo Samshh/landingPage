@@ -41,7 +41,7 @@ const scrollToSecond = () => {
 const scrollToTech = () => {
   gsap.to(window, {
     duration: 2.5,
-    scrollTo: { y: "#techID", autoKill: false }, 
+    scrollTo: { y: "#techID", autoKill: false },
     ease: "expo.inOut",
   });
 };
@@ -93,8 +93,9 @@ onMounted(() => {
   gsap.fromTo(
     ".fixed-button",
     {
-      y: 100,
+      x: 100,
       autoAlpha: 0,
+      rotation: 0,
     },
     {
       scrollTrigger: {
@@ -103,9 +104,10 @@ onMounted(() => {
         end: "bottom center",
         toggleActions: "play none none reverse",
       },
-      y: 0,
+      x: 0,
       autoAlpha: 1,
       duration: 1,
+      rotation: 360,
       ease: "power1.out",
     }
   );
@@ -207,7 +209,7 @@ onUnmounted(() => {
     <div class="outerWrapper">
       <button class="fixed-button" style="cursor: none" @click="scrollToTop">
         <Icon
-          icon="solar:map-arrow-up-broken"
+          icon="ph:arrow-bend-left-up"
           style="color: #161616"
           id="arrowup"
         />

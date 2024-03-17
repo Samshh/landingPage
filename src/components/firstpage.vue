@@ -15,7 +15,7 @@ onMounted(() => {
     });
   };
 
-  animateText(".maintext", "Samshh", 3);
+  animateText(".maintext", "samshh.", 3);
 });
 
 onUnmounted(() => {
@@ -47,7 +47,7 @@ onUnmounted(() => {
         </div>
       </div>
       <div class="name">
-        <h1 class="maintext">73616d</h1>
+        <h1 class="maintext">73616d.</h1>
         <p class="subtext">Software Developer</p>
       </div>
     </div>
@@ -119,7 +119,6 @@ onUnmounted(() => {
 .maintext {
   margin: 0;
   font-size: clamp(15px, 2.7vw, 30px);
-  font-weight: 400;
   text-align: right;
   padding-right: 35px;
   color: #161616;
@@ -136,7 +135,7 @@ onUnmounted(() => {
 }
 
 .lines {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -147,7 +146,7 @@ onUnmounted(() => {
 
 .line {
   position: absolute;
-  width: 1px;
+  width: clamp(1px, 100vw, 1.75px);
   height: 100%;
   top: 0;
   left: 50%;
