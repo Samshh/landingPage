@@ -7,7 +7,6 @@ import {
   changeColor,
   pulse,
   BGchangeColor,
-  cursorChange,
   ObjectChangeColor,
 } from "./animations.js";
 import { Icon } from "@iconify/vue";
@@ -52,7 +51,6 @@ onMounted(() => {
       }
     );
   });
-  cursorChange(".outterWrapper", "#e7e7e7");
   BGchangeColor(".outterWrapper", "#161616");
   ObjectChangeColor(
     ".underline",
@@ -188,9 +186,9 @@ onUnmounted(() => {
     <div class="timewrap">
       <div class="innerWrapper">
         <div class="contwrap">
-          <h1 class="contacts">ソーシャル。</h1>
+          <h1 class="contacts">jK8zX3Qp</h1>
           <a
-            class="contact linkedin"
+            class="contact linkedin hoverable"
             target="_blank"
             href="https://www.linkedin.com/in/samshh/"
             style="cursor: none"
@@ -200,7 +198,7 @@ onUnmounted(() => {
             <div class="underline"></div>
           </a>
           <a
-            class="contact github"
+            class="contact github hoverable"
             target="_blank"
             href="https://github.com/Samshh"
             style="cursor: none"
@@ -210,7 +208,7 @@ onUnmounted(() => {
             <div class="underline1"></div>
           </a>
           <a
-            class="contact google"
+            class="contact google hoverable"
             target="_blank"
             href="https://developers.google.com/profile/u/samshh"
             style="cursor: none"
@@ -220,7 +218,7 @@ onUnmounted(() => {
             <div class="underline2"></div>
           </a>
           <a
-            class="contact bento"
+            class="contact bento hoverable"
             target="_blank"
             href="https://bento.me/samshh"
             style="cursor: none"
@@ -234,7 +232,7 @@ onUnmounted(() => {
             <div class="underline3"></div>
           </a>
           <a
-            class="contact instagram"
+            class="contact instagram hoverable"
             target="_blank"
             href="https://www.instagram.com/smldcra/"
             style="cursor: none"
@@ -247,13 +245,13 @@ onUnmounted(() => {
       </div>
       <div class="signWrap">
         <div class="detailwrap">
-          <h1 class="detail">デタイルズ。</h1>
+          <h1 class="detail">4Bn9ZrQ2</h1>
           <p class="details">samdacs2@gmail.com</p>
           <p class="details">+63 969 696 9696</p>
         </div>
         <div class="mySign">
           <svg
-            class="sigvg"
+            class="sigvg hoverable"
             width="390.37"
             height="306.3"
             viewBox="156.5 110 395.37 311.3"
@@ -271,12 +269,7 @@ onUnmounted(() => {
     </div>
     <div class="madewrap">
       <div class="madeby">
-        <a
-          class="source"
-          target="_blank"
-          href="https://github.com/Samshh/landingPage"
-          >© 2024 Samshh</a
-        >
+        <a class="source">© 2024 Samshh</a>
       </div>
       <div id="footerID">
         <div class="time">

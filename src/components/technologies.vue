@@ -103,7 +103,7 @@ onUnmounted(() => {});
     <div class="technoOuter">
       <div class="technoInner">
         <div>
-          <h1 class="techTitle">テクノロジーズ。</h1>
+          <h1 class="techTitle">7Gh5Jk1QrP39i</h1>
         </div>
         <div class="techStack">
           <div class="tech" style="display: flex">

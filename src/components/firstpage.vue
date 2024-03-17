@@ -33,18 +33,9 @@ onUnmounted(() => {
       <div class="line"></div>
       <div class="line"></div>
     </div>
-    <div class="mainwrapper">
+    <div class="mainwrapper hoverable">
       <div class="box1">
         <img class="logo" src="\src\assets\samlogo1.png" alt="test" />
-        <div class="textwrapper">
-          <div class="katakana">
-            <p class="m">メ</p>
-            <p class="i">イ</p>
-            <p class="p">プ</p>
-            <p class="r">ル</p>
-            <p class="kanji">楓</p>
-          </div>
-        </div>
       </div>
       <div class="name">
         <h1 class="maintext">73616d.</h1>

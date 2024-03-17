@@ -40,7 +40,7 @@ onMounted(() => {
 
 <template>
   <div class="preloader" ref="preloader">
-    <div class="welcome">こんにちは!</div>
+    <div class="welcome hoverable"></div>
   </div>
   <div>
     <div class="background"></div>

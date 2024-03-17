@@ -1,44 +1,80 @@
 <template>
-  <div ref="cursor" class="custom-cursor"></div>
+  <div>
+    <div ref="bigBall" class="cursor__ball cursor__ball--big"></div>
+    <div ref="smallBall" class="cursor__ball cursor__ball--small"></div>
+  </div>
 </template>
 
 <script setup>
 import { onMounted, ref } from "vue";
 import { gsap } from "gsap";
 
-const cursor = ref(null);
+const bigBall = ref(null);
+const smallBall = ref(null);
 
 onMounted(() => {
-  const updateCursorPosition = (event) => {
-    if (window.innerWidth > 768) {
-      gsap.to(cursor.value, {
-        x: event.clientX,
-        y: event.clientY,
-        duration: 0.3,
-        ease: "power2.out",
-      });
-    }
+  const hoverables = document.querySelectorAll(".hoverable");
+
+  const onMouseMove = (e) => {
+    gsap.to(bigBall.value, 0.4, {
+      x: e.clientX - 15,
+      y: e.clientY - 15,
+    });
+    gsap.to(smallBall.value, 0.1, {
+      x: e.clientX - 5,
+      y: e.clientY - 7,
+    });
   };
 
-  document.addEventListener("mousemove", updateCursorPosition);
+  const onMouseHover = () => {
+    gsap.to(bigBall.value, 0.3, {
+      scale: 4,
+    });
+  };
+
+  const onMouseHoverOut = () => {
+    gsap.to(bigBall.value, 0.3, {
+      scale: 1,
+    });
+  };
+
+  document.body.addEventListener("mousemove", onMouseMove);
+  hoverables.forEach((hoverable) => {
+    hoverable.addEventListener("mouseenter", onMouseHover);
+    hoverable.addEventListener("mouseleave", onMouseHoverOut);
+  });
 });
 </script>
 
 <style scoped>
-.custom-cursor {
+.cursor__ball {
   position: fixed;
-  width: 15px;
-  height: 15px;
-  background-color: #161616;
-  border-radius: 50%;
+  top: 0;
+  left: 0;
+  mix-blend-mode: difference;
+  z-index: 1000;
   pointer-events: none;
-  z-index: 9999;
-  cursor: none;
-  transform: translate(-50%, -50%);
+}
+
+.cursor__ball--big {
+  width: 30px;
+  height: 30px;
+  background-color: #e7e7e7;
+  border-radius: 50%;
+}
+
+.cursor__ball--small {
+  width: 10px;
+  height: 10px;
+  background-color: #e7e7e7;
+  border-radius: 50%;
 }
 
 @media (max-width: 768px) {
-  .custom-cursor {
+  .cursor__ball--big {
+    display: none;
+  }
+  .cursor__ball--small {
     display: none;
   }
 }

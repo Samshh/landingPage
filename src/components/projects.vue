@@ -7,7 +7,6 @@ import { onMounted } from "vue";
 import { Icon } from "@iconify/vue";
 import {
   BGchangeColor,
-  cursorChange,
   changeColor,
   animateText,
   scrollerpic,
@@ -38,7 +37,6 @@ onMounted(() => {
     "bottom center"
   );
   BGchangeColor(".projectsMain", "#161616");
-  cursorChange(".projectsMain", "#e7e7e7");
   changeColor(
     ".projectDesc",
     "#e7e7e7",

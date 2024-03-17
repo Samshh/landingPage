@@ -8,7 +8,6 @@ import {
   ObjectChangeColor,
   animateText,
   changeColor,
-  cursorChange,
 } from "./animations.js";
 import { Icon } from "@iconify/vue";
 
@@ -128,7 +127,6 @@ onMounted(() => {
     "bottom center"
   );
 
-  cursorChange(".outerWrapper", "#e7e7e7");
   BGchangeColor(".outerWrapper", "#161616");
   animateText(
     ".myText",
@@ -171,7 +169,7 @@ onUnmounted(() => {
       <div id="navbar">
         <div class="navwrapper">
           <button
-            class="navButton"
+            class="navButton hoverable"
             style="
               cursor: none;
               background-color: transparent;
@@ -182,7 +180,7 @@ onUnmounted(() => {
             <h1 id="samshh" class="samshh" style="color: #161616">about me.</h1>
           </button>
           <button
-            class="navButton"
+            class="navButton hoverable"
             style="
               cursor: none;
               background-color: transparent;
@@ -193,7 +191,7 @@ onUnmounted(() => {
             <h1 id="samshh" class="samshh" style="color: #161616">tech.</h1>
           </button>
           <button
-            class="navButton"
+            class="navButton hoverable"
             style="
               cursor: none;
               background-color: transparent;
@@ -207,9 +205,13 @@ onUnmounted(() => {
       </div>
     </div>
     <div class="outerWrapper">
-      <button class="fixed-button" style="cursor: none" @click="scrollToTop">
+      <button
+        class="fixed-button hoverable"
+        style="cursor: none"
+        @click="scrollToTop"
+      >
         <Icon
-          icon="ph:arrow-bend-left-up"
+          icon="fluent:arrow-turn-left-up-20-filled"
           style="color: #161616"
           id="arrowup"
         />
@@ -218,17 +220,9 @@ onUnmounted(() => {
         <div class="aboutMe">
           <img class="myPic" src="/src/assets/SamGoogle.png" alt="" />
           <div class="aboutwrap">
-            <h1 id="q" class="me">私について。</h1>
-            <p id="q" class="desc myText">
-              私はサム・ダカラ、フィリピン・ダバオシティ拠点のソフトウェア開発者です。
-              主な焦点はバックエンド開発です。現在はウェブ開発の領域に深く入り、
-              機械学習と人工知能に興味を深めています。テックの世界での無限の可能性にワクワクしています！
-            </p>
-            <p id="q" class="desc myText2">
-              テックの外では、私はミュージシャンでもあります —
-              ギターとピアノを演奏します。
-              そして、くつろぐ時間にはアニメを観ていることがあります。一緒にこのテックと創造性の旅を探機しましょう！
-            </p>
+            <h1 id="q" class="me"></h1>
+            <p id="q" class="desc myText"></p>
+            <p id="q" class="desc myText2"></p>
           </div>
         </div>
       </div>
@@ -239,7 +233,7 @@ onUnmounted(() => {
 <style scoped>
 .samshh {
   font-size: clamp(15px, 1.7vw, 26.5px);
-  font-weight: 900px;
+  font-weight: 900;
   margin-bottom: 0px;
   padding-bottom: clamp(10px, 1.7vw, 20px);
   padding-top: clamp(10px, 1.7vw, 20px);
@@ -315,14 +309,7 @@ onUnmounted(() => {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  transition: transform 0.5s, box-shadow 0.5s, filter 0.5s;
-  transform-style: preserve-3d;
   filter: grayscale(100%);
-}
-
-.myPic:hover {
-  transform: scale(1.1) perspective(1000px);
-  filter: grayscale(0%);
 }
 
 ::selection {
@@ -335,7 +322,7 @@ onUnmounted(() => {
   color: #161616;
 }
 
-@media (max-width: 714px) {
+@media (max-width: 800px) {
   #navbar {
     display: none;
   }
