@@ -278,8 +278,10 @@ onUnmounted(() => {
           >© 2024 Samshh</a
         >
       </div>
-      <div class="time">
-        <p>{{ currentTime }}</p>
+      <div id="footerID">
+        <div class="time">
+          <p>{{ currentTime }}</p>
+        </div>
       </div>
     </div>
   </div>

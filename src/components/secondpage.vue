@@ -25,7 +25,7 @@ const scrollToTop = () => {
 const scrollToBottom = () => {
   gsap.to(window, {
     duration: 2.5,
-    scrollTo: { y: document.body.scrollHeight, autoKill: false },
+    scrollTo: { y: "#footerID", autoKill: false },
     ease: "expo.inOut",
   });
 };
