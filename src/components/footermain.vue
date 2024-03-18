@@ -357,7 +357,7 @@ onUnmounted(() => {
 
 .detail {
   font-size: clamp(22.5px, 3.4vw, 45px);
-  font-weight: 400px;
+  font-weight: 800;
   margin: 0;
   text-align: left;
   color: #161616;
@@ -366,7 +366,7 @@ onUnmounted(() => {
 .details {
   margin: 0;
   font-size: clamp(15px, 1.7vw, 30px);
-  font-weight: 400;
+  font-weight: 200;
   text-align: center;
   padding-top: clamp(7.5px, 1.7vw, 15px);
   text-decoration: none;
@@ -405,7 +405,7 @@ onUnmounted(() => {
 
 .contacts {
   font-size: clamp(22.5px, 3.4vw, 45px);
-  font-weight: 400px;
+  font-weight: 800;
   margin: 0;
   text-align: left;
   color: #161616;
@@ -415,7 +415,7 @@ onUnmounted(() => {
   margin: 0;
   font-size: clamp(15px, 1.7vw, 30px);
   padding-top: clamp(7.5px, 1.7vw, 15px);
-  font-weight: 400;
+  font-weight: 200;
   text-align: center;
   text-decoration: none;
   position: relative;

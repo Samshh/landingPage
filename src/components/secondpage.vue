@@ -255,7 +255,7 @@ onUnmounted(() => {
 <style scoped>
 .samshh {
   font-size: clamp(15px, 1.7vw, 26.5px);
-  font-weight: 900;
+  font-weight: 800;
   margin-bottom: 0px;
   padding-bottom: clamp(10px, 1.7vw, 20px);
   padding-top: clamp(10px, 1.7vw, 20px);
@@ -309,7 +309,7 @@ onUnmounted(() => {
 
 .me {
   font-size: clamp(22.5px, 3.4vw, 45px);
-  font-weight: 400px;
+  font-weight: 800;
   margin-bottom: 0px;
   padding-bottom: clamp(10px, 1.7vw, 20px);
   margin: 0;
@@ -318,7 +318,7 @@ onUnmounted(() => {
 .desc {
   margin: 0;
   font-size: clamp(15px, 1.7vw, 30px);
-  font-weight: 400;
+  font-weight: 200;
   text-align: justify;
   padding-top: clamp(15px, 1.7vw, 30px);
 }

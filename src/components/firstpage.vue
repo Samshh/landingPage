@@ -88,7 +88,7 @@ onUnmounted(() => {
 
 .katakana p {
   font-family: "Noto Serif JP", serif;
-  font-weight: 900;
+  font-weight: 800;
   font-style: normal;
   margin: 0;
   padding-bottom: 10px;
@@ -119,7 +119,7 @@ onUnmounted(() => {
   white-space: nowrap;
   margin: 0;
   font-size: clamp(10px, 1.7vw, 20px);
-  font-weight: 400;
+  font-weight: 200;
   text-align: right;
   padding-right: 35px;
   color: #161616;

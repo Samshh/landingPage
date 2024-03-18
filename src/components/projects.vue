@@ -128,7 +128,7 @@ onMounted(() => {
 
 .FProject {
   font-size: clamp(22.5px, 3.4vw, 45px);
-  font-weight: 400px;
+  font-weight: 400;
   margin: 0;
   padding-bottom: clamp(22px, 5.7vw, 45px);
 }
