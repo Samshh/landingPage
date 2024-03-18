@@ -48,6 +48,28 @@ const scrollToTech = () => {
 onMounted(() => {
   gsap.registerPlugin(ScrollTrigger);
 
+  if (window.innerWidth > 808) {
+    gsap.fromTo(
+      ".myPic",
+      {
+        autoAlpha: 0,
+        x: -100,
+      },
+      {
+        scrollTrigger: {
+          trigger: ".outerWrapper",
+          start: "top center",
+          end: "bottom center",
+          toggleActions: "play none none reverse",
+        },
+        x: 0,
+        autoAlpha: 1,
+        duration: 1,
+        ease: "power1.out",
+      }
+    );
+  }
+
   gsap.fromTo(
     ".navButton",
     {
@@ -218,7 +240,7 @@ onUnmounted(() => {
       </button>
       <div class="innerWrapper">
         <div class="aboutMe">
-          <img class="myPic" src="/src/assets/SamGoogle.png" alt="" />
+          <img class="myPic" src="/src/assets/SamGoogle.webp" alt="" />
           <div class="aboutwrap">
             <h1 id="q" class="me"></h1>
             <p id="q" class="desc myText"></p>
@@ -364,9 +386,11 @@ onUnmounted(() => {
 
   .myPic {
     width: 100vw;
-    max-height: 50vh;
+    max-height: auto;
     padding-bottom: 10px;
     padding-top: 10px;
+    object-fit: contain;
+    border-radius: 10px;
   }
 }
 </style>
