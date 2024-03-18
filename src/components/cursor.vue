@@ -70,7 +70,7 @@ onMounted(() => {
   border-radius: 50%;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 808px) {
   .cursor__ball--big {
     display: none;
   }

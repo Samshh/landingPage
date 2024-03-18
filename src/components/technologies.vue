@@ -9,6 +9,25 @@ gsap.registerPlugin(ScrollTrigger);
 
 onMounted(() => {
   gsap.fromTo(
+    ".techTitle span",
+    {
+      autoAlpha: 0,
+    },
+    {
+      autoAlpha: 1,
+      duration: 2,
+      ease: "power1.out",
+      stagger: 0.15,
+      scrollTrigger: {
+        trigger: ".techTitle",
+        start: "top center",
+        end: "bottom center",
+        toggleActions: "play none none reverse"
+      },
+    }
+  );
+
+  gsap.fromTo(
     ".icon",
     {
       autoAlpha: 0,
@@ -92,7 +111,7 @@ onMounted(() => {
     "top center",
     "bottom center"
   );
-  animateText(".techTitle", ".technoOuter", "technologies.", 2);
+  // animateText(".techTitle", ".technoOuter", "technologies.", 2);
 });
 
 onUnmounted(() => {});
@@ -103,7 +122,13 @@ onUnmounted(() => {});
     <div class="technoOuter">
       <div class="technoInner">
         <div>
-          <h1 class="techTitle">7Gh5Jk1QrP39i</h1>
+          <h1 class="techTitle">
+            <span
+              v-for="(letter, index) in 'technologies.'.split('')"
+              :key="index"
+              >{{ letter }}</span
+            >
+          </h1>
         </div>
         <div class="techStack">
           <div class="tech" style="display: flex">

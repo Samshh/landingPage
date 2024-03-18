@@ -274,6 +274,7 @@ onUnmounted(() => {
   padding-top: clamp(45px, 5vw, 180px);
   padding-left: clamp(42.5px, 5.7vw, 85px);
   padding-right: clamp(42.5px, 5.7vw, 85px);
+  width: 60vw;
 }
 
 .aboutMe {
@@ -322,7 +323,7 @@ onUnmounted(() => {
   color: #161616;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 808px) {
   #navbar {
     display: none;
   }
@@ -352,6 +353,7 @@ onUnmounted(() => {
     padding-right: clamp(22.5px, 2.7vw, 45px);
     padding-left: clamp(22.5px, 2.7vw, 45px);
     padding-top: 0px;
+    width: auto;
   }
 
   .desc {
