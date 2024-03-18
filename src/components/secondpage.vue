@@ -190,39 +190,30 @@ onUnmounted(() => {
     <div>
       <div id="navbar">
         <div class="navwrapper">
-          <button
-            class="navButton hoverable"
-            style="
-              cursor: none;
-              background-color: transparent;
-              border-color: transparent;
-            "
+          <h1
+            id="samshh"
+            class="samshh navButton hoverable"
+            style="color: #161616"
             @click="scrollToSecond"
           >
-            <h1 id="samshh" class="samshh" style="color: #161616">about me.</h1>
-          </button>
-          <button
-            class="navButton hoverable"
-            style="
-              cursor: none;
-              background-color: transparent;
-              border-color: transparent;
-            "
+            about me.
+          </h1>
+          <h1
+            id="samshh"
+            class="samshh navButton hoverable"
+            style="color: #161616"
             @click="scrollToTech"
           >
-            <h1 id="samshh" class="samshh" style="color: #161616">tech.</h1>
-          </button>
-          <button
-            class="navButton hoverable"
-            style="
-              cursor: none;
-              background-color: transparent;
-              border-color: transparent;
-            "
+            tech.
+          </h1>
+          <h1
+            id="samshh"
+            class="samshh navButton hoverable"
+            style="color: #161616"
             @click="scrollToBottom"
           >
-            <h1 id="samshh" class="samshh" style="color: #161616">contact.</h1>
-          </button>
+            contact.
+          </h1>
         </div>
       </div>
     </div>
@@ -254,6 +245,7 @@ onUnmounted(() => {
 
 <style scoped>
 .samshh {
+  padding-right: clamp(10px, 1.7vw, 20px);
   font-size: clamp(15px, 1.7vw, 26.5px);
   font-weight: 800;
   margin-bottom: 0px;
@@ -264,6 +256,7 @@ onUnmounted(() => {
 }
 
 .navwrapper {
+  display: flex;
   padding-right: clamp(42.5px, 5.7vw, 85px);
 }
 

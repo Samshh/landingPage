@@ -317,6 +317,7 @@ onUnmounted(() => {
 .source {
   font-size: clamp(8px, 1.7vw, 16px);
   margin: 0;
+  font-weight: 200;
   text-decoration: none;
   color: #161616;
   -webkit-user-select: none;
@@ -430,7 +431,7 @@ onUnmounted(() => {
 
 .time p {
   font-size: clamp(15px, 1.7vw, 30px);
-  font-weight: 400;
+  font-weight: 200;
   text-align: center;
   text-decoration: none;
   position: relative;
