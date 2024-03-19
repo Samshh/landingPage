@@ -25,7 +25,7 @@ onMounted(() => {
   gsap.to(".welcome", {
     delay: 1,
     duration: 2,
-    text: "hello!",
+    text: "hello",
     ease: "power1.inOut",
     onComplete: () => {
       gsap.to(".preloader", {

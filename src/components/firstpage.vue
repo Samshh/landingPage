@@ -15,7 +15,7 @@ onMounted(() => {
     gsap.to(path, {
       delay: 4,
       strokeDashoffset: 0,
-      duration: 4,
+      duration: 3.5,
       ease: "power1.inOut",
       onComplete: function () {
         gsap.to(path, {
