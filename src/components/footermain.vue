@@ -51,6 +51,22 @@ onMounted(() => {
       }
     );
   });
+  BGchangeColor(".outterWrapper", "#161616")
+  changeColor(
+    "#arrowup",
+    "#e7e7e7",
+    ".outterWrapper",
+    "top center",
+    "bottom center"
+  );
+
+  ObjectChangeColor(
+    "#navbar",
+    "#161616",
+    ".outterWrapper",
+    "top center",
+    "bottom center"
+  );
   ObjectChangeColor(
     ".underline",
     "#e7e7e7",
@@ -177,7 +193,7 @@ onUnmounted(() => {
             href="https://www.linkedin.com/in/samshh/"
             style="cursor: none"
           >
-            <Icon icon="mdi:linkedin" class="ficon" style="color: #e7e7e7" />
+            <Icon icon="mdi:linkedin" class="ficon" style="color: #161616" />
             LinkedIn
             <div class="underline"></div>
           </a>
@@ -187,7 +203,7 @@ onUnmounted(() => {
             href="https://github.com/Samshh"
             style="cursor: none"
           >
-            <Icon icon="mdi:github" class="ficon" style="color: #e7e7e7" />
+            <Icon icon="mdi:github" class="ficon" style="color: #161616" />
             GitHub
             <div class="underline1"></div>
           </a>
@@ -197,7 +213,7 @@ onUnmounted(() => {
             href="https://developers.google.com/profile/u/samshh"
             style="cursor: none"
           >
-            <Icon icon="bxl:google" class="ficon" style="color: #e7e7e7" />
+            <Icon icon="bxl:google" class="ficon" style="color: #161616" />
             Google
             <div class="underline2"></div>
           </a>
@@ -210,7 +226,7 @@ onUnmounted(() => {
             <Icon
               icon="simple-icons:bento"
               class="ficon"
-              style="color: #e7e7e7"
+              style="color: #161616"
             />
             Bento
             <div class="underline3"></div>
@@ -221,7 +237,7 @@ onUnmounted(() => {
             href="https://www.instagram.com/smldcra/"
             style="cursor: none"
           >
-            <Icon icon="mdi:instagram" class="ficon" style="color: #e7e7e7" />
+            <Icon icon="mdi:instagram" class="ficon" style="color: #161616" />
             Instagram
             <div class="underline4"></div>
           </a>
@@ -293,7 +309,7 @@ onUnmounted(() => {
   left: 0;
   right: 0;
   height: 2px;
-  background: #e7e7e7;
+  background: #161616;
   transform-origin: left center;
   transform: scaleX(0);
 }
@@ -303,7 +319,7 @@ onUnmounted(() => {
   margin: 0;
   font-weight: 200;
   text-decoration: none;
-  color: #e7e7e7;
+  color: #161616;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -345,7 +361,7 @@ onUnmounted(() => {
   font-weight: 800;
   margin: 0;
   text-align: left;
-  color: #e7e7e7;
+  color: #161616;
 }
 
 .details {
@@ -360,7 +376,7 @@ onUnmounted(() => {
   display: flex;
   align-items: center;
   z-index: 1;
-  color: #e7e7e7;
+  color: #161616;
 }
 
 .outterWrapper {
@@ -393,7 +409,7 @@ onUnmounted(() => {
   font-weight: 800;
   margin: 0;
   text-align: left;
-  color: #e7e7e7;
+  color: #161616;
 }
 
 .contact {
@@ -410,7 +426,7 @@ onUnmounted(() => {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  color: #e7e7e7;
+  color: #161616;
 }
 
 .time p {
@@ -425,7 +441,7 @@ onUnmounted(() => {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  color: #e7e7e7;
+  color: #161616;
   margin: 0;
   white-space: nowrap;
 }
@@ -436,12 +452,12 @@ onUnmounted(() => {
 
 ::selection {
   background-color: #e7e7e7;
-  color: #e7e7e7;
+  color: #161616;
 }
 
 ::-moz-selection {
   background-color: #e7e7e7;
-  color: #e7e7e7;
+  color: #161616;
 }
 
 @media (min-width: 1680px) {

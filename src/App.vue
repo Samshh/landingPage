@@ -1,11 +1,11 @@
 <script setup>
 import firstpage from "./components/firstpage.vue";
-import hero2 from "./components/hero2.vue";
+// import hero2 from "./components/hero2.vue";
 import secondpage from "./components/secondpage.vue";
 import cursor from "./components/cursor.vue";
 import footermain from "./components/footermain.vue";
 import technologies from "./components/technologies.vue";
-import projects from "./components/projects.vue";
+// import projects from "./components/projects.vue";
 import { onMounted } from "vue";
 import { gsap } from "gsap";
 import { TextPlugin } from "gsap/TextPlugin";
@@ -49,7 +49,7 @@ onMounted(() => {
     <!-- <hero2 /> -->
     <secondpage />
     <technologies />
-    <projects />
+    <!-- <projects /> -->
     <footermain />
   </div>
 </template>

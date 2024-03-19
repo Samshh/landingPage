@@ -45,13 +45,13 @@ const scrollToTech = () => {
   });
 };
 
-const scrollToProjects = () => {
-  gsap.to(window, {
-    duration: 2.5,
-    scrollTo: { y: "#projectsID", autoKill: false },
-    ease: "expo.inOut",
-  });
-};
+// const scrollToProjects = () => {
+//   gsap.to(window, {
+//     duration: 2.5,
+//     scrollTo: { y: "#projectsID", autoKill: false },
+//     ease: "expo.inOut",
+//   });
+// };
 
 onMounted(() => {
   gsap.registerPlugin(ScrollTrigger);
@@ -214,14 +214,14 @@ onUnmounted(() => {
           >
             tech.
           </h1>
-          <h1
+          <!-- <h1
             id="samshh"
             class="samshh navButton hoverable"
             style="color: #161616"
             @click="scrollToProjects"
           >
             project.
-          </h1>
+          </h1> -->
           <h1
             id="samshh"
             class="samshh navButton hoverable"
