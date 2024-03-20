@@ -1,6 +1,6 @@
 <script setup>
 import firstpage from "./components/firstpage.vue";
-// import hero2 from "./components/hero2.vue";
+import hero2 from "./components/hero2.vue";
 import secondpage from "./components/secondpage.vue";
 import cursor from "./components/cursor.vue";
 import footermain from "./components/footermain.vue";
@@ -46,7 +46,7 @@ onMounted(() => {
     <div class="background"></div>
     <cursor />
     <firstpage />
-    <!-- <hero2 /> -->
+    <hero2 />
     <secondpage />
     <technologies />
     <!-- <projects /> -->

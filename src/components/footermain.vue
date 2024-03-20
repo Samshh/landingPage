@@ -362,6 +362,7 @@ onUnmounted(() => {
   margin: 0;
   text-align: left;
   color: #161616;
+  user-select: none;
 }
 
 .details {
@@ -410,6 +411,7 @@ onUnmounted(() => {
   margin: 0;
   text-align: left;
   color: #161616;
+  user-select: none;
 }
 
 .contact {

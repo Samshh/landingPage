@@ -306,6 +306,7 @@ onUnmounted(() => {
   padding-left: clamp(42.5px, 5.7vw, 85px);
   padding-right: clamp(42.5px, 5.7vw, 85px);
   width: 60vw;
+  user-select: none;
 }
 
 .aboutMe {

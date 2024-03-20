@@ -39,7 +39,7 @@ onMounted(() => {
 <template>
   <div class="heroWrapper">
     <div class="heroTextWrap">
-      <h1 class="heroText" ref="textRef">
+      <h1 class="heroText hoverable" ref="textRef">
         "The best thing about a boolean is even if you are wrong, you are only
         off by a bit."
       </h1>
@@ -52,6 +52,23 @@ onMounted(() => {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 60vh;
+}
+
+.heroText {
+  font-size: clamp(22.5px, 3.4vw, 45px);
+  font-weight: 800;
+  margin: 0;
+  color: #161616;
+  z-index: 1;
+  user-select: none;
+  text-align: center;
+}
+
+.heroTextWrap {
+  z-index: 1;
+  object-fit: contain;
+  padding-left: 45px;
+  padding-right: 45px;
 }
 </style>

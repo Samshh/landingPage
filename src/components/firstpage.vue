@@ -501,10 +501,7 @@ c0 -204 37 -685 75 -975 12 -94 20 -173 18 -175 -2 -3 -30 -4 -62 -3 -62 2
   top: 50%;
   left: 50%;
   transform: translate(5%, 320%);
-  animation-name: fade-in;
-  animation-duration: 4s;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease-in-out;
+  user-select: none;
 }
 
 .maintext {
