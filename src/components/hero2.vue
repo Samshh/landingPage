@@ -40,8 +40,7 @@ onMounted(() => {
   <div class="heroWrapper">
     <div class="heroTextWrap">
       <h1 class="heroText hoverable" ref="textRef">
-        "The best thing about a boolean is even if you are wrong, you are only
-        off by a bit."
+        analysis -> plan -> design -> develop -> test -> deploy -> maintain -> repeat . . .
       </h1>
     </div>
   </div>
