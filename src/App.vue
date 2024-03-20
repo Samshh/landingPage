@@ -46,7 +46,7 @@ onMounted(() => {
     <div class="background"></div>
     <cursor />
     <firstpage />
-    <hero2 />
+    <!-- <hero2 /> -->
     <secondpage />
     <technologies />
     <!-- <projects /> -->
