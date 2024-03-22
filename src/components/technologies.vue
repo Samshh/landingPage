@@ -22,7 +22,7 @@ onMounted(() => {
         trigger: ".techTitle",
         start: "top center",
         end: "bottom center",
-        toggleActions: "play none none reverse"
+        toggleActions: "play none none reverse",
       },
     }
   );
@@ -48,13 +48,6 @@ onMounted(() => {
     }
   );
   changeColor(".mt", "#161616", ".technoOuter", "top center", "bottom center");
-  changeColor(
-    ".cisco",
-    "#161616",
-    ".technoOuter",
-    "top center",
-    "bottom center"
-  );
   changeColor(".num", "#161616", ".technoOuter", "top center", "bottom center");
   changeColor(
     ".disc",
@@ -88,7 +81,6 @@ onMounted(() => {
     "top center",
     "bottom center"
   );
-  changeColor(".md", "#161616", ".technoOuter", "top center", "bottom center");
   changeColor(".sql", "#161616", ".technoOuter", "top center", "bottom center");
   changeColor(".php", "#161616", ".technoOuter", "top center", "bottom center");
   changeColor(".cpp", "#161616", ".technoOuter", "top center", "bottom center");
@@ -105,13 +97,19 @@ onMounted(() => {
   changeColor(".tf", "#161616", ".technoOuter", "top center", "bottom center");
   changeColor(".py", "#161616", ".technoOuter", "top center", "bottom center");
   changeColor(
+    ".conda",
+    "#161616",
+    ".technoOuter",
+    "top center",
+    "bottom center"
+  );
+  changeColor(
     ".techTitle",
     "#161616",
     ".technoOuter",
     "top center",
     "bottom center"
   );
-  // animateText(".techTitle", ".technoOuter", "technologies.", 2);
 });
 
 onUnmounted(() => {});
@@ -141,6 +139,11 @@ onUnmounted(() => {});
               icon="simple-icons:tensorflow"
               style="color: #e7e7e7"
               class="icon tf"
+            />
+            <Icon
+              icon="simple-icons:anaconda"
+              style="color: #e7e7e7"
+              class="icon conda"
             />
             <Icon
               icon="simple-icons:openai"
@@ -194,11 +197,6 @@ onUnmounted(() => {});
               class="icon disc"
             />
             <Icon
-              icon="simple-icons:cisco"
-              style="color: #e7e7e7"
-              class="icon cisco"
-            />
-            <Icon
               icon="ri:vuejs-fill"
               style="color: #e7e7e7"
               class="icon vue"
@@ -224,7 +222,6 @@ onUnmounted(() => {});
               style="color: #e7e7e7"
               class="icon tailwind"
             />
-            <Icon icon="la:markdown" style="color: #e7e7e7" class="icon md" />
           </div>
         </div>
       </div>
