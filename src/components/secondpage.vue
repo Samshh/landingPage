@@ -161,7 +161,7 @@ onMounted(() => {
   animateText(
     ".myText",
     ".aboutMe",
-    "I'm Sam Dacara, a Software Developer based in Davao City, Philippines. My primary focus is on back-end development. I'm currently delving into the realm of Web Development and exploring my interests in Machine Learning and Artificial Intelligence. Excited about the endless possibilities in the tech world!",
+    "I'm Sam Dacara, a Software Developer, skilled in both back-end and front-end development. I'm fascinated by the endless possibilities in technology, and excited about creating innovative solutions to contribute to the ever-evolving tech landscape",
     5
   );
   animateText(

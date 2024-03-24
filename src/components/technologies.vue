@@ -56,7 +56,6 @@ onMounted(() => {
     "top center",
     "bottom center"
   );
-  changeColor(".ai", "#161616", ".technoOuter", "top center", "bottom center");
   changeColor(
     ".tailwind",
     "#161616",
@@ -144,11 +143,6 @@ onUnmounted(() => {});
               icon="simple-icons:anaconda"
               style="color: #e7e7e7"
               class="icon conda"
-            />
-            <Icon
-              icon="simple-icons:openai"
-              style="color: #e7e7e7"
-              class="icon ai"
             />
             <Icon
               icon="simple-icons:pandas"
