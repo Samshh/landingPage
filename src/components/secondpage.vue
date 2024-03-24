@@ -8,6 +8,7 @@ import {
   ObjectChangeColor,
   animateText,
   changeColor,
+  animateTextNav,
 } from "./animations.js";
 import { Icon } from "@iconify/vue";
 
@@ -56,27 +57,25 @@ const scrollToTech = () => {
 onMounted(() => {
   gsap.registerPlugin(ScrollTrigger);
 
-  if (window.innerWidth > 808) {
-    gsap.fromTo(
-      ".myPic",
-      {
-        autoAlpha: 0,
-        x: -100,
+  gsap.fromTo(
+    ".myPic",
+    {
+      autoAlpha: 0,
+      x: -100,
+    },
+    {
+      scrollTrigger: {
+        trigger: ".outerWrapper",
+        start: "top center",
+        end: "bottom center",
+        toggleActions: "play none none reverse",
       },
-      {
-        scrollTrigger: {
-          trigger: ".outerWrapper",
-          start: "top center",
-          end: "bottom center",
-          toggleActions: "play none none reverse",
-        },
-        x: 0,
-        autoAlpha: 1,
-        duration: 1,
-        ease: "power1.out",
-      }
-    );
-  }
+      x: 0,
+      autoAlpha: 1,
+      duration: 1,
+      ease: "power1.out",
+    }
+  );
 
   gsap.fromTo(
     ".navButton",
@@ -171,6 +170,7 @@ onMounted(() => {
     5
   );
   animateText(".me", ".aboutMe", "about me.", 2);
+  animateTextNav(".aboutNav", ".aboutMe", "", 1);
   changeColor("#q", "#e7e7e7", ".outerWrapper", "top center", "bottom center");
   changeColor(
     "#samshh",
@@ -200,7 +200,7 @@ onUnmounted(() => {
         <div class="navwrapper">
           <h1
             id="samshh"
-            class="samshh navButton hoverable"
+            class="aboutNav samshh navButton hoverable"
             style="color: #161616"
             @click="scrollToSecond"
           >
@@ -208,7 +208,7 @@ onUnmounted(() => {
           </h1>
           <h1
             id="samshh"
-            class="samshh navButton hoverable"
+            class="techNav samshh navButton hoverable"
             style="color: #161616"
             @click="scrollToTech"
           >
@@ -224,7 +224,7 @@ onUnmounted(() => {
           </h1> -->
           <h1
             id="samshh"
-            class="samshh navButton hoverable"
+            class="contactNav samshh navButton hoverable"
             style="color: #161616"
             @click="scrollToBottom"
           >

@@ -1,7 +1,7 @@
 <script setup>
 import { onMounted, onUnmounted } from "vue";
 import { Icon } from "@iconify/vue";
-import { changeColor, animateText } from "./animations.js";
+import { changeColor, animateTextNav } from "./animations.js";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -109,6 +109,7 @@ onMounted(() => {
     "top center",
     "bottom center"
   );
+  animateTextNav(".techNav", ".technoOuter", "", 1);
 });
 
 onUnmounted(() => {});
