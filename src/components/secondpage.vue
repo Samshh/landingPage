@@ -261,12 +261,12 @@ onUnmounted(() => {
 
 <style scoped>
 .samshh {
-  padding-right: clamp(10px, 1.7vw, 20px);
+  padding-right: 20px;
   font-size: clamp(15px, 1.7vw, 26.5px);
   font-weight: 800;
   margin-bottom: 0px;
-  padding-bottom: clamp(10px, 1.7vw, 20px);
-  padding-top: clamp(10px, 1.7vw, 20px);
+  padding-bottom: 20px;
+  padding-top: 20px;
   margin: 0;
   user-select: none;
 }
