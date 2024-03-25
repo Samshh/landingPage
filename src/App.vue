@@ -1,5 +1,6 @@
 <script setup>
 import firstpage from "./components/firstpage.vue";
+import Navi from "./components/Navi.vue";
 import hero2 from "./components/hero2.vue";
 import secondpage from "./components/secondpage.vue";
 import cursor from "./components/cursor.vue";
@@ -23,7 +24,7 @@ requestAnimationFrame(raf);
 onMounted(() => {
   gsap.registerPlugin(TextPlugin);
   gsap.to(".welcome", {
-    delay: 1,
+    delay: 0,
     duration: 2,
     text: "hello",
     ease: "power1.inOut",
@@ -46,7 +47,8 @@ onMounted(() => {
     <div class="background"></div>
     <cursor />
     <firstpage />
-    <!-- <hero2 /> -->
+    <Navi />
+    <hero2 />
     <secondpage />
     <technologies />
     <!-- <projects /> -->

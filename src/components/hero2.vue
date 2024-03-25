@@ -1,46 +1,45 @@
 <script setup>
 import { onMounted, ref } from "vue";
 import { gsap } from "gsap";
-import { TextPlugin } from "gsap/TextPlugin";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-gsap.registerPlugin(TextPlugin);
+gsap.registerPlugin(ScrollTrigger);
 
 const textRef = ref(null);
 
 onMounted(() => {
-  if (textRef.value) {
-    const words = textRef.value.innerText.split(" ");
+  const timeline = gsap.timeline({
+    scrollTrigger: {
+      trigger: textRef.value,
+      start: "top center",
+      end: "bottom center",
+      toggleActions: "play none none reverse",
+    },
+  });
 
-    textRef.value.innerText = "";
+  const lines = textRef.value.querySelectorAll("p");
 
-    words.forEach((word) => {
-      const span = document.createElement("span");
-      span.innerText = word + " ";
-      textRef.value?.appendChild(span);
-    });
-
-    gsap.from(textRef.value.children, {
-      opacity: 0,
-      y: 20,
+  lines.forEach((line, index) => {
+    timeline.from(line, {
       duration: 0.25,
-      stagger: 0.2,
-      scrollTrigger: {
-        trigger: ".heroWrapper",
-        start: "top center",
-        end: "bottom center",
-        toggleActions: "play none none reverse",
-        markers: false,
-      },
+      y: 50,
+      opacity: 0,
+      delay: index * 0.25,
+      ease: "power1.out",
     });
-  }
+  });
 });
 </script>
 
 <template>
   <div class="heroWrapper">
     <div class="heroTextWrap">
-      <h1 class="heroText hoverable" ref="textRef">
-        analysis -> plan -> design -> develop -> test -> deploy -> maintain -> repeat . . .
+      <h1 class="heroText" ref="textRef">
+        <p>crafting <span class="highlight hoverable">experiences</span>.</p>
+        <p>powering <span class="highlight hoverable">solutions</span>.</p>
+        <p>
+          orchestrating <span class="highlight hoverable">automation</span>.
+        </p>
       </h1>
     </div>
   </div>
@@ -49,19 +48,19 @@ onMounted(() => {
 <style scoped>
 .heroWrapper {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
-  height: 60vh;
+  height: 100vh;
 }
 
 .heroText {
-  font-size: clamp(22.5px, 3.4vw, 45px);
-  font-weight: 800;
+  font-size: clamp(25px, 3.4vw, 60px);
+  font-weight: 200;
   margin: 0;
   color: #161616;
   z-index: 1;
   user-select: none;
-  text-align: center;
+  text-align: start;
 }
 
 .heroTextWrap {
@@ -69,5 +68,9 @@ onMounted(() => {
   object-fit: contain;
   padding-left: 45px;
   padding-right: 45px;
+}
+
+.highlight {
+  font-weight: 800;
 }
 </style>

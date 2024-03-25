@@ -13,9 +13,9 @@ onMounted(() => {
     gsap.set(path, { strokeDasharray: length, strokeDashoffset: length });
 
     gsap.to(path, {
-      delay: 4,
+      delay: 3,
       strokeDashoffset: 0,
-      duration: 3.5,
+      duration: 3,
       ease: "power1.inOut",
       onComplete: function () {
         gsap.to(path, {
