@@ -176,7 +176,7 @@ onUnmounted(() => {
   }
 
   .aboutMe {
-    flex-direction: column;
+    flex-direction: column-reverse;
     width: auto;
     padding: 0;
   }
