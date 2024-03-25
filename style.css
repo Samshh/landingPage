@@ -9,7 +9,12 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  cursor: none;
+}
+
+@media (min-width: 808px) {
+  body {
+    cursor: none;
+  }
 }
 
 ::-webkit-scrollbar {

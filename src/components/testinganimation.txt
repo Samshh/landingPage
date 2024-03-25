@@ -1,0 +1,144 @@
+gsap.fromTo(
+    ["#dot", "#square1", "#square2", "#square3", "#square4", "#square5", "#square6"],
+    {
+      opacity: 0,
+      scale: 0,
+    },
+    {
+      scrollTrigger: {
+        trigger: ".heroWrapper",
+        start: "top center",
+        end: "bottom center",
+        toggleActions: "play none none reverse",
+      },
+      opacity: 1,
+      scale: 1,
+      ease: "none",
+    }
+  );
+
+  const tl = gsap.timeline({ repeat: -1 });
+  const tl2 = gsap.timeline({ repeat: -1 });
+  tl2
+    .fromTo("#dot", { y: 20 }, { duration: 0.5, y: 95, ease: "power1.in" })
+    .to("#dot", { duration: 0.5, y: 20, ease: "power1.out" });
+
+  tl.fromTo(
+    "#square1",
+    { x: -40, y: -40 },
+    { duration: 1, x: 0, y: 0, ease: "none" },
+    0
+  )
+    .fromTo(
+      "#square2",
+      { x: 0, y: 0 },
+      { duration: 1, x: 40, y: 40, ease: "none" },
+      0
+    )
+    .fromTo(
+      "#square3",
+      { x: 40, y: 40 },
+      { duration: 1, x: 80, y: 80, ease: "none" },
+      0
+    )
+    .fromTo(
+      "#square4",
+      { x: 80, y: 80 },
+      { duration: 1, x: 120, y: 120, ease: "none" },
+      0
+    )
+    .fromTo(
+      "#square5",
+      { x: 120, y: 120 },
+      { duration: 1, x: 160, y: 160, ease: "none" },
+      0
+    )
+    .fromTo(
+      "#square6",
+      { x: 160, y: 160 },
+      { duration: 1, x: 200, y: 200, ease: "none" },
+      0
+    );
+
+    <svg class="climbing hoverable" height="200" width="200">
+      <circle id="dot" cx="55%" r="10" fill="#161616" />
+      <rect
+        id="square1"
+        x="0%"
+        y="0%"
+        width="20"
+        height="5"
+        style="fill: #161616"
+      />
+      <rect
+        id="square2"
+        x="0%"
+        y="0%"
+        width="20"
+        height="5"
+        style="fill: #161616"
+      />
+      <rect
+        id="square3"
+        x="0%"
+        y="0%"
+        width="20"
+        height="5"
+        style="fill: #161616"
+      />
+      <rect
+        id="square4"
+        x="0%"
+        y="0%"
+        width="20"
+        height="5"
+        style="fill: #161616"
+      />
+      <rect
+        id="square5"
+        x="0%"
+        y="0%"
+        width="20"
+        height="5"
+        style="fill: #161616"
+      />
+      <rect
+        id="square6"
+        x="0%"
+        y="0%"
+        width="20"
+        height="5"
+        style="fill: #161616"
+      />
+    </svg>
+
+.climbing {
+  padding-top: 4%;
+  scale: 2;
+}
+
+@media (max-width: 1440px) {
+  .climbing {
+    scale: 1.5;
+  }
+}
+
+@media (max-width: 1024px) {
+  .climbing {
+    scale: 1.25;
+  }
+}
+
+@media (max-width: 808px) {
+  .climbing {
+    display: none;
+  }
+
+  .heroWrapper {
+    display: flex;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+}

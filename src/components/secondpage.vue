@@ -17,7 +17,6 @@ onMounted(() => {
     ".myPic",
     {
       autoAlpha: 0,
-      x: -100,
     },
     {
       scrollTrigger: {
@@ -26,7 +25,6 @@ onMounted(() => {
         end: "bottom center",
         toggleActions: "play none none reverse",
       },
-      x: 0,
       autoAlpha: 1,
       duration: 1,
       ease: "power1.out",
@@ -53,7 +51,7 @@ onMounted(() => {
   animateText(
     ".myText",
     ".aboutMe",
-    "I'm Sam Dacara, a Software Developer, skilled in both back-end and front-end development. I'm fascinated by the endless possibilities in technology, and excited about creating innovative solutions to contribute to the ever-evolving tech landscape",
+    "I'm Sam Dacara, a Software Developer, skilled in both back-end and front-end development. I'm fascinated by the endless possibilities in technology, and excited about creating innovative solutions to contribute to the ever-evolving tech landscape.",
     5
   );
   animateText(
@@ -65,6 +63,7 @@ onMounted(() => {
   animateText(".me", ".aboutMe", "about me.", 2);
   animateTextNav(".aboutNav", ".aboutMe", "", 1);
   changeColor("#q", "#e7e7e7", ".outerWrapper", "top center", "bottom center");
+  // changeColor(".heroText", "#e7e7e7", ".outerWrapper", "top center", "bottom center")
   changeColor(
     "#samshh",
     "#e7e7e7",
@@ -122,7 +121,7 @@ onUnmounted(() => {
 }
 
 .me {
-  font-size: clamp(22.5px, 3.4vw, 45px);
+  font-size: clamp(25px, 3.4vw, 60px);
   font-weight: 800;
   margin-bottom: 0px;
   padding-bottom: clamp(10px, 1.7vw, 20px);
@@ -177,7 +176,7 @@ onUnmounted(() => {
   }
 
   .aboutMe {
-    flex-direction: column-reverse;
+    flex-direction: column;
     width: auto;
     padding: 0;
   }
@@ -201,7 +200,6 @@ onUnmounted(() => {
     padding-bottom: 10px;
     padding-top: 10px;
     object-fit: contain;
-    border-radius: 10px;
   }
 }
 </style>

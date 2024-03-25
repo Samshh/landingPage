@@ -247,7 +247,7 @@ onUnmounted(() => {});
 
 .techTitle {
   color: #e7e7e7;
-  font-size: clamp(22.5px, 3.4vw, 45px);
+  font-size: clamp(25px, 3.4vw, 60px);
   font-weight: 800;
   margin: 0px;
   user-select: none;
