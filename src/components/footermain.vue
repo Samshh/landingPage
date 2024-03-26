@@ -475,6 +475,7 @@ onUnmounted(() => {
   .signWrap {
     display: flex;
     flex-direction: column;
+    overflow: hidden;
   }
 
   .mySign {
