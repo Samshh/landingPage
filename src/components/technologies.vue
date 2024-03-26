@@ -47,67 +47,64 @@ onMounted(() => {
       stagger: 0.15,
     }
   );
-  changeColor(".mt", "#161616", ".technoOuter", "top center", "bottom center");
-  changeColor(".num", "#161616", ".technoOuter", "top center", "bottom center");
+  changeColor(".mt", "#161616", ".technoOuter", "top center");
+  changeColor(".num", "#161616", ".technoOuter", "top center");
   changeColor(
     ".disc",
     "#161616",
     ".technoOuter",
-    "top center",
-    "bottom center"
+    "top center"
   );
   changeColor(
     ".tailwind",
     "#161616",
     ".technoOuter",
     "top center",
-    "bottom center"
+    
   );
-  changeColor(".vue", "#161616", ".technoOuter", "top center", "bottom center");
-  changeColor(".js", "#161616", ".technoOuter", "top center", "bottom center");
+  changeColor(".vue", "#161616", ".technoOuter", "top center");
+  changeColor(".js", "#161616", ".technoOuter", "top center");
   changeColor(
     ".html",
     "#161616",
     ".technoOuter",
-    "top center",
-    "bottom center"
+    "top center"
   );
-  changeColor(".css", "#161616", ".technoOuter", "top center", "bottom center");
+  changeColor(".css", "#161616", ".technoOuter", "top center");
   changeColor(
     ".gsap",
     "#161616",
     ".technoOuter",
     "top center",
-    "bottom center"
   );
-  changeColor(".sql", "#161616", ".technoOuter", "top center", "bottom center");
-  changeColor(".php", "#161616", ".technoOuter", "top center", "bottom center");
-  changeColor(".cpp", "#161616", ".technoOuter", "top center", "bottom center");
+  changeColor(".sql", "#161616", ".technoOuter", "top center");
+  changeColor(".php", "#161616", ".technoOuter", "top center");
+  changeColor(".cpp", "#161616", ".technoOuter", "top center");
   changeColor(
     ".java",
     "#161616",
     ".technoOuter",
     "top center",
-    "bottom center"
+    
   );
-  changeColor(".git", "#161616", ".technoOuter", "top center", "bottom center");
-  changeColor(".skl", "#161616", ".technoOuter", "top center", "bottom center");
-  changeColor(".pd", "#161616", ".technoOuter", "top center", "bottom center");
-  changeColor(".tf", "#161616", ".technoOuter", "top center", "bottom center");
-  changeColor(".py", "#161616", ".technoOuter", "top center", "bottom center");
+  changeColor(".git", "#161616", ".technoOuter", "top center");
+  changeColor(".skl", "#161616", ".technoOuter", "top center");
+  changeColor(".pd", "#161616", ".technoOuter", "top center");
+  changeColor(".tf", "#161616", ".technoOuter", "top center");
+  changeColor(".py", "#161616", ".technoOuter", "top center");
   changeColor(
     ".conda",
     "#161616",
     ".technoOuter",
     "top center",
-    "bottom center"
+    
   );
   changeColor(
     ".techTitle",
     "#161616",
     ".technoOuter",
     "top center",
-    "bottom center"
+    
   );
 });
 
@@ -231,7 +228,7 @@ onUnmounted(() => {});
 }
 
 .icon {
-  font-size: clamp(75px, 9vw, 200px);
+  font-size: clamp(60px, 9vw, 200px);
   padding-top: clamp(22px, 5.7vw, 45px);
   padding-left: clamp(22px, 5.7vw, 45px);
   padding-right: clamp(22px, 5.7vw, 45px);

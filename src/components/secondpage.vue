@@ -185,6 +185,8 @@ onUnmounted(() => {
     padding-left: clamp(22.5px, 2.7vw, 45px);
     padding-top: 0px;
     width: auto;
+    height: 30vh;
+    overflow: scroll;
   }
 
   .desc {
@@ -198,7 +200,6 @@ onUnmounted(() => {
     max-height: auto;
     padding-bottom: 10px;
     padding-top: 10px;
-    object-fit: contain;
   }
 }
 </style>
