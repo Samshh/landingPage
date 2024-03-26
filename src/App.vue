@@ -5,6 +5,7 @@ import hero2 from "./components/hero2.vue";
 import secondpage from "./components/secondpage.vue";
 import cursor from "./components/cursor.vue";
 import footermain from "./components/footermain.vue";
+import affiliations from "./components/affiliations.vue";
 import technologies from "./components/technologies.vue";
 // import projects from "./components/projects.vue";
 import { onMounted } from "vue";
@@ -52,6 +53,7 @@ onMounted(() => {
     <secondpage />
     <technologies />
     <!-- <projects /> -->
+    <affiliations />
     <footermain />
   </div>
 </template>

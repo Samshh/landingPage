@@ -5,13 +5,27 @@ import { TextPlugin } from "gsap/TextPlugin";
 gsap.registerPlugin(TextPlugin);
 gsap.registerPlugin(ScrollTrigger);
 
+export const animatePositionX = (selector, trigger, x, duration) => {
+  gsap.from(selector, {
+    scrollTrigger: {
+      trigger: trigger,
+      start: "top center",
+      end: "top center",
+      toggleActions: "play none none reverse",
+    },
+    x: x,
+    opacity: 0,
+    duration: duration,
+  });
+};
+
 export const animateTextNav = (selector, trigger, text, duration) => {
   gsap.to(selector, {
     duration: duration,
     text: text,
     padding: 0,
     delay: 0,
-    ease: "power1.inOut",
+    ease: "power1.in",
     scrollTrigger: {
       trigger: trigger,
       start: "top center",
@@ -70,21 +84,6 @@ export const changeColor = (selector, color, trigger, start, end) => {
 
 export const BGchangeColor = (trigger, color) => {
   gsap.to(".background", {
-    scrollTrigger: {
-      trigger: trigger,
-      start: "top center",
-      end: "bottom center",
-      toggleActions: "play reverse play reverse",
-      scrub: false,
-      markers: false,
-    },
-    ease: "power1.inOut",
-    backgroundColor: color,
-  });
-};
-
-export const cursorChange = (trigger, color) => {
-  gsap.to(".custom-cursor", {
     scrollTrigger: {
       trigger: trigger,
       start: "top center",

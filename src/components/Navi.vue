@@ -4,6 +4,7 @@ import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { onMounted } from "vue";
 import { Icon } from "@iconify/vue";
+import { animateTextNav } from "./animations";
 
 gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
 
@@ -39,7 +40,18 @@ const scrollToTech = () => {
   });
 };
 
+const scrollToAffil = () => {
+  gsap.to(window, {
+    duration: 2.5,
+    scrollTo: { y: "#affilID", autoKill: false },
+    ease: "expo.inOut",
+  });
+};
+
 onMounted(() => {
+  animateTextNav(".aboutNav", ".aboutMe", "", 1);
+  animateTextNav(".techNav", ".technoOuter", "", 1);
+  animateTextNav(".affilNav", ".affilWrapper", "", 1);
   gsap.fromTo(
     ".navButton",
     {
@@ -132,6 +144,14 @@ onMounted(() => {
           >
             project.
           </h1> -->
+      <h1
+        id="samshh"
+        class="affilNav samshh navButton hoverable"
+        style="color: #161616"
+        @click="scrollToAffil"
+      >
+        affil.
+      </h1>
       <h1
         id="samshh"
         class="contactNav samshh navButton hoverable"
