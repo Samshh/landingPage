@@ -221,6 +221,10 @@ onUnmounted(() => {});
 </template>
 
 <style scoped>
+.technoOuter {
+  padding-top: clamp(22px, 5.7vw, 45px);
+  padding-bottom: clamp(22px, 5.7vw, 45px);
+}
 .tech {
   display: flex;
   flex-wrap: wrap;
@@ -238,7 +242,6 @@ onUnmounted(() => {});
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: clamp(22px, 5.7vw, 45px);
 }
 
 .techTitle {

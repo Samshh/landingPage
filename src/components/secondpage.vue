@@ -103,6 +103,11 @@ onUnmounted(() => {
 
 <style scoped>
 
+.outerWrapper {
+  padding-top: clamp(22px, 5.7vw, 45px);
+  padding-bottom: clamp(22px, 5.7vw, 45px);
+}
+
 .aboutwrap {
   padding-top: clamp(45px, 5vw, 180px);
   padding-left: clamp(42.5px, 5.7vw, 85px);
@@ -116,7 +121,6 @@ onUnmounted(() => {
   padding-left: clamp(22.5px, 2.7vw, 45px);
   display: flex;
   color: #161616;
-  padding-bottom: clamp(35px, 5.7vw, 70px);
 }
 
 .me {
