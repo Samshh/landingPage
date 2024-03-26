@@ -6,17 +6,17 @@ import { animatePositionX } from "./animations";
 
 onMounted(() => {
   gsap.registerPlugin(ScrollTrigger);
-  gsap.to([".gdglogo",".mmcmlogo"], {
-    scrollTrigger : {
+  gsap.to([".gdglogo", ".mmcmlogo"], {
+    scrollTrigger: {
       trigger: ".outterWrapper",
       start: "top center",
       end: "top center",
       toggleActions: "play none none reverse",
     },
     opacity: 0,
-    duration: .5,
+    duration: 0.5,
   });
-  
+
   gsap.from(".affilMainTxt", {
     scrollTrigger: {
       trigger: ".affilWrapper",
@@ -148,6 +148,10 @@ onMounted(() => {
   .affilContentsWrapper {
     align-items: center;
     justify-content: center;
+  }
+  .gdgTxtWrapper,
+  .mmcmTxtWrapper {
+    padding: 0;
   }
 }
 </style>
