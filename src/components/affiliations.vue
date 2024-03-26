@@ -6,6 +6,17 @@ import { animatePositionX } from "./animations";
 
 onMounted(() => {
   gsap.registerPlugin(ScrollTrigger);
+  gsap.to([".gdglogo",".mmcmlogo"], {
+    scrollTrigger : {
+      trigger: ".outterWrapper",
+      start: "top center",
+      end: "top center",
+      toggleActions: "play none none reverse",
+    },
+    opacity: 0,
+    duration: .5,
+  });
+  
   gsap.from(".affilMainTxt", {
     scrollTrigger: {
       trigger: ".affilWrapper",
@@ -28,7 +39,7 @@ onMounted(() => {
       <h1 class="affilMainTxt">affiliations.</h1>
       <div class="affilContentsWrapper">
         <div class="gdg">
-          <img class="gdglogo" src="../assets/gdg.png" alt="" />
+          <img class="gdglogo hoverable" src="../assets/gdg.png" alt="" />
           <div class="gdgTxtWrapper">
             <h1 class="gdgTxt">Technical Committee</h1>
             <p class="gdgSubTxt">Google Developer Groups - Davao</p>
@@ -39,7 +50,7 @@ onMounted(() => {
           </div>
         </div>
         <div class="mmcm">
-          <img class="mmcmlogo" src="../assets/mmcm.png" alt="" />
+          <img class="mmcmlogo hoverable" src="../assets/mmcm.png" alt="" />
           <div class="mmcmTxtWrapper">
             <h1 class="mmcmTxt">Front-end Developer</h1>
             <p class="mmcmSubTxt">
