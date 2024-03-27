@@ -10,20 +10,28 @@ import technologies from "./components/technologies.vue";
 import projects from "./components/projects.vue";
 import { onMounted } from "vue";
 import { gsap } from "gsap";
-import { TextPlugin } from "gsap/TextPlugin";
+import { TextPlugin} from "gsap/TextPlugin";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Lenis from "@studio-freight/lenis";
+
+gsap.registerPlugin(TextPlugin);
+gsap.registerPlugin(ScrollTrigger);
 
 const lenis = new Lenis();
 
-function raf(time) {
-  lenis.raf(time);
-  requestAnimationFrame(raf);
-}
+lenis.on("scroll", (e) => {
+  console.log(e);
+});
 
-requestAnimationFrame(raf);
+lenis.on("scroll", ScrollTrigger.update);
+
+gsap.ticker.add((time) => {
+  lenis.raf(time * 1000);
+});
+
+gsap.ticker.lagSmoothing(0);
 
 onMounted(() => {
-  gsap.registerPlugin(TextPlugin);
   gsap.to(".welcome", {
     delay: 0,
     duration: 2,
