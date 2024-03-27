@@ -102,7 +102,7 @@ onMounted(() => {
         </div>
         <div class="projectsWrapper">
           <div class="projects1">
-            <img class="projectspic" src="../assets/discproj.PNG" alt="" />
+            <img class="projectspic" src="../assets/discproj.webp" alt="" />
             <div class="projectstxtwrapper">
               <h1 class="projectstxt">
                 <span class="projBold">Ticket System</span> - Bot development
@@ -122,7 +122,7 @@ onMounted(() => {
             </div>
           </div>
           <div class="projects2">
-            <img class="projectspic" src="../assets/gdscproj.PNG" alt="" />
+            <img class="projectspic" src="../assets/gdscproj.webp" alt="" />
             <div class="projectstxtwrapper">
               <h1 class="projectstxt">
                 <span class="projBold">GDSC Prototype</span> - Website
@@ -153,7 +153,7 @@ onMounted(() => {
             </div>
           </div>
           <div class="projects3">
-            <img class="projectspic" src="../assets/ocpproj.PNG" alt="" />
+            <img class="projectspic" src="../assets/ocpproj.webp" alt="" />
             <div class="projectstxtwrapper">
               <h1 class="projectstxt">
                 <span class="projBold">OCP Website</span> - Website Development
