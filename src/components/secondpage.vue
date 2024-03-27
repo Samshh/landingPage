@@ -7,7 +7,6 @@ import {
   ObjectChangeColor,
   animateText,
   changeColor,
-  animateTextNav,
 } from "./animations.js";
 
 onMounted(() => {
