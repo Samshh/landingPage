@@ -7,7 +7,7 @@ import cursor from "./components/cursor.vue";
 import footermain from "./components/footermain.vue";
 import affiliations from "./components/affiliations.vue";
 import technologies from "./components/technologies.vue";
-// import projects from "./components/projects.vue";
+import projects from "./components/projects.vue";
 import { onMounted } from "vue";
 import { gsap } from "gsap";
 import { TextPlugin } from "gsap/TextPlugin";
@@ -52,7 +52,7 @@ onMounted(() => {
     <hero2 />
     <secondpage />
     <technologies />
-    <!-- <projects /> -->
+    <projects />
     <affiliations />
     <footermain />
   </div>

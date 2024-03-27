@@ -135,7 +135,7 @@ onUnmounted(() => {
   margin: 0;
   font-size: clamp(15px, 1.7vw, 30px);
   font-weight: 200;
-  text-align: justify;
+  text-align: start;
   padding-top: clamp(15px, 1.7vw, 30px);
 }
 

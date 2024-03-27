@@ -523,7 +523,7 @@ c0 -204 37 -685 75 -975 12 -94 20 -173 18 -175 -2 -3 -30 -4 -62 -3 -62 2
 }
 
 .lines {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;

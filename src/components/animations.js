@@ -97,20 +97,23 @@ export const BGchangeColor = (trigger, color) => {
   });
 };
 
-export const scrollerpic = (selector, trigger, opacity, x) => {
-  gsap.to(selector, {
-    scrollTrigger: {
-      trigger: trigger,
-      start: "top center",
-      end: "bottom center",
-      toggleActions: "play reverse play reverse",
-      scrub: false,
-      markers: false,
-    },
-    ease: "power1.inOut",
-    x: x,
-    opacity: opacity,
-  });
+export const scrollerpic = (selector, trigger) => {
+  gsap.fromTo(
+    selector,
+    { opacity: 0 },
+    {
+      opacity: 1,
+      ease: "power1.inOut",
+      scrollTrigger: {
+        trigger: trigger,
+        start: "top center",
+        end: "bottom center",
+        toggleActions: "play none none reverse",
+        scrub: false,
+        markers: false,
+      },
+    }
+  );
 };
 
 export const pulse = (selector, duration, delay) => {

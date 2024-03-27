@@ -40,6 +40,14 @@ const scrollToTech = () => {
   });
 };
 
+const scrollToProjects = () => {
+  gsap.to(window, {
+    duration: 2.5,
+    scrollTo: { y: "#projectsID", autoKill: false },
+    ease: "expo.inOut",
+  });
+};
+
 const scrollToAffil = () => {
   gsap.to(window, {
     duration: 2.5,
@@ -51,6 +59,7 @@ const scrollToAffil = () => {
 onMounted(() => {
   animateTextNav(".aboutNav", ".aboutMe", "", 1);
   animateTextNav(".techNav", ".technoOuter", "", 1);
+  animateTextNav(".projectsNav", ".projectsMain", "", 1);
   animateTextNav(".affilNav", ".affilWrapper", "", 1);
   gsap.fromTo(
     ".navButton",
@@ -126,7 +135,7 @@ onMounted(() => {
         style="color: #161616"
         @click="scrollToSecond"
       >
-        about me.
+        about.
       </h1>
       <h1
         id="samshh"
@@ -136,14 +145,14 @@ onMounted(() => {
       >
         tech.
       </h1>
-      <!-- <h1
-            id="samshh"
-            class="samshh navButton hoverable"
-            style="color: #161616"
-            @click="scrollToProjects"
-          >
-            project.
-          </h1> -->
+      <h1
+        id="samshh"
+        class="projectsNav samshh navButton hoverable"
+        style="color: #161616"
+        @click="scrollToProjects"
+      >
+        projects.
+      </h1>
       <h1
         id="samshh"
         class="affilNav samshh navButton hoverable"
@@ -177,24 +186,23 @@ onMounted(() => {
 
 <style scoped>
 .samshh {
-  padding-right: 20px;
   font-size: clamp(15px, 1.7vw, 26.5px);
   font-weight: 800;
-  margin-bottom: 0px;
   padding-bottom: 20px;
   padding-top: 20px;
   margin: 0;
   user-select: none;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .navwrapper {
   display: flex;
-  padding-right: clamp(42.5px, 5.7vw, 85px);
 }
 
 #navbar {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   position: fixed;
   top: 0;
@@ -206,7 +214,7 @@ onMounted(() => {
 
 .fixed-button {
   position: fixed;
-  bottom: 20px;
+  bottom: 1px;
   right: 20px;
   border: none;
   text-align: center;

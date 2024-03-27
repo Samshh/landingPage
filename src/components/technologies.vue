@@ -1,7 +1,7 @@
 <script setup>
 import { onMounted, onUnmounted } from "vue";
 import { Icon } from "@iconify/vue";
-import { changeColor} from "./animations.js";
+import { changeColor } from "./animations.js";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -47,56 +47,8 @@ onMounted(() => {
       stagger: 0.15,
     }
   );
-  changeColor(".mt", "#161616", ".technoOuter", "top center", "bottom center");
-  changeColor(".num", "#161616", ".technoOuter", "top center", "bottom center");
   changeColor(
-    ".disc",
-    "#161616",
-    ".technoOuter",
-    "top center",
-    "bottom center"
-  );
-  changeColor(
-    ".tailwind",
-    "#161616",
-    ".technoOuter",
-    "top center",
-    "bottom center"
-  );
-  changeColor(".vue", "#161616", ".technoOuter", "top center", "bottom center");
-  changeColor(".js", "#161616", ".technoOuter", "top center", "bottom center");
-  changeColor(
-    ".html",
-    "#161616",
-    ".technoOuter",
-    "top center",
-    "bottom center"
-  );
-  changeColor(".css", "#161616", ".technoOuter", "top center", "bottom center");
-  changeColor(
-    ".gsap",
-    "#161616",
-    ".technoOuter",
-    "top center",
-    "bottom center"
-  );
-  changeColor(".sql", "#161616", ".technoOuter", "top center", "bottom center");
-  changeColor(".php", "#161616", ".technoOuter", "top center", "bottom center");
-  changeColor(".cpp", "#161616", ".technoOuter", "top center", "bottom center");
-  changeColor(
-    ".java",
-    "#161616",
-    ".technoOuter",
-    "top center",
-    "bottom center"
-  );
-  changeColor(".git", "#161616", ".technoOuter", "top center", "bottom center");
-  changeColor(".skl", "#161616", ".technoOuter", "top center", "bottom center");
-  changeColor(".pd", "#161616", ".technoOuter", "top center", "bottom center");
-  changeColor(".tf", "#161616", ".technoOuter", "top center", "bottom center");
-  changeColor(".py", "#161616", ".technoOuter", "top center", "bottom center");
-  changeColor(
-    ".conda",
+    ".icon",
     "#161616",
     ".technoOuter",
     "top center",
@@ -195,6 +147,7 @@ onUnmounted(() => {});
               style="color: #e7e7e7"
               class="icon vue"
             />
+            <Icon icon="mdi:react" style="color: #e7e7e7" class="icon react" />
             <Icon icon="cib:js" style="color: #e7e7e7" class="icon js" />
             <Icon
               icon="akar-icons:html-fill"
@@ -215,6 +168,11 @@ onUnmounted(() => {});
               icon="mdi:tailwind"
               style="color: #e7e7e7"
               class="icon tailwind"
+            />
+            <Icon
+              icon="mdi:sass"
+              style="color: #e7e7e7"
+              class="icon sass"
             />
           </div>
         </div>
