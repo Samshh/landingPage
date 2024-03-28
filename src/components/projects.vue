@@ -20,7 +20,7 @@ onMounted(() => {
         end: "center center",
         pin: true,
         scrub: false,
-        markers: true,
+        markers: false,
         toggleActions: "play none none none",
       },
     });

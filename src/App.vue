@@ -10,7 +10,7 @@ import technologies from "./components/technologies.vue";
 import projects from "./components/projects.vue";
 import { onMounted } from "vue";
 import { gsap } from "gsap";
-import { TextPlugin} from "gsap/TextPlugin";
+import { TextPlugin } from "gsap/TextPlugin";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Lenis from "@studio-freight/lenis";
 
@@ -18,15 +18,15 @@ gsap.registerPlugin(TextPlugin);
 const lenis = new Lenis({
   duration: 1.2,
   easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-})
+});
 
 function raf(time) {
   lenis.raf(time);
   ScrollTrigger.update();
-  requestAnimationFrame(raf)
+  requestAnimationFrame(raf);
 }
 
-requestAnimationFrame(raf)
+requestAnimationFrame(raf);
 
 onMounted(() => {
   gsap.to(".welcome", {
@@ -49,18 +49,16 @@ onMounted(() => {
   <div class="preloader" ref="preloader">
     <div class="welcome hoverable"></div>
   </div>
-  <div>
-    <div class="background"></div>
-    <cursor />
-    <firstpage />
-    <Navi />
-    <hero2 />
-    <secondpage />
-    <technologies />
-    <projects />
-    <affiliations />
-    <footermain />
-  </div>
+  <div class="background"></div>
+  <cursor />
+  <firstpage />
+  <Navi />
+  <hero2 />
+  <secondpage />
+  <technologies />
+  <projects />
+  <affiliations />
+  <footermain />
 </template>
 
 <style scoped>
