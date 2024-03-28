@@ -211,6 +211,7 @@ onMounted(() => {
   height: clamp(4%, 5.7vw, 6%);
   background-color: #e7e7e7;
   z-index: 99;
+  filter: drop-shadow(0px 0px 2px #000000);
 }
 
 .fixed-button {

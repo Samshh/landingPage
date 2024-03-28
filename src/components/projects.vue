@@ -64,6 +64,20 @@ onMounted(() => {
     "top center",
     "bottom center"
   );
+  changeColor(
+    ".projectstxt",
+    "#e7e7e7",
+    ".projectsMain",
+    "top center",
+    "bottom center"
+  );
+  changeColor(
+    ".projIcons",
+    "#e7e7e7",
+    ".projectsMain",
+    "top center",
+    "bottom center"
+  );
   BGchangeColor(".projectsMain", "#161616");
 });
 </script>
@@ -90,12 +104,12 @@ onMounted(() => {
               <div>
                 <Icon
                   icon="ic:baseline-discord"
-                  style="color: #e7e7e7"
+                  style="color: #161616"
                   class="projIcons"
                 />
                 <Icon
                   icon="akar-icons:python-fill"
-                  style="color: #e7e7e7"
+                  style="color: #161616"
                   class="projIcons"
                 />
               </div>
@@ -111,22 +125,22 @@ onMounted(() => {
               <div>
                 <Icon
                   icon="ri:vuejs-fill"
-                  style="color: #e7e7e7"
+                  style="color: #161616"
                   class="projIcons"
                 />
                 <Icon
                   icon="mdi:language-typescript"
-                  style="color: #e7e7e7"
+                  style="color: #161616"
                   class="projIcons"
                 />
                 <Icon
                   icon="cib:greensock"
-                  style="color: #e7e7e7"
+                  style="color: #161616"
                   class="projIcons"
                 />
                 <Icon
                   icon="mdi:tailwind"
-                  style="color: #e7e7e7"
+                  style="color: #161616"
                   class="projIcons"
                 />
               </div>
@@ -141,17 +155,17 @@ onMounted(() => {
               <div>
                 <Icon
                   icon="mdi:react"
-                  style="color: #e7e7e7"
+                  style="color: #161616"
                   class="projIcons"
                 />
                 <Icon
                   icon="ion:logo-javascript"
-                  style="color: #e7e7e7"
+                  style="color: #161616"
                   class="projIcons"
                 />
                 <Icon
                   icon="mdi:sass"
-                  style="color: #e7e7e7"
+                  style="color: #161616"
                   class="projIcons"
                 />
               </div>
@@ -168,12 +182,19 @@ onMounted(() => {
   font-weight: 800;
 }
 
+.projectsDesc {
+  display: flex;
+  flex-direction: column;
+  user-select: none;
+}
+
 .projectDesc {
   font-weight: 200;
   font-size: clamp(15px, 1.7vw, 30px);
   padding-top: clamp(15px, 1.7vw, 30px);
   color: #161616;
   margin: 0;
+  user-select: none;
 }
 
 .projPinWrapper {
@@ -199,9 +220,10 @@ onMounted(() => {
 
 .projectstxt {
   margin: 0;
-  color: #e7e7e7;
+  color: #161616;
   font-weight: 200;
   font-size: clamp(15px, 1.7vw, 30px);
+  user-select: none;
 }
 
 .projectstxtwrapper {
@@ -215,6 +237,7 @@ onMounted(() => {
   height: 100%;
   object-fit: cover;
   border-radius: 15px;
+  user-select: none;
 }
 
 .projMainTxt {
