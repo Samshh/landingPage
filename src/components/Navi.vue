@@ -57,6 +57,7 @@ const scrollToAffil = () => {
 };
 
 onMounted(() => {
+  scrollToTop();
   animateTextNav(".aboutNav", ".aboutMe", "", 1);
   animateTextNav(".techNav", ".technoOuter", "", 1);
   animateTextNav(".projectsNav", ".projectsMain", "", 1);
