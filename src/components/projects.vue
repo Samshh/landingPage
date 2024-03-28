@@ -11,41 +11,21 @@ gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(TextPlugin);
 
 onMounted(() => {
-  const elements = document.querySelectorAll(".projectLogo path");
   if (window.innerWidth > 808) {
-    gsap.from(".projectsDesc", {
+    gsap.from(".projects1", {
       scrollTrigger: {
-        trigger: ".projects1",
+        trigger: ".projectsDesc",
         endTrigger: ".projects3",
         start: "center center",
         end: "center center",
-        pin: ".projectsDesc",
+        pin: true,
         scrub: false,
-        toggleActions: "play none none reverse",
+        markers: true,
+        toggleActions: "play none none none",
       },
     });
   }
 
-  elements.forEach((item) => {
-    const pathLength = item.getTotalLength();
-    item.setAttribute("stroke-dasharray", pathLength);
-    item.setAttribute("stroke-dashoffset", pathLength);
-    gsap.fromTo(
-      item,
-      { strokeDashoffset: pathLength },
-      {
-        strokeDashoffset: 0,
-        duration: 2,
-        ease: "power1.inOut",
-        scrollTrigger: {
-          trigger: ".projectsMain",
-          toggleActions: "play none none reverse",
-          start: "top center",
-          end: "bottom center",
-        },
-      }
-    );
-  });
   scrollerpic(".projects1", ".projects1");
   scrollerpic(".projects2", ".projects2");
   scrollerpic(".projects3", ".projects3");
