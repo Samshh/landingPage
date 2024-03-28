@@ -15,21 +15,18 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Lenis from "@studio-freight/lenis";
 
 gsap.registerPlugin(TextPlugin);
-gsap.registerPlugin(ScrollTrigger);
+const lenis = new Lenis({
+  duration: 1.2,
+  easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+})
 
-const lenis = new Lenis();
+function raf(time) {
+  lenis.raf(time);
+  ScrollTrigger.update();
+  requestAnimationFrame(raf)
+}
 
-lenis.on("scroll", (e) => {
-  console.log(e);
-});
-
-lenis.on("scroll", ScrollTrigger.update);
-
-gsap.ticker.add((time) => {
-  lenis.raf(time * 1000);
-});
-
-gsap.ticker.lagSmoothing(0);
+requestAnimationFrame(raf)
 
 onMounted(() => {
   gsap.to(".welcome", {

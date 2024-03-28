@@ -46,9 +46,9 @@ onMounted(() => {
       }
     );
   });
-  // scrollerpic(".projects1", ".projects1");
-  // scrollerpic(".projects2", ".projects2");
-  // scrollerpic(".projects3", ".projects3");
+  scrollerpic(".projects1", ".projects1");
+  scrollerpic(".projects2", ".projects2");
+  scrollerpic(".projects3", ".projects3");
   changeColor(
     "#arrowup",
     "#e7e7e7",
