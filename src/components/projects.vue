@@ -12,13 +12,13 @@ gsap.registerPlugin(TextPlugin);
 
 onMounted(() => {
   if (window.innerWidth > 808) {
-    gsap.from(".projects1", {
+    gsap.from(".projectsDesc", {
       scrollTrigger: {
-        trigger: ".projectsDesc",
+        trigger: ".projects1",
         endTrigger: ".projects3",
         start: "center center",
         end: "center center",
-        pin: true,
+        pin: ".projectsDesc",
         scrub: false,
         markers: false,
         toggleActions: "play none none none",

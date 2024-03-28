@@ -51,7 +51,7 @@ onMounted(() => {
   display: flex;
   justify-content: start;
   align-items: start;
-  height: 100%;
+  height: 50vh;
   padding-bottom: 90px;
 }
 

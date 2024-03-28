@@ -61,7 +61,7 @@ onMounted(() => {
   );
   animateText(".me", ".aboutMe", "about me.", 2);
   changeColor("#q", "#e7e7e7", ".outerWrapper", "top center", "bottom center");
-  // changeColor(".heroText", "#e7e7e7", ".outerWrapper", "top center", "bottom center")
+  changeColor(".heroText", "#e7e7e7", ".outerWrapper", "top center", "bottom center")
   changeColor(
     "#samshh",
     "#e7e7e7",
