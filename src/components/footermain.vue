@@ -10,16 +10,12 @@ import {
   ObjectChangeColor,
 } from "./animations.js";
 import { Icon } from "@iconify/vue";
-// Add gaming sht
-// <Icon icon="simple-icons:myanimelist"  style="color: #161616" />
-// <Icon icon="arcticons:genshin-impact"  style="color: #161616" />
-// <Icon icon="mdi:steam"  style="color: #161616" />
 
-const currentTime = ref(new Date().toLocaleTimeString());
+const currentTime = ref(new Date().toLocaleTimeString('en-US', { timeZone: 'Asia/Manila' }));
 
 watchEffect(() => {
   const intervalId = setInterval(() => {
-    currentTime.value = new Date().toLocaleTimeString();
+    currentTime.value = new Date().toLocaleTimeString('en-US', { timeZone: 'Asia/Manila' });
   }, 1000);
 
   onUnmounted(() => {
@@ -102,7 +98,7 @@ onMounted(() => {
     "top center",
     "bottom center"
   );
-  animateText(".detail", ".outterWrapper", "details.", 2);
+  animateText(".detail", ".outterWrapper", "location.", 2);
   animateText(".contacts", ".outterWrapper", "socials.", 2);
 
   changeColor(
@@ -169,6 +165,7 @@ onMounted(() => {
     "top center",
     "bottom center"
   );
+
   pulse(".underline", 2, 0);
   pulse(".underline1", 2, 0.5);
   pulse(".underline2", 2, 1);
@@ -246,8 +243,8 @@ onUnmounted(() => {
       <div class="signWrap">
         <div class="detailwrap">
           <h1 class="detail">4Bn9ZrQ2</h1>
-          <p class="details">samdacs2@gmail.com</p>
-          <p class="details">+63 969 696 9696</p>
+          <p class="details">Davao City, Philippines</p>
+          <p class="details">UTC +8 | {{ currentTime }}</p>
         </div>
         <div class="mySign">
           <svg
@@ -271,25 +268,23 @@ onUnmounted(() => {
       <div class="madeby">
         <a class="source">© 2024 Samshh</a>
       </div>
-      <div id="footerID">
-        <div class="time">
-          <p>{{ currentTime }}</p>
-        </div>
-      </div>
+      <div id="footerID"></div>
     </div>
   </div>
 </template>
 
 <style scoped>
+
 .mySign {
-  padding-left: 40%;
+  width: 390.37px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .signWrap {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr .5fr;
   padding-left: clamp(22px, 5.7vw, 45px);
   padding-right: clamp(22px, 5.7vw, 45px);
   padding-top: clamp(7.5px, 1.7vw, 15px);
@@ -431,23 +426,6 @@ onUnmounted(() => {
   color: #161616;
 }
 
-.time p {
-  font-size: clamp(15px, 1.7vw, 30px);
-  font-weight: 200;
-  text-align: center;
-  text-decoration: none;
-  position: relative;
-  display: flex;
-  align-items: center;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  color: #161616;
-  margin: 0;
-  white-space: nowrap;
-}
-
 .contact i {
   margin-right: clamp(5px, 1.7vw, 10px);
 }
@@ -479,8 +457,9 @@ onUnmounted(() => {
   }
 
   .mySign {
+    width: auto;
     transform: scale(1);
-    padding-top: 85px;
+    padding-top: clamp(40px, 10vh, 85px);
     padding-left: 0;
     display: flex;
     justify-content: center;
