@@ -58,20 +58,20 @@ const scrollToAffil = () => {
 
 onMounted(() => {
   scrollToTop();
-  ObjectChangeColor(
-    ".emailmeButton",
-    "#e7e7e7",
-    ".outterWrapper",
-    "top center",
-    "bottom center"
-  );
-  changeColor(
-    ".emailmeButton",
-    "#161616",
-    ".outterWrapper",
-    "top center",
-    "bottom center"
-  );
+  // ObjectChangeColor(
+  //   ".emailmeButton",
+  //   "#e7e7e7",
+  //   ".outterWrapper",
+  //   "top center",
+  //   "bottom center"
+  // );
+  // changeColor(
+  //   ".emailmeButton",
+  //   "#161616",
+  //   ".outterWrapper",
+  //   "top center",
+  //   "bottom center"
+  // );
   animateTextNav(".aboutNav", ".aboutMe", "", 1);
   animateTextNav(".techNav", ".technoOuter", "", 1);
   animateTextNav(".projectsNav", ".projectsMain", "", 1);
@@ -97,26 +97,26 @@ onMounted(() => {
       stagger: 0.15,
     }
   );
-  gsap.fromTo(
-    ".emailmeButton",
-    {
-      autoAlpha: 0,
-      y: -100,
-    },
-    {
-      scrollTrigger: {
-        trigger: ".outterWrapper",
-        start: "top center",
-        end: "bottom center",
-        toggleActions: "play reverse play reverse",
-      },
-      y: 0,
-      autoAlpha: 1,
-      duration: 1,
-      ease: "power1.out",
-      stagger: 0.15,
-    }
-  );
+  // gsap.fromTo(
+  //   ".emailmeButton",
+  //   {
+  //     autoAlpha: 0,
+  //     y: -100,
+  //   },
+  //   {
+  //     scrollTrigger: {
+  //       trigger: ".outterWrapper",
+  //       start: "top center",
+  //       end: "bottom center",
+  //       toggleActions: "play reverse play reverse",
+  //     },
+  //     y: 0,
+  //     autoAlpha: 1,
+  //     duration: 1,
+  //     ease: "power1.out",
+  //     stagger: 0.15,
+  //   }
+  // );
 
   gsap.fromTo(
     "#navbar",
@@ -217,9 +217,9 @@ onMounted(() => {
       id="arrowup"
     />
   </button>
-  <router-link to="/email-me" class="hoverable emailmeButton"
+  <!-- <router-link to="/email-me" class="hoverable emailmeButton"
     >let's chat.</router-link
-  >
+  > -->
 </template>
 
 <style scoped>

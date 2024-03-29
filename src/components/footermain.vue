@@ -124,13 +124,6 @@ onMounted(() => {
     "bottom center"
   );
   changeColor(
-    ".time p",
-    "#e7e7e7",
-    ".outterWrapper",
-    "top center",
-    "bottom center"
-  );
-  changeColor(
     ".detail",
     "#e7e7e7",
     ".outterWrapper",

@@ -6,7 +6,7 @@
   <div id="app">
     <div class="background"></div>
     <router-link to="/"></router-link>
-    <router-link to="/email-me"></router-link>
+    <!-- <router-link to="/email-me"></router-link> -->
     <router-view />
   </div>
 </template>

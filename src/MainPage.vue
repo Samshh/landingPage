@@ -12,21 +12,21 @@ import footermain from "./components/footermain.vue";
 import { onMounted } from "vue";
 import { gsap } from "gsap";
 import { TextPlugin } from "gsap/TextPlugin";
-// import Lenis from "@studio-freight/lenis";
+import Lenis from "@studio-freight/lenis";
 
 gsap.registerPlugin(TextPlugin);
 
-// const lenis = new Lenis();
+const lenis = new Lenis();
 
-// function raf(time) {
-//   lenis.raf(time);
-//   requestAnimationFrame(raf);
-// }
-// requestAnimationFrame(raf);
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+requestAnimationFrame(raf);
 
 onMounted(() => {
   gsap.to(".welcome", {
-    delay: 1,
+    delay: 0,
     duration: 2,
     text: "hello",
     ease: "power1.inOut",
