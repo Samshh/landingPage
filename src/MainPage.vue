@@ -26,7 +26,7 @@ gsap.registerPlugin(TextPlugin);
 
 onMounted(() => {
   gsap.to(".welcome", {
-    delay: 0,
+    delay: 1,
     duration: 2,
     text: "hello",
     ease: "power1.inOut",
