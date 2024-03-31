@@ -4,7 +4,7 @@ import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { onMounted } from "vue";
 import { Icon } from "@iconify/vue";
-import { animateTextNav, changeColor, ObjectChangeColor } from "./animations";
+import { animateTextNav } from "./animations";
 
 gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
 
@@ -57,20 +57,6 @@ const scrollToAffil = () => {
 };
 
 onMounted(() => {
-  // ObjectChangeColor(
-  //   ".emailmeButton",
-  //   "#e7e7e7",
-  //   ".outterWrapper",
-  //   "top center",
-  //   "bottom center"
-  // );
-  // changeColor(
-  //   ".emailmeButton",
-  //   "#161616",
-  //   ".outterWrapper",
-  //   "top center",
-  //   "bottom center"
-  // );
   animateTextNav(".aboutNav", ".aboutMe", "", 1);
   animateTextNav(".techNav", ".technoOuter", "", 1);
   animateTextNav(".projectsNav", ".projectsMain", "", 1);

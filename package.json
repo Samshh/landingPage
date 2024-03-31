@@ -12,9 +12,7 @@
     "@iconify/vue": "^3.2.1",
     "@studio-freight/lenis": "^1.0.34",
     "gsap": "^3.12.5",
-    "primevue": "^3.50.0",
-    "vue": "^3.3.11",
-    "vue-router": "^4.3.0"
+    "vue": "^3.3.11"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.5.2",
