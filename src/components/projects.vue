@@ -72,7 +72,7 @@ onMounted(() => {
           <img class="projectspic" src="../assets/sAproj.webp" alt="" />
           <div class="projectstxtwrapper">
             <h1 class="projectstxt">
-              <span class="projBold">sAminate</span> - Web Dev. Library
+              <span class="projBold">sAminate</span> - JavaScript Library
             </h1>
             <div>
               <Icon
