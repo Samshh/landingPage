@@ -57,7 +57,6 @@ const scrollToAffil = () => {
 };
 
 onMounted(() => {
-  scrollToTop();
   // ObjectChangeColor(
   //   ".emailmeButton",
   //   "#e7e7e7",
