@@ -39,13 +39,6 @@ onMounted(() => {
     "bottom center"
   );
   changeColor(
-    ".projectDesc",
-    "#e7e7e7",
-    ".projectsMain",
-    "top center",
-    "bottom center"
-  );
-  changeColor(
     ".projectstxt",
     "#e7e7e7",
     ".projectsMain",
