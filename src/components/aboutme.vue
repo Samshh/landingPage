@@ -175,6 +175,7 @@ onUnmounted(() => {
 
   .me {
     padding-left: 0;
+    text-align: center;
   }
 
   .aboutMe {
@@ -193,7 +194,7 @@ onUnmounted(() => {
   }
 
   .desc {
-    font-size: 15px;
+    text-align: justify;
     padding: 0;
     padding-bottom: 20px;
   }

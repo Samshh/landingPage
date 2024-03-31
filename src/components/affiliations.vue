@@ -119,7 +119,7 @@ onMounted(() => {
 .mmcmSubTxt {
   margin: 0;
   color: #161616;
-  font-size: clamp(10px, 1.7vw, 20px);
+  font-size: clamp(5px, 1.7vw, 20px);
   font-weight: 200;
 }
 
@@ -127,14 +127,14 @@ onMounted(() => {
 .mmcmTxt {
   margin: 0;
   color: #161616;
-  font-size: clamp(15px, 2.7vw, 30px);
+  font-size: clamp(10px, 2.7vw, 30px);
   font-weight: 600;
 }
 
 .gdglogo,
 .mmcmlogo {
   width: auto;
-  height: clamp(100px, 20vw, 200px);
+  height: clamp(75px, 20vw, 150px);
 }
 
 @media (max-width: 600px) {

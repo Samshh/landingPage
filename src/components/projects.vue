@@ -5,30 +5,11 @@ import { TextPlugin } from "gsap/TextPlugin";
 import { onMounted } from "vue";
 import { changeColor, BGchangeColor, ObjectChangeColor } from "./animations";
 import { Icon } from "@iconify/vue";
-import { scrollerpic } from "./animations";
 
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(TextPlugin);
 
 onMounted(() => {
-  if (window.innerWidth > 808) {
-    gsap.from(".projectsDesc", {
-      scrollTrigger: {
-        trigger: ".projects1",
-        endTrigger: ".projects3",
-        start: "center center",
-        end: "center center",
-        pin: ".projectsDesc",
-        scrub: false,
-        markers: false,
-        toggleActions: "play none none none",
-      },
-    });
-  }
-
-  scrollerpic(".projects1", ".projects1");
-  scrollerpic(".projects2", ".projects2");
-  scrollerpic(".projects3", ".projects3");
   changeColor(
     "#arrowup",
     "#e7e7e7",
@@ -85,90 +66,97 @@ onMounted(() => {
 <template>
   <div id="projectsID">
     <div class="projectsMain">
-      <div class="projPinWrapper">
-        <div class="projectsDesc">
-          <h1 class="projMainTxt">projects.</h1>
-          <p class="projectDesc">
-            Here are projects that I'm involved, which are mostly passion
-            projects and some are for organizations. This includes planning,
-            analysis, design, development, testing, deployment and maintenance.
-          </p>
+      <h1 class="projMainTxt">projects.</h1>
+      <div class="projectsWrapper">
+        <div class="projects1">
+          <img class="projectspic" src="../assets/sAproj.webp" alt="" />
+          <div class="projectstxtwrapper">
+            <h1 class="projectstxt">
+              <span class="projBold">sAminate</span> - Web Dev. Library
+            </h1>
+            <div>
+              <Icon
+                icon="ion:logo-npm"
+                style="color: #161616"
+                class="projIcons"
+              />
+              <Icon
+                icon="ion:logo-javascript"
+                style="color: #161616"
+                class="projIcons"
+              />
+              <Icon
+                icon="cib:greensock"
+                style="color: #161616"
+                class="projIcons"
+              />
+            </div>
+          </div>
         </div>
-        <div class="projectsWrapper">
-          <div class="projects1">
-            <img class="projectspic" src="../assets/discproj.webp" alt="" />
-            <div class="projectstxtwrapper">
-              <h1 class="projectstxt">
-                <span class="projBold">Ticket System</span> - Bot development
-              </h1>
-              <div>
-                <Icon
-                  icon="ic:baseline-discord"
-                  style="color: #161616"
-                  class="projIcons"
-                />
-                <Icon
-                  icon="akar-icons:python-fill"
-                  style="color: #161616"
-                  class="projIcons"
-                />
-              </div>
+        <div class="projects2">
+          <img class="projectspic" src="../assets/discproj.webp" alt="" />
+          <div class="projectstxtwrapper">
+            <h1 class="projectstxt">
+              <span class="projBold">Ticket System</span> - Bot development
+            </h1>
+            <div>
+              <Icon
+                icon="ic:baseline-discord"
+                style="color: #161616"
+                class="projIcons"
+              />
+              <Icon
+                icon="akar-icons:python-fill"
+                style="color: #161616"
+                class="projIcons"
+              />
             </div>
           </div>
-          <div class="projects2">
-            <img class="projectspic" src="../assets/gdscproj.webp" alt="" />
-            <div class="projectstxtwrapper">
-              <h1 class="projectstxt">
-                <span class="projBold">GDSC Prototype</span> - Website
-                Development
-              </h1>
-              <div>
-                <Icon
-                  icon="ri:vuejs-fill"
-                  style="color: #161616"
-                  class="projIcons"
-                />
-                <Icon
-                  icon="mdi:language-typescript"
-                  style="color: #161616"
-                  class="projIcons"
-                />
-                <Icon
-                  icon="cib:greensock"
-                  style="color: #161616"
-                  class="projIcons"
-                />
-                <Icon
-                  icon="mdi:tailwind"
-                  style="color: #161616"
-                  class="projIcons"
-                />
-              </div>
+        </div>
+        <div class="projects3">
+          <img class="projectspic" src="../assets/gdscproj.webp" alt="" />
+          <div class="projectstxtwrapper">
+            <h1 class="projectstxt">
+              <span class="projBold">GDSC Prototype</span> - Website Development
+            </h1>
+            <div>
+              <Icon
+                icon="ri:vuejs-fill"
+                style="color: #161616"
+                class="projIcons"
+              />
+              <Icon
+                icon="mdi:language-typescript"
+                style="color: #161616"
+                class="projIcons"
+              />
+              <Icon
+                icon="cib:greensock"
+                style="color: #161616"
+                class="projIcons"
+              />
+              <Icon
+                icon="mdi:tailwind"
+                style="color: #161616"
+                class="projIcons"
+              />
             </div>
           </div>
-          <div class="projects3">
-            <img class="projectspic" src="../assets/ocpproj.webp" alt="" />
-            <div class="projectstxtwrapper">
-              <h1 class="projectstxt">
-                <span class="projBold">OCP Website</span> - Website Development
-              </h1>
-              <div>
-                <Icon
-                  icon="mdi:react"
-                  style="color: #161616"
-                  class="projIcons"
-                />
-                <Icon
-                  icon="ion:logo-javascript"
-                  style="color: #161616"
-                  class="projIcons"
-                />
-                <Icon
-                  icon="mdi:sass"
-                  style="color: #161616"
-                  class="projIcons"
-                />
-              </div>
+        </div>
+        <div class="projects4">
+          <img class="projectspic" src="../assets/ocpproj.webp" alt="" />
+          <div class="projectstxtwrapper">
+            <h1 class="projectstxt">
+              <span class="projBold">OCP Website</span> - Website Development
+            </h1>
+            <div>
+              <Icon icon="mdi:react" style="color: #161616" class="projIcons" />
+              <Icon
+                icon="ion:logo-javascript"
+                style="color: #161616"
+                class="projIcons"
+              />
+              <Icon icon="mdi:sass" style="color: #161616" class="projIcons" />
             </div>
           </div>
         </div>
@@ -182,31 +170,10 @@ onMounted(() => {
   font-weight: 800;
 }
 
-.projectsDesc {
-  display: flex;
-  flex-direction: column;
-  user-select: none;
-}
-
-.projectDesc {
-  font-weight: 200;
-  font-size: clamp(15px, 1.7vw, 30px);
-  padding-top: clamp(15px, 1.7vw, 30px);
-  color: #161616;
-  margin: 0;
-  user-select: none;
-}
-
-.projPinWrapper {
-  display: grid;
-  grid-template-columns: 1fr 1.5fr;
-  justify-content: start;
-  align-items: start;
-}
-
 .projects1,
 .projects2,
-.projects3 {
+.projects3,
+.projects4 {
   padding-top: clamp(22px, 5.7vw, 25px);
   padding-bottom: clamp(22px, 5.7vw, 25px);
   padding-left: clamp(22px, 5.7vw, 25px);
@@ -242,13 +209,16 @@ onMounted(() => {
 
 .projMainTxt {
   font-size: clamp(25px, 3.4vw, 60px);
-  padding-bottom: clamp(22px, 5.7vw, 45px);
   font-weight: 800;
   color: #161616;
   margin: 0;
 }
 
 .projectsMain {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin: 0;
   height: auto;
   padding-top: clamp(22px, 5.7vw, 45px);
@@ -258,26 +228,17 @@ onMounted(() => {
 }
 
 .projectsWrapper {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   justify-content: center;
   align-items: center;
 }
 
 @media (max-width: 808px) {
-  .projPinWrapper {
+  .projectsWrapper {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .projectDesc {
-    text-align: start;
-  }
-
-  .projMainTxt {
-    text-align: center;
   }
 }
 </style>
