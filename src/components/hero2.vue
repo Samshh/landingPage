@@ -24,7 +24,6 @@ onMounted(() => {
       duration: 0.25,
       y: 50,
       opacity: 0,
-      delay: index * 0.25,
       ease: "power1.out",
     });
   });
@@ -50,9 +49,9 @@ onMounted(() => {
 .heroWrapper {
   display: flex;
   justify-content: start;
-  align-items: start;
-  height: 50vh;
-  padding-bottom: 90px;
+  align-items: center;
+  height: 100vh;
+  padding-bottom: clamp(22px, 5.7vw, 45px);
 }
 
 .heroText {
@@ -67,14 +66,15 @@ onMounted(() => {
 
 .heroText p {
   margin: 0;
-  padding-top: 30px; 
+  padding-top: 15px; 
+  padding-bottom: 15px; 
 }
 
 .heroTextWrap {
   z-index: 1;
   object-fit: contain;
-  padding-left: 45px;
-  padding-right: 45px;
+  padding-left: clamp(22px, 5.7vw, 45px);
+  padding-right: clamp(22px, 5.7vw, 45px);
 }
 
 .highlight {

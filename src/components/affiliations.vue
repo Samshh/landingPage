@@ -73,6 +73,7 @@ onMounted(() => {
   align-items: center;
   padding-top: clamp(22px, 5.7vw, 45px);
   padding-bottom: clamp(22px, 5.7vw, 45px);
+  height: 100vh;
 }
 
 .affilInWrapper {
@@ -119,7 +120,7 @@ onMounted(() => {
 .mmcmSubTxt {
   margin: 0;
   color: #161616;
-  font-size: clamp(5px, 1.7vw, 20px);
+  font-size: clamp(10px, 1.7vw, 15px);
   font-weight: 200;
 }
 
@@ -127,7 +128,7 @@ onMounted(() => {
 .mmcmTxt {
   margin: 0;
   color: #161616;
-  font-size: clamp(10px, 2.7vw, 30px);
+  font-size: clamp(15px, 2.7vw, 25px);
   font-weight: 600;
 }
 
@@ -151,6 +152,10 @@ onMounted(() => {
   .gdgTxtWrapper,
   .mmcmTxtWrapper {
     padding: 0;
+  }
+  .gdgSubTxt,
+  .mmcmSubTxt {
+    padding-bottom: 10px;
   }
 }
 </style>

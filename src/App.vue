@@ -12,23 +12,7 @@ import footermain from "./components/footermain.vue";
 import { onMounted } from "vue";
 import { gsap } from "gsap";
 import { TextPlugin } from "gsap/TextPlugin";
-import Lenis from "@studio-freight/lenis";
-
 gsap.registerPlugin(TextPlugin);
-
-const lenis = new Lenis();
-
-lenis.on("scroll", (e) => {
-  console.log(e);
-});
-
-lenis.on("scroll", ScrollTrigger.update);
-
-gsap.ticker.add((time) => {
-  lenis.raf(time * 1000);
-});
-
-gsap.ticker.lagSmoothing(0);
 
 onMounted(() => {
   gsap.to(".welcome", {
