@@ -43,7 +43,7 @@ onMounted(() => {
           <div class="gdgTxtWrapper">
             <h1 class="gdgTxt">Technical Committee</h1>
             <p class="gdgSubTxt">Google Developer Groups - Davao</p>
-            <h1 class="gdgTxt">Website and Applications Developer</h1>
+            <h1 class="gdgTxt">Web Application Developer</h1>
             <p class="gdgSubTxt">
               Google Developer Student Clubs - Mapúa Malayan Colleges Mindanao
             </p>
@@ -120,7 +120,7 @@ onMounted(() => {
 .mmcmSubTxt {
   margin: 0;
   color: #161616;
-  font-size: clamp(10px, 1.7vw, 15px);
+  font-size: clamp(10px, 1.7vw, 20px);
   font-weight: 200;
 }
 
@@ -128,14 +128,14 @@ onMounted(() => {
 .mmcmTxt {
   margin: 0;
   color: #161616;
-  font-size: clamp(15px, 2.7vw, 25px);
+  font-size: clamp(15px, 2.7vw, 30px);
   font-weight: 600;
 }
 
 .gdglogo,
 .mmcmlogo {
   width: auto;
-  height: clamp(75px, 20vw, 150px);
+  height: clamp(75px, 20vw, 175px);
 }
 
 @media (max-width: 600px) {

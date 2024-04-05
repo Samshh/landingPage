@@ -183,7 +183,7 @@ onUnmounted(() => {});
 
 <style scoped>
 .technoOuter {
-  padding-top: clamp(22px, 5.7vw, 45px);
+  padding-top: clamp(25px, 5.7vw, 90px);
   padding-bottom: clamp(22px, 5.7vw, 45px);
 }
 .tech {

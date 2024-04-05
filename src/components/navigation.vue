@@ -57,6 +57,7 @@ const scrollToAffil = () => {
 };
 
 onMounted(() => {
+  // scrollToTop();
   animateTextNav(".aboutNav", ".aboutMe", "", 1);
   animateTextNav(".techNav", ".technoOuter", "", 1);
   animateTextNav(".projectsNav", ".projectsMain", "", 1);
@@ -82,26 +83,6 @@ onMounted(() => {
       stagger: 0.15,
     }
   );
-  // gsap.fromTo(
-  //   ".emailmeButton",
-  //   {
-  //     autoAlpha: 0,
-  //     y: -100,
-  //   },
-  //   {
-  //     scrollTrigger: {
-  //       trigger: ".outterWrapper",
-  //       start: "top center",
-  //       end: "bottom center",
-  //       toggleActions: "play reverse play reverse",
-  //     },
-  //     y: 0,
-  //     autoAlpha: 1,
-  //     duration: 1,
-  //     ease: "power1.out",
-  //     stagger: 0.15,
-  //   }
-  // );
 
   gsap.fromTo(
     "#navbar",
@@ -202,33 +183,9 @@ onMounted(() => {
       id="arrowup"
     />
   </button>
-  <!-- <router-link to="/email-me" class="hoverable emailmeButton"
-    >let's chat.</router-link
-  > -->
 </template>
 
 <style scoped>
-.emailmeButton {
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  color: #e7e7e7;
-  cursor: none;
-  background: #161616;
-  border-radius: 50px;
-  margin: 0;
-  font-size: clamp(7.5px, 1.7vw, 15px);
-  font-weight: 800;
-  text-align: center;
-  margin-top: 18px;
-  user-select: none;
-  text-decoration: none;
-  position: fixed;
-  top: 1px;
-  right: 20px;
-}
-
 .samshh {
   font-size: clamp(15px, 1.7vw, 26.5px);
   font-weight: 800;
@@ -254,7 +211,7 @@ onMounted(() => {
   height: clamp(4%, 5.7vw, 6%);
   background-color: #e7e7e7;
   z-index: 99;
-  /* filter: drop-shadow(0px 0px 2px #000000); */
+  filter: drop-shadow(0px 0px 3px #00000035);
 }
 
 .fixed-button {

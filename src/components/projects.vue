@@ -46,6 +46,13 @@ onMounted(() => {
     "bottom center"
   );
   changeColor(
+    ".projBold",
+    "#e7e7e7",
+    ".projectsMain",
+    "top center",
+    "bottom center"
+  );
+  changeColor(
     ".projIcons",
     "#e7e7e7",
     ".projectsMain",
@@ -65,7 +72,13 @@ onMounted(() => {
           <img class="projectspic" src="../assets/sAproj.webp" alt="" />
           <div class="projectstxtwrapper">
             <h1 class="projectstxt">
-              <span class="projBold">sAminate</span> - JavaScript Library
+              <a
+                href="https://saminate.netlify.app/"
+                class="projBold hoverable"
+                target="_blank"
+                >sAminate</a
+              >
+              - JavaScript Library
             </h1>
             <div>
               <Icon
@@ -90,7 +103,13 @@ onMounted(() => {
           <img class="projectspic" src="../assets/discproj.webp" alt="" />
           <div class="projectstxtwrapper">
             <h1 class="projectstxt">
-              <span class="projBold">Ticket System</span> - Bot development
+              <a
+                href="https://github.com/Samshh/DiscordBot"
+                class="projBold hoverable"
+                target="_blank"
+                >Ticket System</a
+              >
+              - Bot development
             </h1>
             <div>
               <Icon
@@ -110,7 +129,13 @@ onMounted(() => {
           <img class="projectspic" src="../assets/gdscproj.webp" alt="" />
           <div class="projectstxtwrapper">
             <h1 class="projectstxt">
-              <span class="projBold">GDSC Prototype</span> - Website Development
+              <a
+                href="https://github.com/Samshh/GDSC-project"
+                class="projBold hoverable"
+                target="_blank"
+                >GDSC Prototype</a
+              >
+              - Website Development
             </h1>
             <div>
               <Icon
@@ -140,7 +165,13 @@ onMounted(() => {
           <img class="projectspic" src="../assets/ocpproj.webp" alt="" />
           <div class="projectstxtwrapper">
             <h1 class="projectstxt">
-              <span class="projBold">OCP Website</span> - Website Development
+              <a
+                href="https://mmcm-ocp.com/"
+                target="_blank"
+                class="projBold hoverable"
+                >OCP Website</a
+              > 
+              - Website Development
             </h1>
             <div>
               <Icon icon="mdi:react" style="color: #161616" class="projIcons" />
@@ -161,6 +192,9 @@ onMounted(() => {
 <style scoped>
 .projBold {
   font-weight: 800;
+  color: #161616;
+  text-decoration: none;
+  cursor: none;
 }
 
 .projects1,
@@ -214,8 +248,8 @@ onMounted(() => {
   align-items: center;
   margin: 0;
   height: auto;
-  padding-top: clamp(22px, 5.7vw, 45px);
-  padding-bottom: clamp(22px, 5.7vw, 45px);
+  padding-top: clamp(25px, 5.7vw, 90px);
+  padding-bottom: clamp(25px, 5.7vw, 45px);
   padding-left: clamp(22px, 5.7vw, 45px);
   padding-right: clamp(22px, 5.7vw, 45px);
 }
