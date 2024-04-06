@@ -69,7 +69,13 @@ onMounted(() => {
       <h1 class="projMainTxt">projects.</h1>
       <div class="projectsWrapper">
         <div class="projects1">
-          <img class="projectspic" src="../assets/sAproj.webp" alt="" />
+          <a
+            style="cursor: none"
+            href="https://saminate.netlify.app/"
+            target="_blank"
+          >
+            <img class="projectspic hoverable" src="../assets/sAproj.webp" alt="" />
+          </a>
           <div class="projectstxtwrapper">
             <h1 class="projectstxt">
               <a
@@ -100,7 +106,13 @@ onMounted(() => {
           </div>
         </div>
         <div class="projects2">
-          <img class="projectspic" src="../assets/discproj.webp" alt="" />
+          <a
+            style="cursor: none"
+            href="https://github.com/Samshh/DiscordBot"
+            target="_blank"
+          >
+            <img class="projectspic hoverable" src="../assets/discproj.webp" alt="" />
+          </a>
           <div class="projectstxtwrapper">
             <h1 class="projectstxt">
               <a
@@ -126,7 +138,13 @@ onMounted(() => {
           </div>
         </div>
         <div class="projects3">
-          <img class="projectspic" src="../assets/gdscproj.webp" alt="" />
+          <a
+            style="cursor: none"
+            href="https://github.com/Samshh/GDSC-project"
+            target="_blank"
+          >
+            <img class="projectspic hoverable" src="../assets/gdscproj.webp" alt="" />
+          </a>
           <div class="projectstxtwrapper">
             <h1 class="projectstxt">
               <a
@@ -162,7 +180,13 @@ onMounted(() => {
           </div>
         </div>
         <div class="projects4">
-          <img class="projectspic" src="../assets/ocpproj.webp" alt="" />
+          <a
+            style="cursor: none"
+            href="https://mmcm-ocp.com/"
+            target="_blank"
+          >
+            <img class="projectspic hoverable" src="../assets/ocpproj.webp" alt="" />
+          </a>
           <div class="projectstxtwrapper">
             <h1 class="projectstxt">
               <a
@@ -170,7 +194,7 @@ onMounted(() => {
                 target="_blank"
                 class="projBold hoverable"
                 >OCP Website</a
-              > 
+              >
               - Website Development
             </h1>
             <div>
@@ -232,6 +256,11 @@ onMounted(() => {
   object-fit: cover;
   border-radius: 15px;
   user-select: none;
+  transition: filter 0.5s ease;
+}
+
+.projectspic:hover {
+  filter: grayscale(100%);
 }
 
 .projMainTxt {

@@ -50,8 +50,9 @@ onMounted(() => {
   display: flex;
   justify-content: start;
   align-items: center;
-  height: 100vh;
-  padding-bottom: clamp(22px, 5.7vw, 45px);
+  height: fit-content;
+  padding-bottom: 150px;
+  padding-top: 150px;
 }
 
 .heroText {
