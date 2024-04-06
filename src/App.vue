@@ -1,19 +1,22 @@
 <script setup>
 import cursor from "./components/cursor.vue";
 import hero1 from "./components/hero1.vue";
-import navigation from "./components/navigation.vue";
-import hero2 from "./components/hero2.vue";
-import aboutme from "./components/aboutme.vue";
-import technologies from "./components/technologies.vue";
-import projects from "./components/projects.vue";
-import affiliations from "./components/affiliations.vue";
 import footermain from "./components/footermain.vue";
-
 import { onMounted } from "vue";
 import { gsap } from "gsap";
 import { TextPlugin } from "gsap/TextPlugin";
-gsap.registerPlugin(TextPlugin);
+import Lenis from "@studio-freight/lenis";
 
+const lenis = new Lenis();
+
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+
+requestAnimationFrame(raf);
+
+gsap.registerPlugin(TextPlugin);
 onMounted(() => {
   gsap.to(".welcome", {
     delay: 0,
@@ -38,12 +41,6 @@ onMounted(() => {
   <div class="background"></div>
   <cursor />
   <hero1 />
-  <navigation />
-  <hero2 />
-  <aboutme />
-  <technologies />
-  <projects />
-  <affiliations />
   <footermain />
 </template>
 

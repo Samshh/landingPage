@@ -11,11 +11,15 @@ import {
 } from "./animations.js";
 import { Icon } from "@iconify/vue";
 
-const currentTime = ref(new Date().toLocaleTimeString('en-US', { timeZone: 'Asia/Manila' }));
+const currentTime = ref(
+  new Date().toLocaleTimeString("en-US", { timeZone: "Asia/Manila" })
+);
 
 watchEffect(() => {
   const intervalId = setInterval(() => {
-    currentTime.value = new Date().toLocaleTimeString('en-US', { timeZone: 'Asia/Manila' });
+    currentTime.value = new Date().toLocaleTimeString("en-US", {
+      timeZone: "Asia/Manila",
+    });
   }, 1000);
 
   onUnmounted(() => {
@@ -40,22 +44,14 @@ onMounted(() => {
         ease: "power1.inOut",
         scrollTrigger: {
           trigger: ".outterWrapper",
-          toggleActions: "play none none reverse",
+          toggleActions: "play none none reset",
           start: "top center",
           end: "bottom center",
         },
       }
     );
   });
-  BGchangeColor(".outterWrapper", "#161616")
-  changeColor(
-    "#arrowup",
-    "#e7e7e7",
-    ".outterWrapper",
-    "top center",
-    "bottom center"
-  );
-
+  BGchangeColor(".outterWrapper", "#161616");
   ObjectChangeColor(
     "#navbar",
     "#161616",
@@ -100,7 +96,6 @@ onMounted(() => {
   );
   animateText(".detail", ".outterWrapper", "location.", 2);
   animateText(".contacts", ".outterWrapper", "socials.", 2);
-
   changeColor(
     "#samshh",
     "#e7e7e7",
@@ -108,7 +103,6 @@ onMounted(() => {
     "top center",
     "bottom center"
   );
-
   changeColor(
     ".contacts",
     "#e7e7e7",
@@ -158,7 +152,6 @@ onMounted(() => {
     "top center",
     "bottom center"
   );
-
   pulse(".underline", 2, 0);
   pulse(".underline1", 2, 0.5);
   pulse(".underline2", 2, 1);
@@ -267,7 +260,6 @@ onUnmounted(() => {
 </template>
 
 <style scoped>
-
 .mySign {
   width: 390.37px;
   display: flex;
@@ -277,7 +269,7 @@ onUnmounted(() => {
 
 .signWrap {
   display: grid;
-  grid-template-columns: 1fr .5fr;
+  grid-template-columns: 1fr 0.5fr;
   padding-left: clamp(22px, 5.7vw, 45px);
   padding-right: clamp(22px, 5.7vw, 45px);
   padding-top: clamp(7.5px, 1.7vw, 15px);

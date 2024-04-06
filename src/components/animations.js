@@ -5,37 +5,6 @@ import { TextPlugin } from "gsap/TextPlugin";
 gsap.registerPlugin(TextPlugin);
 gsap.registerPlugin(ScrollTrigger);
 
-export const animatePositionX = (selector, trigger, x, duration) => {
-  gsap.from(selector, {
-    scrollTrigger: {
-      trigger: trigger,
-      start: "top center",
-      end: "top center",
-      toggleActions: "play none none reverse",
-    },
-    x: x,
-    opacity: 0,
-    duration: duration,
-  });
-};
-
-export const animateTextNav = (selector, trigger, text, duration) => {
-  gsap.to(selector, {
-    duration: duration,
-    text: text,
-    padding: 0,
-    delay: 0,
-    ease: "power1.in",
-    scrollTrigger: {
-      trigger: trigger,
-      start: "top center",
-      end: "bottom center",
-      toggleActions: "play reverse play reverse",
-      markers: false,
-    },
-  });
-};
-
 export const animateText = (selector, trigger, text, duration) => {
   gsap.to(selector, {
     duration: duration,
@@ -97,24 +66,6 @@ export const BGchangeColor = (trigger, color) => {
   });
 };
 
-export const scrollerpic = (selector, trigger) => {
-  gsap.fromTo(
-    selector,
-    { opacity: 0 },
-    {
-      opacity: 1,
-      ease: "power1.inOut",
-      scrollTrigger: {
-        trigger: trigger,
-        start: "top center",
-        end: "bottom center",
-        toggleActions: "play none none reverse",
-        scrub: false,
-        markers: false,
-      },
-    }
-  );
-};
 
 export const pulse = (selector, duration, delay) => {
   gsap.to(selector, {
