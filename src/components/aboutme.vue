@@ -51,13 +51,13 @@ onMounted(() => {
     ".myText",
     ".aboutMe",
     "I'm Sam Dacara, a Software Developer, skilled in both back-end and front-end development. I'm fascinated by the endless possibilities in technology, and excited about creating innovative solutions to contribute to the ever-evolving tech landscape.",
-    5
+    3
   );
   animateText(
     ".myText2",
     ".aboutMe",
     "Outside of tech, I'm also a Musician—I play the guitar and piano. And when it's chill time, you'll catch me watching anime. Let's explore this tech and creativity journey together!",
-    5
+    3
   );
   animateText(".me", ".aboutMe", "about me.", 2);
   changeColor("#q", "#e7e7e7", ".outerWrapper", "top center", "bottom center");

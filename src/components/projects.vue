@@ -139,7 +139,7 @@ onMounted(() => {
         </div>
         <div class="projects3">
           <a
-            style="cursor: none"
+            style="cursor: none;"
             href="https://github.com/Samshh/GDSC-project"
             target="_blank"
           >
@@ -256,7 +256,7 @@ onMounted(() => {
   object-fit: cover;
   border-radius: 15px;
   user-select: none;
-  transition: filter 0.5s ease;
+  transition: filter 0.3s ease;
 }
 
 .projectspic:hover {

@@ -40,7 +40,7 @@ onMounted(() => {
         ease: "power1.inOut",
         scrollTrigger: {
           trigger: ".outterWrapper",
-          toggleActions: "play none none reverse",
+          toggleActions: "play none none reset",
           start: "top center",
           end: "bottom center",
         },

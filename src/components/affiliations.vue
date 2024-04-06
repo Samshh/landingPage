@@ -39,7 +39,7 @@ onMounted(() => {
       <h1 class="affilMainTxt">affiliations.</h1>
       <div class="affilContentsWrapper">
         <div class="gdg">
-          <img class="gdglogo" src="../assets/gdg.png" alt="" />
+          <img class="gdglogo hoverable" src="../assets/gdg.png" alt="" />
           <div class="gdgTxtWrapper">
             <h1 class="gdgTxt">Technical Committee</h1>
             <p class="gdgSubTxt">Google Developer Groups - Davao</p>
@@ -50,7 +50,7 @@ onMounted(() => {
           </div>
         </div>
         <div class="mmcm">
-          <img class="mmcmlogo" src="../assets/mmcm.png" alt="" />
+          <img class="mmcmlogo hoverable" src="../assets/mmcm.png" alt="" />
           <div class="mmcmTxtWrapper">
             <h1 class="mmcmTxt">Front-end Developer</h1>
             <p class="mmcmSubTxt">
@@ -136,6 +136,11 @@ onMounted(() => {
 .mmcmlogo {
   width: auto;
   height: clamp(75px, 20vw, 175px);
+  transition: filter 0.3s ease;
+}
+
+.gdglogo:hover, .mmcmlogo:hover {
+  filter: grayscale(100%);
 }
 
 @media (max-width: 600px) {
