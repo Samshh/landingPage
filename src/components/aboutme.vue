@@ -61,7 +61,13 @@ onMounted(() => {
   );
   animateText(".me", ".aboutMe", "about me.", 2);
   changeColor("#q", "#e7e7e7", ".outerWrapper", "top center", "bottom center");
-  changeColor(".heroText", "#e7e7e7", ".outerWrapper", "top center", "bottom center")
+  changeColor(
+    ".heroText",
+    "#e7e7e7",
+    ".outerWrapper",
+    "top center",
+    "bottom center"
+  );
   changeColor(
     "#samshh",
     "#e7e7e7",
@@ -101,7 +107,6 @@ onUnmounted(() => {
 </template>
 
 <style scoped>
-
 .outerWrapper {
   padding-top: clamp(22px, 5.7vw, 45px);
   padding-bottom: clamp(22px, 5.7vw, 45px);
@@ -116,7 +121,7 @@ onUnmounted(() => {
   padding-right: clamp(42.5px, 5.7vw, 85px);
   width: 60vw;
   user-select: none;
-  min-height: 404px;
+  min-height: 228px;
 }
 
 .aboutMe {
@@ -144,7 +149,7 @@ onUnmounted(() => {
 
 .myPic {
   border-radius: 10px;
-  object-fit: cover;
+  object-fit: contain;
   height: clamp(450px, 50vw, 900px);
   width: clamp(250px, 50vw, 800px);
   -webkit-user-select: none;
@@ -165,7 +170,6 @@ onUnmounted(() => {
 }
 
 @media (max-width: 808px) {
-
   .outerWrapper {
     height: auto;
     overflow: auto;
@@ -186,6 +190,8 @@ onUnmounted(() => {
     flex-direction: column-reverse;
     width: auto;
     padding: 0;
+    justify-content: center;
+    align-items: center;
   }
 
   .aboutwrap {
@@ -204,7 +210,7 @@ onUnmounted(() => {
   }
 
   .myPic {
-    width: 100vw;
+    width: fit-content;
     max-height: auto;
     padding-bottom: 10px;
     padding-top: 10px;
