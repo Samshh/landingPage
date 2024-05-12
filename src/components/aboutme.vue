@@ -105,6 +105,9 @@ onUnmounted(() => {
 .outerWrapper {
   padding-top: clamp(22px, 5.7vw, 45px);
   padding-bottom: clamp(22px, 5.7vw, 45px);
+  max-width: 1920px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .aboutwrap {
@@ -113,6 +116,7 @@ onUnmounted(() => {
   padding-right: clamp(42.5px, 5.7vw, 85px);
   width: 60vw;
   user-select: none;
+  min-height: 404px;
 }
 
 .aboutMe {

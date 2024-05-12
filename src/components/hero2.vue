@@ -53,6 +53,9 @@ onMounted(() => {
   height: fit-content;
   padding-bottom: 150px;
   padding-top: 150px;
+  max-width: 1920px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .heroText {

@@ -212,6 +212,7 @@ onMounted(() => {
   background-color: #e7e7e7;
   z-index: 99;
   filter: drop-shadow(0px 0px 3px #00000035);
+  min-height: 45px;
 }
 
 .fixed-button {

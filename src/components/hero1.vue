@@ -470,23 +470,6 @@ c0 -204 37 -685 75 -975 12 -94 20 -173 18 -175 -2 -3 -30 -4 -62 -3 -62 2
   transform: translate(-50%, -50%);
 }
 
-.textwrapper {
-  display: flex;
-  flex-direction: column;
-  padding-left: 10px;
-  justify-content: space-between;
-}
-
-.katakana p {
-  font-family: "Noto Serif JP", serif;
-  font-weight: 800;
-  font-style: normal;
-  margin: 0;
-  padding-bottom: 10px;
-  font-size: clamp(15px, 1.7vw, 30px);
-  color: #161616;
-}
-
 .name {
   position: absolute;
   top: 50%;
@@ -513,4 +496,9 @@ c0 -204 37 -685 75 -975 12 -94 20 -173 18 -175 -2 -3 -30 -4 -62 -3 -62 2
   color: #161616;
 }
 
+@media (max-height: 635px){
+  .mainwrapper {
+    scale: 0.8;
+  }
+}
 </style>

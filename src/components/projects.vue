@@ -281,6 +281,9 @@ onMounted(() => {
   padding-bottom: clamp(25px, 5.7vw, 45px);
   padding-left: clamp(22px, 5.7vw, 45px);
   padding-right: clamp(22px, 5.7vw, 45px);
+  max-width: 1920px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .projectsWrapper {

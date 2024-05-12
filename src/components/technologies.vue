@@ -185,6 +185,9 @@ onUnmounted(() => {});
 .technoOuter {
   padding-top: clamp(25px, 5.7vw, 90px);
   padding-bottom: clamp(22px, 5.7vw, 45px);
+  max-width: 1920px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .tech {
   display: flex;

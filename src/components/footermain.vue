@@ -335,6 +335,10 @@ onUnmounted(() => {
   flex-direction: column;
   width: 100vw;
   height: 100vh;
+  min-height: 850px;
+  max-width: 1920px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .detailwrap {
@@ -370,15 +374,16 @@ onUnmounted(() => {
 
 .outterWrapper {
   width: 100vw;
-  height: 100vh;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   padding-bottom: clamp(7.5px, 1.7vw, 15px);
   padding-top: clamp(22px, 5.7vw, 45px);
+  min-height: 850px;
 }
 
 .innerWrapper {
-  padding-top: clamp(22px, 5.7vw, 45px);
+  padding-top: clamp(40px, 5.7vw, 80px);
   display: flex;
   justify-content: space-between;
   padding-left: clamp(22px, 5.7vw, 45px);

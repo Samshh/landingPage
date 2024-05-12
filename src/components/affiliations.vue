@@ -74,6 +74,9 @@ onMounted(() => {
   padding-top: clamp(22px, 5.7vw, 45px);
   padding-bottom: clamp(22px, 5.7vw, 45px);
   height: 100vh;
+  max-width: 1920px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .affilInWrapper {
