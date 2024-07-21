@@ -129,7 +129,7 @@ onMounted(() => {
                 target="_blank"
                 >Ticket System</a
               >
-              - Bot development
+              - Discord Bot Development
             </h1>
             <div>
               <Icon
@@ -163,9 +163,9 @@ onMounted(() => {
                 href="https://github.com/gdsc-mmcm"
                 class="projBold hoverable"
                 target="_blank"
-                >GDSC Prototype</a
+                >GDSC Website</a
               >
-              - Website Development
+              - Front-end Development
             </h1>
             <div>
               <Icon icon="mdi:react" style="color: #161616" class="projIcons" />
@@ -203,7 +203,7 @@ onMounted(() => {
                 class="projBold hoverable"
                 >OCP Website</a
               >
-              - Website Development
+              - Front-end Development
             </h1>
             <div>
               <Icon icon="mdi:react" style="color: #161616" class="projIcons" />
