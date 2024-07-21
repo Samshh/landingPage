@@ -41,8 +41,8 @@ onMounted(() => {
         <div class="gdg">
           <img class="gdglogo hoverable" src="../assets/gdg.png" alt="" />
           <div class="gdgTxtWrapper">
-            <h1 class="gdgTxt">Technical Committee</h1>
-            <p class="gdgSubTxt">Google Developer Groups - Davao</p>
+            <h1 class="gdgTxt">Technical Staff</h1>
+            <p class="gdgSubTxt">Google Developer Group - Davao</p>
             <h1 class="gdgTxt">Web Application Developer</h1>
             <p class="gdgSubTxt">
               Google Developer Student Clubs - Mapúa Malayan Colleges Mindanao

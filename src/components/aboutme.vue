@@ -94,7 +94,7 @@ onUnmounted(() => {
     <div class="outerWrapper">
       <div class="innerWrapper">
         <div class="aboutMe">
-          <img class="myPic" src="/src/assets/SamGoogle.webp" alt="" />
+          <img class="myPic" src="/src/assets/IMG_3622.jpeg" alt="" />
           <div class="aboutwrap">
             <h1 id="q" class="me"></h1>
             <p id="q" class="desc myText"></p>
@@ -116,7 +116,6 @@ onUnmounted(() => {
 }
 
 .aboutwrap {
-  padding-top: clamp(45px, 5vw, 180px);
   padding-left: clamp(42.5px, 5.7vw, 85px);
   padding-right: clamp(42.5px, 5.7vw, 85px);
   width: 60vw;
@@ -128,6 +127,7 @@ onUnmounted(() => {
   padding-right: clamp(22.5px, 2.7vw, 45px);
   padding-left: clamp(22.5px, 2.7vw, 45px);
   display: flex;
+  align-items: center;
   color: #161616;
 }
 
@@ -149,7 +149,7 @@ onUnmounted(() => {
 
 .myPic {
   border-radius: 10px;
-  object-fit: contain;
+  object-fit: scale-down;
   height: clamp(450px, 50vw, 900px);
   width: clamp(250px, 50vw, 800px);
   -webkit-user-select: none;

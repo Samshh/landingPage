@@ -74,7 +74,11 @@ onMounted(() => {
             href="https://saminate.netlify.app/"
             target="_blank"
           >
-            <img class="projectspic hoverable" src="../assets/sAproj.webp" alt="" />
+            <img
+              class="projectspic hoverable"
+              src="../assets/sAproj.webp"
+              alt=""
+            />
           </a>
           <div class="projectstxtwrapper">
             <h1 class="projectstxt">
@@ -111,7 +115,11 @@ onMounted(() => {
             href="https://github.com/Samshh/DiscordBot"
             target="_blank"
           >
-            <img class="projectspic hoverable" src="../assets/discproj.webp" alt="" />
+            <img
+              class="projectspic hoverable"
+              src="../assets/discproj.webp"
+              alt=""
+            />
           </a>
           <div class="projectstxtwrapper">
             <h1 class="projectstxt">
@@ -139,16 +147,20 @@ onMounted(() => {
         </div>
         <div class="projects3">
           <a
-            style="cursor: none;"
-            href="https://github.com/Samshh/GDSC-project"
+            style="cursor: none"
+            href="https://github.com/gdsc-mmcm"
             target="_blank"
           >
-            <img class="projectspic hoverable" src="../assets/gdscproj.webp" alt="" />
+            <img
+              class="projectspic hoverable"
+              src="../assets/gdscproj.webp"
+              alt=""
+            />
           </a>
           <div class="projectstxtwrapper">
             <h1 class="projectstxt">
               <a
-                href="https://github.com/Samshh/GDSC-project"
+                href="https://github.com/gdsc-mmcm"
                 class="projBold hoverable"
                 target="_blank"
                 >GDSC Prototype</a
@@ -156,11 +168,7 @@ onMounted(() => {
               - Website Development
             </h1>
             <div>
-              <Icon
-                icon="ri:vuejs-fill"
-                style="color: #161616"
-                class="projIcons"
-              />
+              <Icon icon="mdi:react" style="color: #161616" class="projIcons" />
               <Icon
                 icon="mdi:language-typescript"
                 style="color: #161616"
@@ -180,12 +188,12 @@ onMounted(() => {
           </div>
         </div>
         <div class="projects4">
-          <a
-            style="cursor: none"
-            href="https://mmcm-ocp.com/"
-            target="_blank"
-          >
-            <img class="projectspic hoverable" src="../assets/ocpproj.webp" alt="" />
+          <a style="cursor: none" href="https://mmcm-ocp.com/" target="_blank">
+            <img
+              class="projectspic hoverable"
+              src="../assets/ocpproj.webp"
+              alt=""
+            />
           </a>
           <div class="projectstxtwrapper">
             <h1 class="projectstxt">
