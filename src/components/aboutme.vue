@@ -121,6 +121,7 @@ onUnmounted(() => {
   padding-left: clamp(22.5px, 2.7vw, 45px);
   display: flex;
   align-items: center;
+  justify-content: center;
   color: #161616;
 }
 
@@ -197,7 +198,7 @@ onUnmounted(() => {
   }
 
   .desc {
-    text-align: justify;
+    text-align: center;
     padding: 0;
     padding-bottom: 20px;
   }
