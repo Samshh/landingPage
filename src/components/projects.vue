@@ -262,7 +262,6 @@ onMounted(() => {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 15px;
   user-select: none;
   transition: filter 0.3s ease;
 }
